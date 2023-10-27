@@ -1,0 +1,92 @@
+[
+  {
+    "name": "beer",
+    "image": "../images/drinks_1/beer.png",
+    "language": {
+      "english": "beer",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/beer.mp3"
+  },
+  {
+    "name": "coffee",
+    "image": "../images/drinks_1/coffee.png",
+    "language": {
+      "english": "coffee",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/coffee.mp3"
+  },
+  {
+    "name": "hot_chocolate",
+    "image": "../images/drinks_1/hot_chocolate.png",
+    "language": {
+      "english": "hot chocolate",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/hot_chocolate.mp3"
+  },
+  {
+    "name": "juice_apple",
+    "image": "../images/drinks_1/juice_apple.png",
+    "language": {
+      "english": "apple juice",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/juice_apple.mp3"
+  },
+  {
+    "name": "juice_orange",
+    "image": "../images/drinks_1/juice_orange.png",
+    "language": {
+      "english": "orange juice",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/juice_orange.mp3"
+  },
+  {
+    "name": "soda",
+    "image": "../images/drinks_1/soda.png",
+    "language": {
+      "english": "soda",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/soda.mp3"
+  },
+  {
+    "name": "tea",
+    "image": "../images/drinks_1/tea.png",
+    "language": {
+      "english": "tea",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/tea.mp3"
+  },
+  {
+    "name": "water",
+    "image": "../images/drinks_1/water.png",
+    "language": {
+      "english": "water",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/pig.mp3"
+  },
+  {
+    "name": "wine_red",
+    "image": "../images/drinks_1/wine_red.png",
+    "language": {
+      "english": "red wine",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/wine_red.mp3"
+  },
+  {
+    "name": "wine_red",
+    "image": "../images/drinks_1/wine_red.png",
+    "language": {
+      "english": "white wine",
+      "french": "X"
+    },
+    "audio": "sound/drinks_1/wine_red.mp3"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "avocado",
+    "image": "../images/vegetables_1/avocado.png",
+    "language": {
+      "english": "avocado",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/avocado.mp3"
+  },
+  {
+    "name": "beetroot",
+    "image": "../images/vegetables_1/beetroot.png",
+    "language": {
+      "english": "beetroot",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/beetroot.mp3"
+  },
+  {
+    "name": "bellpepper",
+    "image": "../images/vegetables_1/bellpepper.png",
+    "language": {
+      "english": "bellpepper",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/bellpepper.mp3"
+  },
+  {
+    "name": "carrot",
+    "image": "../images/vegetables_1/carrot.png",
+    "language": {
+      "english": "carrot",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/carrot.mp3"
+  },
+  {
+    "name": "chilli",
+    "image": "../images/vegetables_1/chilli.png",
+    "language": {
+      "english": "chilli",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/chilli.mp3"
+  },
+  {
+    "name": "cucumber",
+    "image": "../images/vegetables_1/cucumber.png",
+    "language": {
+      "english": "cucumber",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/cucumber.mp3"
+  },
+  {
+    "name": "eggplant",
+    "image": "../images/fruits/eggplant.png",
+    "language": {
+      "english": "eggplant",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/eggplant.mp3"
+  },
+  {
+    "name": "lettuce",
+    "image": "../images/fruits/lettuce.png",
+    "language": {
+      "english": "lettuce",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/lettuce.mp3"
+  },
+  {
+    "name": "mushroom",
+    "image": "../images/fruits/mushroom.png",
+    "language": {
+      "english": "mushroom",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/mushroom.mp3"
+  },
+  {
+    "name": "onion",
+    "image": "../images/vegetables_1/onion.png",
+    "language": {
+      "english": "onion",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/onion.mp3"
+  },
+  {
+    "name": "tomato",
+    "image": "../images/vegetables_1/tomato.png",
+    "language": {
+      "english": "tomato",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/tomato.mp3"
+  }
+]

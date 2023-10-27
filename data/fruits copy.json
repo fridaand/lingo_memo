@@ -1,0 +1,92 @@
+[
+  {
+    "name": "banana",
+    "image": "..images/fruits/banana.png",
+    "language": {
+      "english": "banana",
+      "french": "la banane"
+    },
+    "audio": "sound/fruits/banana.mp3"
+  },
+  {
+    "name": "cherry",
+    "image": "../images/fruits/cherry.png",
+    "language": {
+      "english": "cherry",
+      "french": "la cerise"
+    },
+    "audio": "sound/fruits/cherry.mp3"
+  },
+  {
+    "name": "grape",
+    "image": "../images/fruits/grape.png",
+    "language": {
+      "english": "grape",
+      "french": "le raisin"
+    },
+    "audio": "sound/fruits/grape.mp3"
+  },
+  {
+    "name": "orange",
+    "image": "../images/fruits/orange.png",
+    "language": {
+      "english": "orange",
+      "french": "l'orange"
+    },
+    "audio": "sound/fruits/orange.mp3"
+  },
+  {
+    "name": "peach",
+    "image": "../images/fruits/peach.png",
+    "language": {
+      "english": "peach",
+      "french": "la pêche"
+    },
+    "audio": "sound/fruits/peach.mp3"
+  },
+  {
+    "name": "pear",
+    "image": "../images/fruits/pear.png",
+    "language": {
+      "english": "pear",
+      "french": "la poire"
+    },
+    "audio": "sound/fruits/pear.mp3"
+  },
+  {
+    "name": "pineapple",
+    "image": "../images/fruits/pineapple.png",
+    "language": {
+      "english": "pineapple",
+      "french": "l'ananas"
+    },
+    "audio": "sound/fruits/pineapple.mp3"
+  },
+  {
+    "name": "apple",
+    "image": "../images/fruits/apple.png",
+    "language": {
+      "english": "apple",
+      "french": "la pomme"
+    },
+    "audio": "sound/fruits/apple.mp3"
+  },
+  {
+    "name": "kiwi",
+    "image": "../images/fruits/kiwi.png",
+    "language": {
+      "english": "kiwi",
+      "french": "le kiwi"
+    },
+    "audio": "sound/fruits/kiwi.mp3"
+  },
+  {
+    "name": "strawberry",
+    "image": "../images/fruits/strawberry.png",
+    "language": {
+      "english": "strawberry",
+      "french": "la fraise"
+    },
+    "audio": "sound/fruits/strawberry.mp3"
+  }
+]

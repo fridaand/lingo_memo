@@ -1,0 +1,92 @@
+[
+  {
+    "name": "bird",
+    "image": "../images/animals_1/bird.png",
+    "language": {
+      "english": "bird",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/bird.mp3"
+  },
+  {
+    "name": "cat",
+    "image": "../images/animals_1/cat.png",
+    "language": {
+      "english": "cat",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/cat.mp3"
+  },
+  {
+    "name": "cow",
+    "image": "../images/animals_1/cow.png",
+    "language": {
+      "english": "cow",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/cow.mp3"
+  },
+  {
+    "name": "dog",
+    "image": "../images/animals_1/dog.png",
+    "language": {
+      "english": "dog",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/dog.mp3"
+  },
+  {
+    "name": "fish",
+    "image": "../images/animals_1/fish.png",
+    "language": {
+      "english": "fish",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/fish.mp3"
+  },
+  {
+    "name": "hamster",
+    "image": "../images/animals_1/hamster.png",
+    "language": {
+      "english": "hamster",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/hamster.mp3"
+  },
+  {
+    "name": "horse",
+    "image": "../images/animals_1/horse.png",
+    "language": {
+      "english": "horse",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/horse.mp3"
+  },
+  {
+    "name": "pig",
+    "image": "../images/animals_1/pig.png",
+    "language": {
+      "english": "pig",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/pig.mp3"
+  },
+  {
+    "name": "rabbit",
+    "image": "../images/animals_1/rabbit.png",
+    "language": {
+      "english": "rabbit",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/rabbit.mp3"
+  },
+  {
+    "name": "sheep",
+    "image": "../images/animals_1/sheep.png",
+    "language": {
+      "english": "sheep",
+      "french": "X"
+    },
+    "audio": "sound/animals_1/sheep.mp3"
+  }
+]
