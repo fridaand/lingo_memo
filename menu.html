@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Välj en kategori</h1>
+      <ul class="container-mission" id="mission-list">
+        <a href="game.html?category=fruits_1&dataFolder=data">
+          <div class="mission-card" id="fruits-game_1" data-mission="fruits_1">
+            <li>
+              <h3 id="cate-fruits_1">Frukter</h3>
+            </li>
+          </div>
+        </a>
+
+        <a href="game.html?category=vegetables_1&dataFolder=data">
+          <div
+            class="mission-card"
+            id="vegetables-game_1"
+            data-mission="vegetables_1"
+          >
+            <li>
+              <h3 id="cate-vegetables_1" class="cate-title">Grönsaker</h3>
+            </li>
+          </div>
+        </a>
+
+        <a href="game.html?category=animals_1&dataFolder=data">
+          <div
+            class="mission-card"
+            id="animals-game_1"
+            data-mission="animals_1"
+          >
+            <li>
+              <h3 id="cate-animals_1" class="cate-title">Djur</h3>
+            </li>
+          </div>
+        </a>
+
+        <a href="game.html?category=dishes_1&dataFolder=data">
+          <div class="mission-card" id="dishes-game_1" data-mission="dishes_1">
+            <li>
+              <h3 id="cate-dishes_1" class="cate-title">Maträtter</h3>
+            </li>
+          </div>
+        </a>
+
+        <a href="game.html?category=drinks_1&dataFolder=data">
+          <div class="mission-card" id="dryck-game_1" data-mission="dryck_1">
+            <li>
+              <h3 id="cate-drinks_1" class="cate-title">Dryck</h3>
+            </li>
+          </div>
+        </a>
+      </ul>
+
+      <div class="container_game-info">
+        <div>Antal spelade omgångar: <span class="rounds">0</span></div>
+        <div>Totalt spelade minuter: <span class="total-minutes">0</span></div>
+
+        <button id="mute-button" class="button-mute">
+          🔇
+          <!-- Lägga in en högtalarsymbol/ikon -->
+        </button>
+      </div>
+    </main>
+
+    <script src="menu.js"></script>
+  </body>
+</html>

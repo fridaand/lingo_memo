@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo lingo game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Memo lingo game</h1>
+      <h3 id="cate"></h3>
+
+      <!-- container for the cards -->
+      <div class="grid-container"></div>
+
+      <!-- showing the points -->
+      <p>Försök: <span class="score"></span></p>
+
+      <!-- button that starts the game (add more?)-->
+      <div class="section_end-game">
+        <div class="container_end-game">
+          <h3>Bra gjort!</h3>
+          <p>Du klarade spelet med <span class="">0</span> drag</p>
+          <p>På <span class="timer">0</span> sekunder</p>
+          <p>Tryck på knappen för att spela igen</p>
+          <div class="actions">
+            <button onclick="restartGame()">Spela igen</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_game-info">
+        <div>Tid: <span class="timer">0</span> sek</div>
+        <div>Antal spelade omgångar: <span class="rounds">0</span></div>
+        <div>Totalt spelade minuter: <span class="total-minutes">0</span></div>
+
+        <button id="mute-button" class="button-mute">
+          🔇
+          <!-- Lägga in en högtalarsymbol/ikon -->
+        </button>
+
+        <button class="button-menu" onclick="window.location.href='menu.html';">
+          Huvudmeny
+        </button>
+      </div>
+    </main>
+
+    <!-- script tag last in the body-->
+    <script src="game.js"></script>
+  </body>
+</html>
