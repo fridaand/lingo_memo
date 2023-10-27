@@ -3,9 +3,9 @@ const gridContainer = document.querySelector(".grid-container");
 const roundsElement = document.querySelector("#rounds span");
 const totalMinutesElement = document.querySelector("#total-minutes span");
 */
-const timerSpan = document.querySelector(".timer");
-const roundsSpan = document.querySelector(".rounds");
-const totalMinutesSpan = document.querySelector(".total-minutes");
+const timerSpans = document.querySelectorAll(".timer");
+//const roundsSpans = document.querySelectorAll(".rounds");
+//const totalMinutesSpan = document.querySelector(".total-minutes");
 
 // Händelselyssnare för mute-knappen
 const muteButton = document.getElementById("mute-button");
@@ -16,22 +16,25 @@ let lockBoard = false;
 let score = 0;
 let timer = 0;
 let timerInterval;
-let totalRounds = parseInt(localStorage.getItem("totalRounds")) || 0;
+//let totalRounds = parseInt(localStorage.getItem("totalRounds")) || 0;
 let totalMinutes = parseInt(localStorage.getItem("totalMinutes")) || 0;
 let isMuted = false; // Variabel för att hålla reda på ljudtillståndet
+
+function updateScore() {
+    document.querySelectorAll(".score").forEach((span) => {span.textContent = score;});
+}
 
 /*
 document.querySelector(".score").textContent = score;
 roundsElement.textContent = totalRounds;
 totalMinutesElement.textContent = totalMinutes;
 */
-document.querySelector(".score").textContent = score;
-roundsSpan.textContent = totalRounds;
-totalMinutesSpan.textContent = totalMinutes;
+//roundsSpan.textContent = totalRounds;
+//totalMinutesSpan.textContent = totalMinutes;
 
-let cat = localStorage.getItem("selectedCategory");
+let category = localStorage.getItem("selectedCategory");
 
-fetch("./data/" + cat + ".json")
+fetch("./data/" + category + ".json")
   .then((res) => res.json())
   .then((data) => {
     cards = [...data, ...data];
@@ -52,8 +55,7 @@ function shuffleCards() {
   }
 }
 
-document.getElementById("cate").innerText =
-  localStorage.getItem("categoryTitle");
+document.getElementById("cate").innerText = localStorage.getItem("categoryTitle");
 
 function generateCards() {
   for (let card of cards) {
@@ -112,28 +114,19 @@ function flipCard() {
 
   secondCard = this;
   score++;
-  document.querySelector(".score").textContent = score;
+  updateScore();
   lockBoard = true;
 
   checkForMatch();
 }
 
-/*
 function startTimer() {
   if (!timerInterval) {
     timerInterval = setInterval(() => {
-      timer++;
-      timerElement.textContent = timer;
-    }, 1000);
-  }
-}
-*/
-
-function startTimer() {
-  if (!timerInterval) {
-    timerInterval = setInterval(() => {
-      timer++;
-      timerSpan.textContent = timer;
+        timer++;
+        timerSpans.forEach((span) => {
+            span.textContent = timer;
+        })
     }, 1000);
   }
 }
@@ -169,20 +162,35 @@ function resetBoard() {
 document.addEventListener("DOMContentLoaded", function () {
   // Dölj .container_end-game vid sidans laddning
   document.querySelector(".section_end-game").style.display = "none";
+  document.querySelector(".container_game-info").style.display = "flex";
+
+  let currentRounds = localStorage.getItem("totalRounds") || 0;
+  document.getElementById("info-rounds").innerText = currentRounds;
+
+  updateScore();
 });
 
 function endGame() {
-  totalRounds++;
+  //totalRounds++;
   totalMinutes += timer / 60;
-  localStorage.setItem("totalRounds", totalRounds);
+
+  // Rounds
+  let nRounds = localStorage.getItem("totalRounds") || 0;
+  localStorage.setItem("totalRounds", ++nRounds);
+  document.getElementById("info-rounds").innerText = nRounds;
+
   localStorage.setItem("totalMinutes", totalMinutes);
 
-  /*
+    // Increase number of rounds
+    //let nRounds = localStorage.getItem("prevTotalRounds") || 0;
+    //localStorage.setItem("prevTotalRounds", ++nRounds);
+    //document.getElementById("info-rounds").innerText = nRounds;
+    /*
   roundsElement.textContent = totalRounds;
   totalMinutesElement.textContent = Math.floor(totalMinutes);
 */
-  roundsSpan.textContent = totalRounds;
-  totalMinutesSpan.textContent = Math.floor(totalMinutes);
+
+  //totalMinutesSpan.textContent = Math.floor(totalMinutes);
 
   clearInterval(timerInterval);
   timerInterval = null;
@@ -190,15 +198,17 @@ function endGame() {
 
   // När spelet är slut
   document.querySelector(".section_end-game").style.display = "flex";
+  document.querySelector(".container_game-info").style.display = "none";
 }
 
 function restartGame() {
   // När spelet startas om
   document.querySelector(".section_end-game").style.display = "none";
+  document.querySelector(".container_game-info").style.display = "flex";
   resetBoard();
   shuffleCards();
   score = 0;
-  document.querySelector(".score").textContent = score;
+  updateScore();
   gridContainer.innerHTML = "";
   generateCards();
 }

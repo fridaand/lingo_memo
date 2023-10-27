@@ -1,7 +1,7 @@
 [
   {
     "name": "kiwi",
-    "image": "../images/fruits_1/kiwi.png",
+    "image": "images/fruits_1/kiwi.png",
     "language": {
       "english": "kiwi",
       "french": "le kiwi"
@@ -10,7 +10,7 @@
   },
   {
     "name": "strawberry",
-    "image": "../images/fruits_1/strawberry.png",
+    "image": "images/fruits_1/strawberry.png",
     "language": {
       "english": "strawberry",
       "french": "la fraise"

@@ -1,7 +1,7 @@
 [
   {
     "name": "bird",
-    "image": "../images/animals_1/bird.png",
+    "image": "images/animals_1/bird.png",
     "language": {
       "english": "bird",
       "french": "X"
@@ -10,7 +10,7 @@
   },
   {
     "name": "cat",
-    "image": "../images/animals_1/cat.png",
+    "image": "images/animals_1/cat.png",
     "language": {
       "english": "cat",
       "french": "X"
@@ -19,7 +19,7 @@
   },
   {
     "name": "cow",
-    "image": "../images/animals_1/cow.png",
+    "image": "images/animals_1/cow.png",
     "language": {
       "english": "cow",
       "french": "X"
@@ -28,7 +28,7 @@
   },
   {
     "name": "dog",
-    "image": "../images/animals_1/dog.png",
+    "image": "images/animals_1/dog.png",
     "language": {
       "english": "dog",
       "french": "X"
@@ -37,7 +37,7 @@
   },
   {
     "name": "fish",
-    "image": "../images/animals_1/fish.png",
+    "image": "images/animals_1/fish.png",
     "language": {
       "english": "fish",
       "french": "X"
@@ -46,7 +46,7 @@
   },
   {
     "name": "hamster",
-    "image": "../images/animals_1/hamster.png",
+    "image": "images/animals_1/hamster.png",
     "language": {
       "english": "hamster",
       "french": "X"
@@ -55,7 +55,7 @@
   },
   {
     "name": "horse",
-    "image": "../images/animals_1/horse.png",
+    "image": "images/animals_1/horse.png",
     "language": {
       "english": "horse",
       "french": "X"
@@ -64,7 +64,7 @@
   },
   {
     "name": "pig",
-    "image": "../images/animals_1/pig.png",
+    "image": "images/animals_1/pig.png",
     "language": {
       "english": "pig",
       "french": "X"
@@ -73,7 +73,7 @@
   },
   {
     "name": "rabbit",
-    "image": "../images/animals_1/rabbit.png",
+    "image": "images/animals_1/rabbit.png",
     "language": {
       "english": "rabbit",
       "french": "X"
@@ -82,7 +82,7 @@
   },
   {
     "name": "sheep",
-    "image": "../images/animals_1/sheep.png",
+    "image": "images/animals_1/sheep.png",
     "language": {
       "english": "sheep",
       "french": "X"

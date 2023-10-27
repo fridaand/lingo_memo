@@ -1,7 +1,7 @@
 [
   {
     "name": "burger",
-    "image": "../images/dishes_1/burger.png",
+    "image": "images/dishes_1/burger.png",
     "language": {
       "english": "burger",
       "french": "X"
@@ -9,17 +9,17 @@
     "audio": "sound/dishes_1/burger.mp3"
   },
   {
-    "name": "indian_curry",
-    "image": "../images/dishes_1/indian_curry.png",
+    "name": "curry",
+    "image": "images/dishes_1/curry.png",
     "language": {
-      "english": "indian curry",
+      "english": "curry",
       "french": "X"
     },
-    "audio": "sound/dishes_1/indian_curry.mp3"
+    "audio": "sound/dishes_1/curry.mp3"
   },
   {
     "name": "pancakes",
-    "image": "../images/dishes_1/pancakes.png",
+    "image": "images/dishes_1/pancakes.png",
     "language": {
       "english": "pancakes",
       "french": "X"
@@ -28,7 +28,7 @@
   },
   {
     "name": "pasta",
-    "image": "../images/dishes_1/pasta.png",
+    "image": "images/dishes_1/pasta.png",
     "language": {
       "english": "pasta",
       "french": "X"
@@ -37,7 +37,7 @@
   },
   {
     "name": "pie",
-    "image": "../images/dishes_1/pie.png",
+    "image": "images/dishes_1/pie.png",
     "language": {
       "english": "pie",
       "french": "X"
@@ -46,7 +46,7 @@
   },
   {
     "name": "pizza",
-    "image": "../images/dishes_1/pizza.png",
+    "image": "images/dishes_1/pizza.png",
     "language": {
       "english": "pizza",
       "french": "X"
@@ -55,7 +55,7 @@
   },
   {
     "name": "salad",
-    "image": "../images/dishes_1/salad.png",
+    "image": "images/dishes_1/salad.png",
     "language": {
       "english": "salad",
       "french": "X"
@@ -64,7 +64,7 @@
   },
   {
     "name": "soup",
-    "image": "../images/dishes_1/soup.png",
+    "image": "images/dishes_1/soup.png",
     "language": {
       "english": "soup",
       "french": "X"
@@ -73,7 +73,7 @@
   },
   {
     "name": "taco",
-    "image": "../images/dishes_1/taco.png",
+    "image": "images/dishes_1/taco.png",
     "language": {
       "english": "taco",
       "french": "X"
@@ -82,7 +82,7 @@
   },
   {
     "name": "wok",
-    "image": "../images/dishes_1/wok.png",
+    "image": "images/dishes_1/wok.png",
     "language": {
       "english": "wok",
       "french": "X"
@@ -91,7 +91,7 @@
   },
   {
     "name": "wrap",
-    "image": "../images/dishes_1/wrap.png",
+    "image": "images/dishes_1/wrap.png",
     "language": {
       "english": "wrap",
       "french": "X"

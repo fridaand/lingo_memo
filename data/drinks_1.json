@@ -1,7 +1,7 @@
 [
   {
     "name": "beer",
-    "image": "../images/drinks_1/beer.png",
+    "image": "images/drinks_1/beer.png",
     "language": {
       "english": "beer",
       "french": "X"
@@ -10,7 +10,7 @@
   },
   {
     "name": "coffee",
-    "image": "../images/drinks_1/coffee.png",
+    "image": "images/drinks_1/coffee.png",
     "language": {
       "english": "coffee",
       "french": "X"
@@ -19,7 +19,7 @@
   },
   {
     "name": "hot_chocolate",
-    "image": "../images/drinks_1/hot_chocolate.png",
+    "image": "images/drinks_1/hot_chocolate.png",
     "language": {
       "english": "hot chocolate",
       "french": "X"
@@ -28,7 +28,7 @@
   },
   {
     "name": "juice_apple",
-    "image": "../images/drinks_1/juice_apple.png",
+    "image": "images/drinks_1/juice_apple.png",
     "language": {
       "english": "apple juice",
       "french": "X"
@@ -37,7 +37,7 @@
   },
   {
     "name": "juice_orange",
-    "image": "../images/drinks_1/juice_orange.png",
+    "image": "images/drinks_1/juice_orange.png",
     "language": {
       "english": "orange juice",
       "french": "X"
@@ -46,7 +46,7 @@
   },
   {
     "name": "soda",
-    "image": "../images/drinks_1/soda.png",
+    "image": "images/drinks_1/soda.png",
     "language": {
       "english": "soda",
       "french": "X"
@@ -55,7 +55,7 @@
   },
   {
     "name": "tea",
-    "image": "../images/drinks_1/tea.png",
+    "image": "images/drinks_1/tea.png",
     "language": {
       "english": "tea",
       "french": "X"
@@ -64,7 +64,7 @@
   },
   {
     "name": "water",
-    "image": "../images/drinks_1/water.png",
+    "image": "images/drinks_1/water.png",
     "language": {
       "english": "water",
       "french": "X"
@@ -73,7 +73,7 @@
   },
   {
     "name": "wine_red",
-    "image": "../images/drinks_1/wine_red.png",
+    "image": "images/drinks_1/wine_red.png",
     "language": {
       "english": "red wine",
       "french": "X"
@@ -82,7 +82,7 @@
   },
   {
     "name": "wine_red",
-    "image": "../images/drinks_1/wine_red.png",
+    "image": "images/drinks_1/wine_red.png",
     "language": {
       "english": "white wine",
       "french": "X"
