@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 ATT FIXA:
 +spelresultat på båda sidor
 +antal spelade minuter
--ev lägga till funktion för att läsa upp kategorikort på huvudsida också
--game: pop-up resultat span kunna visa på två ställen
--pause button
++game: pop-up resultat span kunna visa på två ställen
++pause button
 */

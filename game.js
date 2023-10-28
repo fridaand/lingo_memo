@@ -1,6 +1,4 @@
 
-// Händelselyssnare för mute-knappen
-const muteButton = document.getElementById("button-mute");
 
 let cards = [];
 let firstCard, secondCard;
@@ -9,6 +7,8 @@ let score = 0;
 let timer = 0;
 let timerInterval;
 let isMuted = false; // Variabel för att hålla reda på ljudtillståndet
+let isPaused = false;
+let lastAudio = undefined;
 
 function updateScore() {
     document.querySelectorAll(".score").forEach((span) => {span.textContent = score;});
@@ -50,6 +50,10 @@ function generateCards() {
         cardElement.innerHTML = generateCardDiv(card);
         gridContainer.appendChild(cardElement);
         cardElement.addEventListener("click", function () {
+            if (isPaused || (lastAudio && !lastAudio.ended)) {
+                return;
+            }
+
             if (!isMuted) {
                 playCardSound(card.audio); // Spela upp ljudet när kortet klickas på
             }
@@ -60,24 +64,9 @@ function generateCards() {
 }
 
 function playCardSound(audioSrc) {
-  const audio = new Audio(audioSrc);
-  audio.play();
+    lastAudio = new Audio(audioSrc);
+    lastAudio.play();
 }
-
-muteButton.addEventListener("click", () => {
-  isMuted = !isMuted; // Växla ljudets tillstånd
-
-  // Uppdatera knappens ikon beroende på ljudtillståndet
-  muteButton.innerHTML = isMuted ? "🔊" : "🔇";
-
-  // Om ljudet är avstängt, stäng av alla ljud
-  if (isMuted) {
-    document.querySelectorAll(".card").forEach((card) => {
-      const audioElement = card.querySelector("audio");
-      audioElement.pause();
-    });
-  }
-});
 
 function flipCard() {
   if (lockBoard) return;
@@ -102,8 +91,10 @@ function flipCard() {
 function startTimer() {
     if (!timerInterval) {
         timerInterval = setInterval(() => {
-            timer++;
-            updateGameSeconds();
+            if (!isPaused) {
+                timer++;
+                updateGameSeconds();
+            }
         }, 1000);
     }
 }
@@ -150,9 +141,20 @@ function updatePage() {
     updateGameSeconds();
 }
 
+function registerMuteButton() {
+    const muteButton = document.getElementById("button-mute");
+    muteButton.addEventListener("click", () => {
+        isMuted = !isMuted; // Växla ljudets tillstånd
+
+        // Uppdatera knappens ikon beroende på ljudtillståndet
+        muteButton.innerHTML = isMuted ? "🔊" : "🔇";
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     hideEndGameInfo();
     showGameInfo();
+    registerMuteButton();
     updatePage();
 });
 
@@ -197,6 +199,15 @@ function resetCards() {
     const gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
 }
+
+function pause() {
+    if (isPaused) {
+        isPaused = false;
+    } else {
+        isPaused = true;
+    }
+}
+
 // När spelet är slut
 function endGame() {
     increaseRounds();
