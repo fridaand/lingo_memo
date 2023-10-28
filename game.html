@@ -22,7 +22,7 @@
         <div class="container_end-game">
           <h3>Bra gjort!</h3>
           <p>Du klarade spelet med <span class="score"></span> drag</p>
-          <p>På <span class="timer">0</span> sekunder</p>
+          <p>På <span class="info-seconds"></span> sekunder</p>
           <p>Tryck på knappen för att spela igen</p>
           <div class="actions">
             <button onclick="restartGame()">Spela igen</button>
@@ -31,14 +31,14 @@
       </div>
 
       <div class="container_game-info">
-        <div>Tid: <span class="timer">0</span> sek</div>
-        <div>Antal spelade omgångar: <span id="info-rounds">0</span></div>
-        <div>Totalt spelade minuter: <span id="info-minutes">0</span></div>
+        <div>Tid: <span class="info-seconds"></span> sekunder</div>
+        <div>Antal spelade omgångar: <span id="info-rounds"></span></div>
+        <div>Totalt spelade minuter: <span id="info-totaltime"></span></div>
 
-        <button id="mute-button" class="button-mute">
-          🔇
-          <!-- Lägga in en högtalarsymbol/ikon -->
-        </button>
+        <span>
+            <button id="button-mute" class="button-mute">🔇</button>
+            <button id="button-pause" class="button-pause">⏸️</button>
+        </span>
 
         <button class="button-menu" onclick="window.location.href='menu.html';">
           Huvudmeny
@@ -47,6 +47,7 @@
     </main>
 
     <!-- script tag last in the body-->
+    <script src="common.js"></script>
     <script src="game.js"></script>
   </body>
 </html>

@@ -1,14 +1,6 @@
-const gridContainer = document.querySelector(".grid-container");
-/*const timerElement = document.querySelector(".timer span");
-const roundsElement = document.querySelector("#rounds span");
-const totalMinutesElement = document.querySelector("#total-minutes span");
-*/
-const timerSpans = document.querySelectorAll(".timer");
-//const roundsSpans = document.querySelectorAll(".rounds");
-//const totalMinutesSpan = document.querySelector(".total-minutes");
 
 // Händelselyssnare för mute-knappen
-const muteButton = document.getElementById("mute-button");
+const muteButton = document.getElementById("button-mute");
 
 let cards = [];
 let firstCard, secondCard;
@@ -16,31 +8,11 @@ let lockBoard = false;
 let score = 0;
 let timer = 0;
 let timerInterval;
-//let totalRounds = parseInt(localStorage.getItem("totalRounds")) || 0;
-let totalMinutes = parseInt(localStorage.getItem("totalMinutes")) || 0;
 let isMuted = false; // Variabel för att hålla reda på ljudtillståndet
 
 function updateScore() {
     document.querySelectorAll(".score").forEach((span) => {span.textContent = score;});
 }
-
-/*
-document.querySelector(".score").textContent = score;
-roundsElement.textContent = totalRounds;
-totalMinutesElement.textContent = totalMinutes;
-*/
-//roundsSpan.textContent = totalRounds;
-//totalMinutesSpan.textContent = totalMinutes;
-
-let category = localStorage.getItem("selectedCategory");
-
-fetch("./data/" + category + ".json")
-  .then((res) => res.json())
-  .then((data) => {
-    cards = [...data, ...data];
-    shuffleCards();
-    generateCards();
-  });
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -55,29 +27,36 @@ function shuffleCards() {
   }
 }
 
-document.getElementById("cate").innerText = localStorage.getItem("categoryTitle");
+function updateTitle() {
+    document.getElementById("cate").innerText = localStorage.getItem("categoryTitle");
+}
 
-function generateCards() {
-  for (let card of cards) {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    cardElement.setAttribute("data-name", card.name);
-    cardElement.innerHTML = `
+function generateCardDiv(card) {
+    return `
     <div class="front">
         <img class="front-image" src=${card.image} />
         <p class="card-text">${card.language.english}</p>
     </div>
     <div class="back"></div>
     `;
-    gridContainer.appendChild(cardElement);
-    cardElement.addEventListener("click", function () {
-      if (!isMuted) {
-        playCardSound(card.audio); // Spela upp ljudet när kortet klickas på
-      }
+}
 
-      flipCard.call(this);
-    });
-  }
+function generateCards() {
+    const gridContainer = document.querySelector(".grid-container");
+    for (let card of cards) {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
+        cardElement.setAttribute("data-name", card.name);
+        cardElement.innerHTML = generateCardDiv(card);
+        gridContainer.appendChild(cardElement);
+        cardElement.addEventListener("click", function () {
+            if (!isMuted) {
+                playCardSound(card.audio); // Spela upp ljudet när kortet klickas på
+            }
+
+            flipCard.call(this);
+        });
+    }
 }
 
 function playCardSound(audioSrc) {
@@ -121,14 +100,12 @@ function flipCard() {
 }
 
 function startTimer() {
-  if (!timerInterval) {
-    timerInterval = setInterval(() => {
-        timer++;
-        timerSpans.forEach((span) => {
-            span.textContent = timer;
-        })
-    }, 1000);
-  }
+    if (!timerInterval) {
+        timerInterval = setInterval(() => {
+            timer++;
+            updateGameSeconds();
+        }, 1000);
+    }
 }
 
 function checkForMatch() {
@@ -159,56 +136,105 @@ function resetBoard() {
   lockBoard = false;
 }
 
+function updateGameSeconds() {
+    document.querySelectorAll(".info-seconds").forEach((span) => {
+        span.innerText = timer;
+    });
+}
+
+function updatePage() {
+    updateRounds();
+    updateScore();
+    updateTitle();
+    updateTotalTime();
+    updateGameSeconds();
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Dölj .container_end-game vid sidans laddning
-  document.querySelector(".section_end-game").style.display = "none";
-  document.querySelector(".container_game-info").style.display = "flex";
-
-  let currentRounds = localStorage.getItem("totalRounds") || 0;
-  document.getElementById("info-rounds").innerText = currentRounds;
-
-  updateScore();
+    hideEndGameInfo();
+    showGameInfo();
+    updatePage();
 });
 
+function increaseTotalTime() {
+    let previousTotalTime = parseInt(localStorage.getItem("totalTime")) || 0;
+    let currentTotalTime = previousTotalTime + timer;
+    localStorage.setItem("totalTime", currentTotalTime);
+}
+
+function increaseRounds() {
+  let rounds = localStorage.getItem("totalRounds") || 0;
+  localStorage.setItem("totalRounds", ++rounds);
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    timer = 0;
+}
+
+function hideGameInfo() {
+    document.querySelector(".container_game-info").style.display = "none";
+}
+
+function showGameInfo() {
+    document.querySelector(".container_game-info").style.display = "flex";
+}
+
+function hideEndGameInfo() {
+    document.querySelector(".section_end-game").style.display = "none";
+}
+function showEndGameInfo() {
+    document.querySelector(".section_end-game").style.display = "flex";
+}
+
+function resetScore() {
+    score = 0;
+    updateScore();
+}
+
+function resetCards() {
+    const gridContainer = document.querySelector(".grid-container");
+    gridContainer.innerHTML = "";
+}
+// När spelet är slut
 function endGame() {
-  //totalRounds++;
-  totalMinutes += timer / 60;
+    increaseRounds();
+    increaseTotalTime();
 
-  // Rounds
-  let nRounds = localStorage.getItem("totalRounds") || 0;
-  localStorage.setItem("totalRounds", ++nRounds);
-  document.getElementById("info-rounds").innerText = nRounds;
+    updatePage();
 
-  localStorage.setItem("totalMinutes", totalMinutes);
+    resetTimer();
 
-    // Increase number of rounds
-    //let nRounds = localStorage.getItem("prevTotalRounds") || 0;
-    //localStorage.setItem("prevTotalRounds", ++nRounds);
-    //document.getElementById("info-rounds").innerText = nRounds;
-    /*
-  roundsElement.textContent = totalRounds;
-  totalMinutesElement.textContent = Math.floor(totalMinutes);
-*/
-
-  //totalMinutesSpan.textContent = Math.floor(totalMinutes);
-
-  clearInterval(timerInterval);
-  timerInterval = null;
-  timer = 0;
-
-  // När spelet är slut
-  document.querySelector(".section_end-game").style.display = "flex";
-  document.querySelector(".container_game-info").style.display = "none";
+    hideGameInfo();
+    showEndGameInfo();
 }
 
+// När spelet startas om
 function restartGame() {
-  // När spelet startas om
-  document.querySelector(".section_end-game").style.display = "none";
-  document.querySelector(".container_game-info").style.display = "flex";
-  resetBoard();
-  shuffleCards();
-  score = 0;
-  updateScore();
-  gridContainer.innerHTML = "";
-  generateCards();
+    hideEndGameInfo();
+    showGameInfo();
+
+    resetBoard();
+    resetScore();
+    resetCards();
+
+    shuffleCards();
+    generateCards();
+
+    updatePage();
 }
+
+function main() {
+    let category = localStorage.getItem("selectedCategory");
+
+    fetch("./data/" + category + ".json")
+        .then((res) => res.json())
+        .then((data) => {
+            cards = [...data, ...data];
+            shuffleCards();
+            generateCards();
+        });
+}
+
+main();

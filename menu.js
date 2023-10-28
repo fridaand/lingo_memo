@@ -1,11 +1,6 @@
-//let totalRounds = 0;
-//let totalMinutes = 0;
-
-
-
 function updatePage() {
-    let currentRounds = localStorage.getItem("totalRounds") || 0;
-    document.getElementById("info-rounds").innerText = currentRounds;
+    updateRounds();
+    updateTotalTime();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -41,20 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// FÖRSÖK: Spara spelresultat
-//const totalRoundsElement = document.querySelector(".rounds");
-//const totalMinutesElement = document.querySelector(".total-minutes");
-
-//const totalRounds = localStorage.getItem("totalRounds") || 0;
-//const totalMinutes = localStorage.getItem("totalMinutes") || 0;
-
-//totalRoundsElement.textContent = `Antal spelade omgångar: ${totalRounds}`;
-//totalMinutesElement.textContent = `Totalt spelade minuter: ${totalMinutes}`;
-
 /*
 ATT FIXA:
--spelresultat på båda sidor
--antal spelade minuter
++spelresultat på båda sidor
++antal spelade minuter
 -ev lägga till funktion för att läsa upp kategorikort på huvudsida också
 -game: pop-up resultat span kunna visa på två ställen
 -pause button
