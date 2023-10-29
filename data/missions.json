@@ -4,12 +4,12 @@
       "name": "Fruits",
       "cards": [
         {
-          "image": "..images/fruits/banana.png",
+          "image": "images/fruits/banana.png",
           "name": "banana",
           "sound": "sounds/banana.mp3"
         },
         {
-          "image": "../images/fruits/cherry.png",
+          "image": "images/fruits/cherry.png",
           "name": "cherry",
           "sound": "sounds/cherry.mp3"
         }
