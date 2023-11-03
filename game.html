@@ -3,19 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memo lingo game</title>
+    <title>LINGO MEMO GAME</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <main>
-      <h1>Memo lingo game</h1>
-      <h3 id="cate"></h3>
+        <!-- "NAVBAR" -->
+  <body>
+    <main>
+      <nav class="navbar">
+        <h1>LINGO MEMO GAME</h1>
+        <div class="hitbox" id="button_trigger"
+          ><img src="/icons/nav/cross_s.svg" alt=""
+        /></div>
+      </nav>
+
+            <!-- SECTION PAGE LABEL -->
+            <section class="section_page-label">
+              <div class="wrapper_h2-text-button">
+                <h2 id="cate"></h2>
+                <div class="wrapper_text-button">
+                  <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
+                  <div class="button_wrapper">
+                    <div id="button-mute" class="button-mute"><img class="hitbox" src="/icons/buttons/button_sound-off.png" alt=""></div>
+                    <div id="button-pause" class="button-pause" onclick="pause()"> <img class="hitbox" src="/icons/buttons/button_pause.png" alt="">
+                    </div>
+                  </div>
+
+                
+                </div>
+              </div>
+            </section>
+                <!-- SECTION DRAUGHTS & SECONDS -->
+                <section class="section_total">
+                  <h4 class="h3_label_s">PÅGÅENDE SPEL</h4>
+                  <div class="container_game-info">
+                    <div class="wrapper_spel-min">
+                      <div class="wrapper_text-min">
+                        <div><span class="score"></span> drag</div>
+                      </div>
+                      <div class="wrapper_text-min">
+                        <div><span class="info-seconds"></span> sekunder</div>
+
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                 <!-- showing the points -->
+     
+
+
+      
 
       <!-- container for the cards -->
-      <div class="grid-container"></div>
+      <div class="section_game"></div>
 
-      <!-- showing the points -->
-      <p>Försök: <span class="score"></span></p>
+     
+      <!-- SECTION TOTAL GAMES & MINUTES -->
+      <section class="section_total">
+        <h4 class="h3_label_s">TOTALT</h4>
+        <div class="container_game-info">
+          <div class="wrapper_spel-min">
+            <div class="wrapper_text-min">
+              <span id="info-rounds"></span>spel
+            </div>
+            <div class="wrapper_text-min">
+              <span id="info-totaltime"></span>minuter
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       <!-- button that starts the game (add more?)-->
       <div class="section_end-game">
@@ -31,7 +91,7 @@
       </div>
 
       <div class="container_game-info">
-        <div>Tid: <span class="info-seconds"></span> sekunder</div>
+        <!--
         <div>Antal spelade omgångar: <span id="info-rounds"></span></div>
         <div>Totalt spelade minuter: <span id="info-totaltime"></span></div>
 
@@ -39,12 +99,55 @@
             <button id="button-mute" class="button-mute">🔇</button>
             <button id="button-pause" class="button-pause" onclick="pause()">⏸️</button>
         </div>
-
+ -->
         <button class="button-menu" onclick="window.location.href='menu.html';">
           Huvudmeny
         </button>
+
       </div>
+<div id="popUpId" class="popup_bg">
+    <div class="popup_box"><span class="close">&times;</span>
+      <div class="popup_wrapper">   
+        <div class="hitbox"><img class="button_close" src="/icons/nav/cross_s.svg" alt=""></div>
+        <h2>VILL DU AVSLUTA?</h2>
+      </div>
+      <div class="button_wrapper">
+        <a href="menu.html"><div class="button_popup"><h3>Ja</h3></div></a>
+        <a href="menu.html"><div class="button_popup"><h3>Nej</h3></div></a>
+      </div>
+</div>
+   
+    </div>
     </main>
+
+    <script>
+      // Get the popup
+      let popuplet = document.getElementById("popUpId");
+      
+      // Get the button that opens the popup
+      let btn = document.getElementById("button_trigger");
+      
+      // Get the <span> element that closes the popup
+      let span = document.getElementsByClassName("button_close")[0];
+      
+      // When the user clicks the button, open the popup 
+      btn.onclick = function() {
+        popuplet.style.display = "block";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        popuplet.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == popup) {
+          popuplet.style.display = "none";
+        }
+      }
+      </script>
+
 
     <!-- script tag last in the body-->
     <script src="common.js"></script>

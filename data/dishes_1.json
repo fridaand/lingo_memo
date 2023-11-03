@@ -9,15 +9,6 @@
     "audio": "sound/dishes_1/burger.mp3"
   },
   {
-    "name": "curry",
-    "image": "images/dishes_1/curry.png",
-    "language": {
-      "english": "curry",
-      "french": "X"
-    },
-    "audio": "sound/dishes_1/curry.mp3"
-  },
-  {
     "name": "pancakes",
     "image": "images/dishes_1/pancakes.png",
     "language": {

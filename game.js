@@ -1,5 +1,3 @@
-
-
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -11,7 +9,9 @@ let isPaused = false;
 let lastAudio = undefined;
 
 function updateScore() {
-    document.querySelectorAll(".score").forEach((span) => {span.textContent = score;});
+  document.querySelectorAll(".score").forEach((span) => {
+    span.textContent = score;
+  });
 }
 
 function shuffleCards() {
@@ -28,11 +28,12 @@ function shuffleCards() {
 }
 
 function updateTitle() {
-    document.getElementById("cate").innerText = localStorage.getItem("categoryTitle");
+  document.getElementById("cate").innerText =
+    localStorage.getItem("categoryTitle");
 }
 
 function generateCardDiv(card) {
-    return `
+  return `
     <div class="front">
         <img class="front-image" src=${card.image} />
         <p class="card-text">${card.language.english}</p>
@@ -42,30 +43,30 @@ function generateCardDiv(card) {
 }
 
 function generateCards() {
-    const gridContainer = document.querySelector(".grid-container");
-    for (let card of cards) {
-        const cardElement = document.createElement("div");
-        cardElement.classList.add("card");
-        cardElement.setAttribute("data-name", card.name);
-        cardElement.innerHTML = generateCardDiv(card);
-        gridContainer.appendChild(cardElement);
-        cardElement.addEventListener("click", function () {
-            if (isPaused || (lastAudio && !lastAudio.ended)) {
-                return;
-            }
+  const gridContainer = document.querySelector(".section_game");
+  for (let card of cards) {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    cardElement.setAttribute("data-name", card.name);
+    cardElement.innerHTML = generateCardDiv(card);
+    gridContainer.appendChild(cardElement);
+    cardElement.addEventListener("click", function () {
+      if (isPaused || (lastAudio && !lastAudio.ended)) {
+        return;
+      }
 
-            if (!isMuted) {
-                playCardSound(card.audio); // Spela upp ljudet när kortet klickas på
-            }
+      if (!isMuted) {
+        playCardSound(card.audio); // Spela upp ljudet när kortet klickas på
+      }
 
-            flipCard.call(this);
-        });
-    }
+      flipCard.call(this);
+    });
+  }
 }
 
 function playCardSound(audioSrc) {
-    lastAudio = new Audio(audioSrc);
-    lastAudio.play();
+  lastAudio = new Audio(audioSrc);
+  lastAudio.play();
 }
 
 function flipCard() {
@@ -89,14 +90,14 @@ function flipCard() {
 }
 
 function startTimer() {
-    if (!timerInterval) {
-        timerInterval = setInterval(() => {
-            if (!isPaused) {
-                timer++;
-                updateGameSeconds();
-            }
-        }, 1000);
-    }
+  if (!timerInterval) {
+    timerInterval = setInterval(() => {
+      if (!isPaused) {
+        timer++;
+        updateGameSeconds();
+      }
+    }, 1000);
+  }
 }
 
 function checkForMatch() {
@@ -128,40 +129,40 @@ function resetBoard() {
 }
 
 function updateGameSeconds() {
-    document.querySelectorAll(".info-seconds").forEach((span) => {
-        span.innerText = timer;
-    });
+  document.querySelectorAll(".info-seconds").forEach((span) => {
+    span.innerText = timer;
+  });
 }
 
 function updatePage() {
-    updateRounds();
-    updateScore();
-    updateTitle();
-    updateTotalTime();
-    updateGameSeconds();
+  updateRounds();
+  updateScore();
+  updateTitle();
+  updateTotalTime();
+  updateGameSeconds();
 }
 
 function registerMuteButton() {
-    const muteButton = document.getElementById("button-mute");
-    muteButton.addEventListener("click", () => {
-        isMuted = !isMuted; // Växla ljudets tillstånd
+  const muteButton = document.getElementById("button-mute");
+  muteButton.addEventListener("click", () => {
+    isMuted = !isMuted; // Växla ljudets tillstånd
 
-        // Uppdatera knappens ikon beroende på ljudtillståndet
-        muteButton.innerHTML = isMuted ? "🔊" : "🔇";
-    });
+    // Uppdatera knappens ikon beroende på ljudtillståndet
+    muteButton.innerHTML = isMuted ? "🔊" : "🔇";
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    hideEndGameInfo();
-    showGameInfo();
-    registerMuteButton();
-    updatePage();
+  hideEndGameInfo();
+  showGameInfo();
+  registerMuteButton();
+  updatePage();
 });
 
 function increaseTotalTime() {
-    let previousTotalTime = parseInt(localStorage.getItem("totalTime")) || 0;
-    let currentTotalTime = previousTotalTime + timer;
-    localStorage.setItem("totalTime", currentTotalTime);
+  let previousTotalTime = parseInt(localStorage.getItem("totalTime")) || 0;
+  let currentTotalTime = previousTotalTime + timer;
+  localStorage.setItem("totalTime", currentTotalTime);
 }
 
 function increaseRounds() {
@@ -170,82 +171,82 @@ function increaseRounds() {
 }
 
 function resetTimer() {
-    clearInterval(timerInterval);
-    timerInterval = null;
-    timer = 0;
+  clearInterval(timerInterval);
+  timerInterval = null;
+  timer = 0;
 }
 
 function hideGameInfo() {
-    document.querySelector(".container_game-info").style.display = "none";
+  document.querySelector(".container_game-info").style.display = "none";
 }
 
 function showGameInfo() {
-    document.querySelector(".container_game-info").style.display = "flex";
+  document.querySelector(".container_game-info").style.display = "flex";
 }
 
 function hideEndGameInfo() {
-    document.querySelector(".section_end-game").style.display = "none";
+  document.querySelector(".section_end-game").style.display = "none";
 }
 function showEndGameInfo() {
-    document.querySelector(".section_end-game").style.display = "flex";
+  document.querySelector(".section_end-game").style.display = "flex";
 }
 
 function resetScore() {
-    score = 0;
-    updateScore();
+  score = 0;
+  updateScore();
 }
 
 function resetCards() {
-    const gridContainer = document.querySelector(".grid-container");
-    gridContainer.innerHTML = "";
+  const gridContainer = document.querySelector(".section_game");
+  gridContainer.innerHTML = "";
 }
 
 function pause() {
-    if (isPaused) {
-        isPaused = false;
-    } else {
-        isPaused = true;
-    }
+  if (isPaused) {
+    isPaused = false;
+  } else {
+    isPaused = true;
+  }
 }
 
 // När spelet är slut
 function endGame() {
-    increaseRounds();
-    increaseTotalTime();
+  increaseRounds();
+  increaseTotalTime();
 
-    updatePage();
+  updatePage();
 
-    resetTimer();
+  resetTimer();
 
-    hideGameInfo();
-    showEndGameInfo();
+  hideGameInfo();
+  showEndGameInfo();
 }
 
 // När spelet startas om
 function restartGame() {
-    hideEndGameInfo();
-    showGameInfo();
+  hideEndGameInfo();
+  showGameInfo();
 
-    resetBoard();
-    resetScore();
-    resetCards();
+  resetBoard();
+  resetScore();
+  resetCards();
 
-    shuffleCards();
-    generateCards();
+  shuffleCards();
+  generateCards();
 
-    updatePage();
+  updatePage();
 }
 
 function main() {
-    let category = localStorage.getItem("selectedCategory");
+  let category = localStorage.getItem("selectedCategory");
 
-    fetch("./data/" + category + ".json")
-        .then((res) => res.json())
-        .then((data) => {
-            cards = [...data, ...data];
-            shuffleCards();
-            generateCards();
-        });
+  fetch("./data/" + category + ".json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
 }
 
 main();
