@@ -1,0 +1,20 @@
+[
+  {
+    "name": "pink",
+    "image": "images/colors_1/pink.png",
+    "language": {
+      "english": "pink",
+      "french": "x"
+    },
+    "audio": "sound/colors_1/pink.mp3"
+  },
+  {
+    "name": "orange",
+    "image": "images/colors_1/orange.png",
+    "language": {
+      "english": "orange",
+      "french": "x"
+    },
+    "audio": "sound/colors_1/orange.mp3"
+  }
+]

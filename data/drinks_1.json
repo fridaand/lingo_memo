@@ -81,12 +81,12 @@
     "audio": "sound/drinks_1/wine_red.mp3"
   },
   {
-    "name": "wine_red",
-    "image": "images/drinks_1/wine_red.png",
+    "name": "wine_white",
+    "image": "images/drinks_1/wine_white.png",
     "language": {
       "english": "white wine",
       "french": "X"
     },
-    "audio": "sound/drinks_1/wine_red.mp3"
+    "audio": "sound/drinks_1/wine_white.mp3"
   }
 ]

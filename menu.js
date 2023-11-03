@@ -38,11 +38,3 @@ document.addEventListener("DOMContentLoaded", function () {
     updatePage();
   });
 });
-
-/*
-ATT FIXA:
-+spelresultat på båda sidor
-+antal spelade minuter
-+game: pop-up resultat span kunna visa på två ställen
-+pause button
-*/
