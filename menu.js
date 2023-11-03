@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     missionElement.addEventListener("click", () => {
       // Spara den valda kategorin i localStorage
       localStorage.setItem("selectedCategory", category.name);
-      localStorage.setItem(
-        "categoryTitle",
+      localStorage.setItem("categoryTitle",
         document.getElementById("cate-" + category.name).innerText
       );
 
@@ -32,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const clearElement = document.getElementById("clear-button");
-  clearElement.addEventListener("click", () => {
-    localStorage.clear();
-    updatePage();
-  });
+  //const clearElement = document.getElementById("clear-button");
+  //clearElement.addEventListener("click", () => {
+    //localStorage.clear();
+    //updatePage();
+  //});
 });
