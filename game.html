@@ -118,20 +118,23 @@
       let popup = document.getElementById("popUpId");
 
       // Get the button that opens the popup
-      let btn = document.getElementById("button_trigger");
+      let xButton = document.getElementById("button_trigger");
 
       // Get the <span> element that closes the popup
-      let span = document.getElementsByClassName("button_close")[0];
+      let closeElements = document.querySelectorAll(".button_close");
 
       // When the user clicks the button, open the popup
-      btn.onclick = function() {
+      xButton.onclick = function() {
         popup.style.display = "flex";
       }
 
+      closeElements.forEach((e) => {
+          e.onclick = function() {
+              popup.style.display = "none";
+          };
+      });
+
       // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        popup.style.display = "none";
-      }
 
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
