@@ -200,21 +200,23 @@ p {
 
 .section_end-game {
   display: flex;
-
-  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   height: 100%;
   position: absolute;
   top: 25%;
 }
 
 .container_end-game {
-  width: 400px;
+  display: flex;
+  width: 280px;
   height: auto;
   flex-direction: column;
   justify-content: center;
   border-radius: 20px;
   margin: auto;
-  padding: 3rem;
+  padding: 1.25rem;
   background-color: rgb(90, 177, 148);
 }
 
