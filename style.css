@@ -3,6 +3,7 @@
 /* ev flytta dessa egenskaper senare t anann div */
 body {
   display: flex;
+  height: 100vh;
   justify-content: center;
   color: white;
   font-family: "Quicksand", "Gill Sans", "Gill Sans MT", "Calibri",
@@ -23,7 +24,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
@@ -58,9 +59,9 @@ p {
   align-items: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  width: 360px;
+  width: 320px;
   justify-content: space-between;
-  row-gap: 0.5vw;
+  row-gap: 0.75vw;
   padding: var(--spacing-padding-l, 20px);
   background: var(
     --fade_forest_dark,
@@ -68,17 +69,23 @@ p {
   );
 }
 
+.info-sec {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+
 .card {
-  width: var(--measure-card-size-s, 72px);
-  height: var(--measure-card-size-s, 72px);
-  min-width: var(--measure-card-size-s, 72px);
-  min-height: var(--measure-card-size-s, 72px);
-  padding: var(--spacing-padding-xs, 8px) var(--spacing-padding-xs, 8px);
+  width: auto;
+  height: auto;
+  min-width: var(--measure-card-size-s, 60px);
+  min-height: var(--measure-card-size-s, 60px);
+  padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
   gap: 0.25rem;
   border-radius: 0.5rem;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   position: relative; /* important */
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
@@ -91,8 +98,9 @@ p {
 
 .card-text {
   color: #1d1d1d;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .front-image {
@@ -240,7 +248,7 @@ li {
   }
   main {
     min-width: 360px;
-    width: 440px;
+    width: auto;
     height: 100%;
     flex-direction: column;
     justify-content: center;
@@ -255,7 +263,7 @@ li {
 
   .navbar {
     display: flex;
-    width: 360px;
+    width: 320px;
     height: 48px;
     padding: var(--spacing-padding-xs, 8px) var(--spacing-padding-l, 20px);
     justify-content: space-between;
@@ -279,8 +287,8 @@ li {
 
   .section_page-label {
     display: flex;
-    width: 360px;
-    min-width: var(--measure-total-width-m, 360px);
+    width: 320px;
+    min-width: var(--measure-total-width-m, 320px);
     padding: var(--spacing-padding-m, 16px) var(--spacing-padding-l, 20px);
 
     flex-direction: column;
@@ -294,7 +302,7 @@ li {
 
   .section_total {
     display: flex;
-    width: 360px;
+    min-width: 320px;
 
     font-weight: 400;
     padding: 0px var(--spacing-padding-l, 20px);
@@ -318,7 +326,7 @@ li {
 
   .wrapper_h2-text-button {
     display: flex;
-    width: var(--measure-total-width-s, 360px);
+    min-width: var(--measure-total-width-s, 320px);
     justify-content: space-between;
     align-items: center;
   }
@@ -352,9 +360,11 @@ li {
 
   .wrapper_spel-min {
     display: flex;
-    justify-content: flex-space;
+    justify-content: space-between;
+    min-width: 164px;
+    width: auto;
     align-items: center;
-    gap: var(--spacing-padding-l, 20px);
+    gap: var(--spacing-padding-s, 8px);
   }
 
   .wrapper_text-min {
@@ -363,8 +373,27 @@ li {
     gap: var(--spacing-gap-xs, 8px);
   }
 
+  .button_s_r {
+    width: 1.5rem;
+    margin: 4px;
+    transition: ease-out 0.3s;
+  }
+
   .button_m {
     width: 2rem;
+    margin: 4px;
+    transition: ease-out 0.3s;
+  }
+
+  .button_m_r {
+    width: 2rem;
+    margin-left: 8px;
+    transition: ease-out 0.3s;
+  }
+
+  .button_m_l {
+    width: 2rem;
+    margin-right: 8px;
     transition: ease-out 0.3s;
   }
 
@@ -379,9 +408,8 @@ li {
 
   footer {
     display: flex;
-    width: 360px;
     height: 3rem;
-    min-width: var(--measure-total-width-m, 360px);
+    min-width: var(--measure-total-width-s, 320px);
     padding: 0px var(--spacing-padding-s, 1.25rem);
     justify-content: space-between;
     align-items: center;
@@ -400,24 +428,27 @@ li {
   /* POP UPS */
   .popup_bg {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 360px;
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(120, 40, 180, 0.4); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
   }
 }
 
 .popup_box {
   display: inline-flex;
+  height: auto;
   padding: 20px var(--spacing-padding-l, 20px);
   flex-direction: column;
   align-items: flex-start;
+  margin: auto;
   gap: var(--measure-card-image-s-2, 32px);
   border-radius: 8px;
   background: var(
@@ -442,6 +473,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-self: stretch;
+  gap: 0.5rem;
 }
 
 /* COMMON FONTS */
@@ -592,7 +624,7 @@ h2 {
 
 .category_label_dd {
   flex-direction: row;
-  min-width: var(--measure-total-width-m, 360px);
+  min-width: var(--measure-total-width-s, 320px);
   padding: 1.25rem;
   background: var(
     --fade_3,
@@ -622,7 +654,7 @@ h2 {
 
 .button_category {
   display: flex;
-  width: 160px;
+  width: 140px;
   padding: var(--spacing-padding-m, 16px) var(--spacing-padding-m, 16px);
   align-items: center;
   gap: var(--spacing-gap-xs, 8px);
@@ -641,22 +673,24 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   gap: 8px;
   width: 128px; /*test */
 }
 
-/* The Close Button */
+/* The Close Button 
 .button_close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
+*/
 
 .button_close:hover,
 .button_close:focus {
-  color: #000;
-  text-decoration: none;
+  opacity: 0.8;
+  transition: ease-out 0.3s;
   cursor: pointer;
 }
 .button_popup {

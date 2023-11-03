@@ -25,8 +25,8 @@
                 <div class="wrapper_text-button">
                   <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
                   <div class="button_wrapper">
-                    <div id="button-mute" class="button-mute"><img class="hitbox" src="/icons/buttons/button_sound-off.png" alt=""></div>
-                    <div id="button-pause" class="button-pause" onclick="pause()"> <img class="hitbox" src="/icons/buttons/button_pause.png" alt="">
+                    <div id="button-mute" class="hitbox button-mute"><img id="sound-icon" class="button_s_r" src="/icons/buttons/button_sound-off.png" alt="Mute button"></div>
+                    <div id="button-pause" class="hitbox button-pause" onclick="pause()"> <img id="play-pause" class="button_m_r" src="/icons/buttons/button_pause.png" alt="Play-pause button">
                     </div>
                   </div>
 
@@ -106,14 +106,15 @@
 
       </div>
 <div id="popUpId" class="popup_bg">
-    <div class="popup_box"><span class="close">&times;</span>
+    <div class="popup_box">
+      <!--<span class="close">&times;</span> -->
       <div class="popup_wrapper">   
         <div class="hitbox"><img class="button_close" src="/icons/nav/cross_s.svg" alt=""></div>
         <h2>VILL DU AVSLUTA?</h2>
       </div>
       <div class="button_wrapper">
         <a href="menu.html"><div class="button_popup"><h3>Ja</h3></div></a>
-        <a href="menu.html"><div class="button_popup"><h3>Nej</h3></div></a>
+        <a class="button_close"><div class="button_popup"><h3>Nej</h3></div></a>
       </div>
 </div>
    
@@ -122,7 +123,7 @@
 
     <script>
       // Get the popup
-      let popuplet = document.getElementById("popUpId");
+      let popup = document.getElementById("popUpId");
       
       // Get the button that opens the popup
       let btn = document.getElementById("button_trigger");
@@ -132,18 +133,18 @@
       
       // When the user clicks the button, open the popup 
       btn.onclick = function() {
-        popuplet.style.display = "block";
+        popup.style.display = "flex";
       }
       
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
-        popuplet.style.display = "none";
+        popup.style.display = "none";
       }
       
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
         if (event.target == popup) {
-          popuplet.style.display = "none";
+          popup.style.display = "none";
         }
       }
       </script>

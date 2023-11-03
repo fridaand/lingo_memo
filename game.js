@@ -144,11 +144,20 @@ function updatePage() {
 
 function registerMuteButton() {
   const muteButton = document.getElementById("button-mute");
+  const iconSound = document.getElementById("sound-icon");
   muteButton.addEventListener("click", () => {
     isMuted = !isMuted; // Växla ljudets tillstånd
 
-    // Uppdatera knappens ikon beroende på ljudtillståndet
-    muteButton.innerHTML = isMuted ? "🔊" : "🔇";
+    // ADDED IMAGES BELOW
+    iconSound.src = isMuted
+      ? "icons/buttons/button_sound-on.png"
+      : "icons/buttons/button_sound-off.png";
+
+    /* PREVIOUS CODE
+    muteButton.innerHTML = isMuted
+      ? "/icons/buttons/button_sound-on.png"
+      : "🔇";
+      */
   });
 }
 
@@ -202,10 +211,18 @@ function resetCards() {
 }
 
 function pause() {
+  //ADDED CONST VARIABLE
+  const playPause = document.getElementById("play-pause");
+
   if (isPaused) {
     isPaused = false;
+    //ADDED IMG
+    playPause.src = "icons/buttons/button_pause.png"; // Ändra till pause-ikonen
   } else {
     isPaused = true;
+
+    //ADDED IMG
+    playPause.src = "icons/buttons/button_play.png"; // Ändra till pause-ikonen
   }
 }
 
