@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const clearElement = document.getElementById("clear-button");
-  clearElement.addEventListener("click", () => {
-    localStorage.clear();
-    updatePage();
-  });
+  //const clearElement = document.getElementById("clear-button");
+  //clearElement.addEventListener("click", () => {
+    //localStorage.clear();
+    //updatePage();
+  //});
 });
