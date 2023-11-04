@@ -748,8 +748,6 @@ p {
     --button-shade-green,
     linear-gradient(179deg, #408581 18.99%, #3a7874 30.68%, #1a3534 81.09%)
   );
-
-  /* button_cat */
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2),
     -2px -2px 8px 0px rgba(0, 0, 0, 0.15) inset;
 }

@@ -113,15 +113,6 @@
       </div>
 
       <div class="container_game-info">
-        <!--
-                  <div>Antal spelade omgångar: <span id="info-rounds"></span></div>
-                  <div>Totalt spelade minuter: <span id="info-totaltime"></span></div>
-
-                  <div class="wraper-button">
-                  <button id="button-mute" class="button-mute">🔇</button>
-                  <button id="button-pause" class="button-pause" onclick="pause()">⏸️</button>
-                  </div>
-              -->
         <button class="button-menu" onclick="window.location.href='menu.html';">
           Huvudmeny
         </button>
@@ -149,37 +140,13 @@
       </div>
     </main>
 
-    <script>
-      // Get the popup
-      let popup = document.getElementById("popUpId");
-
-      // Get the button that opens the popup
-      let xButton = document.getElementById("button_trigger");
-
-      // Get the <span> element that closes the popup
-      let closeElements = document.querySelectorAll(".button_close");
-
-      // When the user clicks the button, open the popup
-      xButton.onclick = function () {
-        popup.style.display = "flex";
-      };
-
-      closeElements.forEach((e) => {
-        e.onclick = function () {
-          popup.style.display = "none";
-        };
-      });
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == popup) {
-          popup.style.display = "none";
-        }
-      };
-    </script>
-
     <!-- script tag last in the body-->
     <script src="common.js"></script>
     <script src="game.js"></script>
   </body>
 </html>
+
+<!--
+      <button id="clear-button" class="button-clear">CLEAR</button>
+      -->
+<!-- "Icon made by Freepik from www.flaticon.com" -->

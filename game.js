@@ -4,9 +4,31 @@ let lockBoard = false;
 let score = 0;
 let timer = 0;
 let timerInterval;
-let isMuted = false; // Variabel för att hålla reda på ljudtillståndet
+let isMuted = false;
 let isPaused = false;
 let lastAudio = undefined;
+let popup = document.getElementById("popUpId"); // Get the popup
+let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
+let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
+
+// FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
+xButton.onclick = function () {
+  // When the user clicks the button, open the popup
+  popup.style.display = "flex";
+};
+
+closeElements.forEach((e) => {
+  e.onclick = function () {
+    popup.style.display = "none";
+  };
+});
+
+window.onclick = function (event) {
+  // When the user clicks anywhere outside of the popup, close it
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+};
 
 function updateScore() {
   document.querySelectorAll(".score").forEach((span) => {
@@ -148,16 +170,9 @@ function registerMuteButton() {
   muteButton.addEventListener("click", () => {
     isMuted = !isMuted; // Växla ljudets tillstånd
 
-    // ADDED IMAGES BELOW
     iconSound.src = isMuted
       ? "icons/buttons/button_sound-on.png"
       : "icons/buttons/button_sound-off.png";
-
-    /* PREVIOUS CODE
-    muteButton.innerHTML = isMuted
-      ? "/icons/buttons/button_sound-on.png"
-      : "🔇";
-      */
   });
 }
 
@@ -211,18 +226,15 @@ function resetCards() {
 }
 
 function pause() {
-  //ADDED CONST VARIABLE
   const playPause = document.getElementById("play-pause");
 
   if (isPaused) {
     isPaused = false;
-    //ADDED IMG
-    playPause.src = "icons/buttons/button_pause.png"; // Ändra till pause-ikonen
+    playPause.src = "icons/buttons/button_pause.png";
   } else {
     isPaused = true;
 
-    //ADDED IMG
-    playPause.src = "icons/buttons/button_play.png"; // Ändra till pause-ikonen
+    playPause.src = "icons/buttons/button_play.png";
   }
 }
 
@@ -230,11 +242,8 @@ function pause() {
 function endGame() {
   increaseRounds();
   increaseTotalTime();
-
   updatePage();
-
   resetTimer();
-
   hideGameInfo();
   showEndGameInfo();
 }
@@ -243,14 +252,11 @@ function endGame() {
 function restartGame() {
   hideEndGameInfo();
   showGameInfo();
-
   resetBoard();
   resetScore();
   resetCards();
-
   shuffleCards();
   generateCards();
-
   updatePage();
 }
 
