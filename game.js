@@ -1,7 +1,7 @@
 let cards = [];
 let firstCard = null;
 let secondCard = null;
-//let lockBoard = false;
+let lockBoard = false;
 let score = 0;
 let timer = 0;
 let timerInterval;
@@ -75,7 +75,7 @@ function generateCards() {
     gridContainer.appendChild(cardElement);
 
     cardElement.onClick = function () {
-      if (isPaused || (lastAudio && !lastAudio.ended)) {
+      if (isPaused || (lastAudio && !lastAudio.ended) || lockBoard) {
         return;
       }
 
@@ -96,7 +96,6 @@ function playCardSound(audioSrc) {
 }
 
 function flipCard() {
-  //if (lockBoard) return; // what is this?
   if (this === firstCard) return;
 
   this.classList.add("flipped");
@@ -110,7 +109,7 @@ function flipCard() {
   secondCard = this;
   score++;
   updateScore();
-  //lockBoard = true;
+  lockBoard = true;
 
   checkForMatch();
 }
@@ -151,7 +150,7 @@ function unflipCards() {
 function resetBoard() {
   firstCard = null;
   secondCard = null;
-  //lockBoard = false;
+  lockBoard = false;
 }
 
 function updateGameSeconds() {
@@ -196,6 +195,12 @@ function increaseTotalTime() {
 function increaseRounds() {
   let rounds = localStorage.getItem("totalRounds") || 0;
   localStorage.setItem("totalRounds", ++rounds);
+}
+
+function increaseStars() {
+  const category = localStorage.getItem("selectedCategory");
+  let stars = localStorage.getItem("stars-" + category) || 0;
+  localStorage.setItem("stars-" + category, ++stars);
 }
 
 function resetTimer() {
@@ -246,6 +251,7 @@ function pause() {
 function endGame() {
   increaseRounds();
   increaseTotalTime();
+  increaseStars();
   updatePage();
   resetTimer();
   hideGameInfo();
