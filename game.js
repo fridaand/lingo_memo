@@ -1,6 +1,7 @@
 let cards = [];
-let firstCard, secondCard;
-let lockBoard = false;
+let firstCard = null;
+let secondCard = null;
+//let lockBoard = false;
 let score = 0;
 let timer = 0;
 let timerInterval;
@@ -72,7 +73,8 @@ function generateCards() {
     cardElement.setAttribute("data-name", card.name);
     cardElement.innerHTML = generateCardDiv(card);
     gridContainer.appendChild(cardElement);
-    cardElement.addEventListener("click", function () {
+
+    cardElement.onClick = function () {
       if (isPaused || (lastAudio && !lastAudio.ended)) {
         return;
       }
@@ -82,7 +84,9 @@ function generateCards() {
       }
 
       flipCard.call(this);
-    });
+    };
+
+    cardElement.addEventListener("click", cardElement.onClick);
   }
 }
 
@@ -92,7 +96,7 @@ function playCardSound(audioSrc) {
 }
 
 function flipCard() {
-  if (lockBoard) return;
+  //if (lockBoard) return; // what is this?
   if (this === firstCard) return;
 
   this.classList.add("flipped");
@@ -106,7 +110,7 @@ function flipCard() {
   secondCard = this;
   score++;
   updateScore();
-  lockBoard = true;
+  //lockBoard = true;
 
   checkForMatch();
 }
@@ -128,8 +132,8 @@ function checkForMatch() {
 }
 
 function disableCards() {
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
+  firstCard.removeEventListener("click", firstCard.onClick);
+  secondCard.removeEventListener("click", secondCard.onClick);
   resetBoard();
   if (document.querySelectorAll(".card:not(.flipped)").length === 0) {
     endGame();
@@ -147,7 +151,7 @@ function unflipCards() {
 function resetBoard() {
   firstCard = null;
   secondCard = null;
-  lockBoard = false;
+  //lockBoard = false;
 }
 
 function updateGameSeconds() {
@@ -171,8 +175,8 @@ function registerMuteButton() {
     isMuted = !isMuted; // Växla ljudets tillstånd
 
     iconSound.src = isMuted
-      ? "icons/buttons/button_sound-on.png"
-      : "icons/buttons/button_sound-off.png";
+      ? "icons/buttons/button_sound-off.png"
+      : "icons/buttons/button_sound-on.png";
   });
 }
 
