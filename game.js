@@ -78,7 +78,7 @@ function generateCards() {
       }
 
       if (!isMuted) {
-        playCardSound(card.audio); // Spela upp ljudet när kortet klickas på
+        playCardSound(card.audio.english); // Spela upp ljudet när kortet klickas på
       }
 
       flipCard.call(this);

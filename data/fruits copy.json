@@ -1,92 +1,122 @@
 [
   {
-    "name": "banana",
-    "image": "..images/fruits/banana.png",
-    "language": {
-      "english": "banana",
-      "french": "la banane"
-    },
-    "audio": "sound/fruits/banana.mp3"
-  },
-  {
-    "name": "cherry",
-    "image": "../images/fruits/cherry.png",
-    "language": {
-      "english": "cherry",
-      "french": "la cerise"
-    },
-    "audio": "sound/fruits/cherry.mp3"
-  },
-  {
-    "name": "grape",
-    "image": "../images/fruits/grape.png",
-    "language": {
-      "english": "grape",
-      "french": "le raisin"
-    },
-    "audio": "sound/fruits/grape.mp3"
-  },
-  {
-    "name": "orange",
-    "image": "../images/fruits/orange.png",
-    "language": {
-      "english": "orange",
-      "french": "l'orange"
-    },
-    "audio": "sound/fruits/orange.mp3"
-  },
-  {
-    "name": "peach",
-    "image": "../images/fruits/peach.png",
-    "language": {
-      "english": "peach",
-      "french": "la pêche"
-    },
-    "audio": "sound/fruits/peach.mp3"
-  },
-  {
-    "name": "pear",
-    "image": "../images/fruits/pear.png",
-    "language": {
-      "english": "pear",
-      "french": "la poire"
-    },
-    "audio": "sound/fruits/pear.mp3"
-  },
-  {
-    "name": "pineapple",
-    "image": "../images/fruits/pineapple.png",
-    "language": {
-      "english": "pineapple",
-      "french": "l'ananas"
-    },
-    "audio": "sound/fruits/pineapple.mp3"
-  },
-  {
     "name": "apple",
-    "image": "../images/fruits/apple.png",
+    "image": "images/fruits_1/apple.png",
     "language": {
       "english": "apple",
       "french": "la pomme"
     },
-    "audio": "sound/fruits/apple.mp3"
+    "audio": {
+      "english": "sound/fruits_1/apple.mp3",
+      "french": "sound/fruits_1/pomme.mp3"
+    }
+  },
+  {
+    "name": "banana",
+    "image": "images/fruits_1/banana.png",
+    "language": {
+      "english": "banana",
+      "french": "la banane"
+    },
+    "audio": {
+      "english": "sound/fruits_1/banana.mp3",
+      "french": "sound/fruits_1/banane.mp3"
+    }
+  },
+  {
+    "name": "cherry",
+    "image": "images/fruits_1/cherry.png",
+    "language": {
+      "english": "cherry",
+      "french": "la cerise"
+    },
+    "audio": {
+      "english": "sound/fruits_1/cherry.mp3",
+      "french": "sound/fruits_1/cerise.mp3"
+    }
+  },
+  {
+    "name": "grape",
+    "image": "images/fruits_1/grape.png",
+    "language": {
+      "english": "grape",
+      "french": "le raisin"
+    },
+    "audio": {
+      "english": "sound/fruits_1/grape.mp3",
+      "french": "sound/fruits_1/raisin.mp3"
+    }
   },
   {
     "name": "kiwi",
-    "image": "../images/fruits/kiwi.png",
+    "image": "images/fruits_1/kiwi.png",
     "language": {
       "english": "kiwi",
       "french": "le kiwi"
     },
-    "audio": "sound/fruits/kiwi.mp3"
+    "audio": {
+      "english": "sound/fruits_1/kiwi.mp3",
+      "french": "sound/fruits_1/kiwi-fr.mp3"
+    }
+  },
+  {
+    "name": "orange",
+    "image": "images/fruits_1/orange.png",
+    "language": {
+      "english": "orange",
+      "french": "l'orange"
+    },
+    "audio": {
+      "english": "sound/fruits_1/orange.mp3",
+      "french": "sound/fruits_1/orange-fr.mp3"
+    }
+  },
+  {
+    "name": "peach",
+    "image": "images/fruits_1/peach.png",
+    "language": {
+      "english": "peach",
+      "french": "la pêche"
+    },
+    "audio": {
+      "english": "sound/fruits_1/peach.mp3",
+      "french": "sound/fruits_1/peche.mp3"
+    }
+  },
+  {
+    "name": "pineapple",
+    "image": "images/fruits_1/pineapple.png",
+    "language": {
+      "english": "pineapple",
+      "french": "l'ananas"
+    },
+    "audio": {
+      "english": "sound/fruits_1/pineapple.mp3",
+      "french": "sound/fruits_1/ananas.mp3"
+    }
+  },
+  {
+    "name": "pear",
+    "image": "images/fruits_1/pear.png",
+    "language": {
+      "english": "pear",
+      "french": "la poire"
+    },
+    "audio": {
+      "english": "sound/fruits_1/pear.mp3",
+      "french": "sound/fruits_1/poire.mp3"
+    }
   },
   {
     "name": "strawberry",
-    "image": "../images/fruits/strawberry.png",
+    "image": "images/fruits_1/strawberry.png",
     "language": {
       "english": "strawberry",
       "french": "la fraise"
     },
-    "audio": "sound/fruits/strawberry.mp3"
+    "audio": {
+      "english": "sound/fruits_1/strawberry.mp3",
+      "french": "sound/fruits_1/fraise.mp3"
+    }
   }
 ]

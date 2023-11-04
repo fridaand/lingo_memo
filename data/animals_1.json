@@ -4,89 +4,119 @@
     "image": "images/animals_1/bird.png",
     "language": {
       "english": "bird",
-      "french": "X"
+      "french": "l'oiseau"
     },
-    "audio": "sound/animals_1/bird.mp3"
+    "audio": {
+      "english": "sound/animals_1/bird.mp3",
+      "french": "sound/animals_1/oiseau.mp3"
+    }
   },
   {
     "name": "cat",
     "image": "images/animals_1/cat.png",
     "language": {
       "english": "cat",
-      "french": "X"
+      "french": "le chat"
     },
-    "audio": "sound/animals_1/cat.mp3"
+    "audio": {
+      "english": "sound/animals_1/cat.mp3",
+      "french": "sound/animals_1/chat.mp3"
+    }
   },
   {
     "name": "cow",
     "image": "images/animals_1/cow.png",
     "language": {
       "english": "cow",
-      "french": "X"
+      "french": "la vache"
     },
-    "audio": "sound/animals_1/cow.mp3"
+    "audio": {
+      "english": "sound/animals_1/cow.mp3",
+      "french": "sound/animals_1/vache.mp3"
+    }
   },
   {
     "name": "dog",
     "image": "images/animals_1/dog.png",
     "language": {
       "english": "dog",
-      "french": "X"
+      "french": "le chien"
     },
-    "audio": "sound/animals_1/dog.mp3"
+    "audio": {
+      "english": "sound/animals_1/dog.mp3",
+      "french": "sound/animals_1/chien.mp3"
+    }
   },
   {
     "name": "fish",
     "image": "images/animals_1/fish.png",
     "language": {
       "english": "fish",
-      "french": "X"
+      "french": "le poisson"
     },
-    "audio": "sound/animals_1/fish.mp3"
+    "audio": {
+      "english": "sound/animals_1/fish.mp3",
+      "french": "sound/animals_1/poisson.mp3"
+    }
   },
   {
     "name": "hamster",
     "image": "images/animals_1/hamster.png",
     "language": {
       "english": "hamster",
-      "french": "X"
+      "french": "le hamster"
     },
-    "audio": "sound/animals_1/hamster.mp3"
+    "audio": {
+      "english": "sound/animals_1/hamster.mp3",
+      "french": "sound/animals_1/hamster-fr.mp3"
+    }
   },
   {
     "name": "horse",
     "image": "images/animals_1/horse.png",
     "language": {
       "english": "horse",
-      "french": "X"
+      "french": "le cheval"
     },
-    "audio": "sound/animals_1/horse.mp3"
+    "audio": {
+      "english": "sound/animals_1/horse.mp3",
+      "french": "sound/animals_1/cheval.mp3"
+    }
   },
   {
     "name": "pig",
     "image": "images/animals_1/pig.png",
     "language": {
       "english": "pig",
-      "french": "X"
+      "french": "le cochon"
     },
-    "audio": "sound/animals_1/pig.mp3"
+    "audio": {
+      "english": "sound/animals_1/pig.mp3",
+      "french": "sound/animals_1/cochon.mp3"
+    }
   },
   {
     "name": "rabbit",
     "image": "images/animals_1/rabbit.png",
     "language": {
       "english": "rabbit",
-      "french": "X"
+      "french": "le lapin"
     },
-    "audio": "sound/animals_1/rabbit.mp3"
+    "audio": {
+      "english": "sound/animals_1/rabbit.mp3",
+      "french": "sound/animals_1/lapin.mp3"
+    }
   },
   {
     "name": "sheep",
     "image": "images/animals_1/sheep.png",
     "language": {
       "english": "sheep",
-      "french": "X"
+      "french": "le mouton"
     },
-    "audio": "sound/animals_1/sheep.mp3"
+    "audio": {
+      "english": "sound/animals_1/sheep.mp3",
+      "french": "sound/animals_1/mouton.mp3"
+    }
   }
 ]

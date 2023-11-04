@@ -4,89 +4,119 @@
     "image": "images/drinks_1/beer.png",
     "language": {
       "english": "beer",
-      "french": "X"
+      "french": "la bière"
     },
-    "audio": "sound/drinks_1/beer.mp3"
+    "audio": {
+      "english": "sound/drinks_1/beer.mp3",
+      "french": "sound/drinks_1/biere.mp3"
+    }
   },
   {
     "name": "coffee",
     "image": "images/drinks_1/coffee.png",
     "language": {
       "english": "coffee",
-      "french": "X"
+      "french": "le café"
     },
-    "audio": "sound/drinks_1/coffee.mp3"
+    "audio": {
+      "english": "sound/drinks_1/coffee.mp3",
+      "french": "sound/drinks_1/cafe.mp3"
+    }
   },
   {
     "name": "hot_chocolate",
     "image": "images/drinks_1/hot_chocolate.png",
     "language": {
       "english": "hot chocolate",
-      "french": "X"
+      "french": "le chocolat chaud"
     },
-    "audio": "sound/drinks_1/hot_chocolate.mp3"
+    "audio": {
+      "english": "sound/drinks_1/hot_chocolate.mp3",
+      "french": "sound/drinks_1/chocolat_chaud.mp3"
+    }
   },
   {
     "name": "juice_apple",
     "image": "images/drinks_1/juice_apple.png",
     "language": {
       "english": "apple juice",
-      "french": "X"
+      "french": "le jus de pomme"
     },
-    "audio": "sound/drinks_1/juice_apple.mp3"
+    "audio": {
+      "english": "sound/drinks_1/juice_apple.mp3",
+      "french": "sound/drinks_1/jus_pomme.mp3"
+    }
   },
   {
     "name": "juice_orange",
     "image": "images/drinks_1/juice_orange.png",
     "language": {
       "english": "orange juice",
-      "french": "X"
+      "french": "le jus d'orange"
     },
-    "audio": "sound/drinks_1/juice_orange.mp3"
+    "audio": {
+      "english": "sound/drinks_1/juice_orange.mp3",
+      "french": "sound/drinks_1/jus_orange.mp3"
+    }
   },
   {
     "name": "soda",
     "image": "images/drinks_1/soda.png",
     "language": {
       "english": "soda",
-      "french": "X"
+      "french": "le soda"
     },
-    "audio": "sound/drinks_1/soda.mp3"
+    "audio": {
+      "english": "sound/drinks_1/soda.mp3",
+      "french": "sound/drinks_1/soda-fr.mp3"
+    }
   },
   {
     "name": "tea",
     "image": "images/drinks_1/tea.png",
     "language": {
       "english": "tea",
-      "french": "X"
+      "french": "le thé"
     },
-    "audio": "sound/drinks_1/tea.mp3"
+    "audio": {
+      "english": "sound/drinks_1/tea.mp3",
+      "french": "sound/drinks_1/the.mp3"
+    }
   },
   {
     "name": "water",
     "image": "images/drinks_1/water.png",
     "language": {
       "english": "water",
-      "french": "X"
+      "french": "l'eau"
     },
-    "audio": "sound/drinks_1/water.mp3"
+    "audio": {
+      "english": "sound/drinks_1/water.mp3",
+      "french": "sound/drinks_1/eau.mp3"
+    }
   },
   {
     "name": "wine_red",
     "image": "images/drinks_1/wine_red.png",
     "language": {
       "english": "red wine",
-      "french": "X"
+      "french": "le vin rouge"
     },
-    "audio": "sound/drinks_1/wine_red.mp3"
+    "audio": {
+      "english": "sound/drinks_1/wine_red.mp3",
+      "french": "sound/drinks_1/vin_rouge.mp3"
+    }
   },
   {
     "name": "wine_white",
     "image": "images/drinks_1/wine_white.png",
     "language": {
       "english": "white wine",
-      "french": "X"
+      "french": "le vin blanc"
     },
-    "audio": "sound/drinks_1/wine_white.mp3"
+    "audio": {
+      "english": "sound/drinks_1/wine_white.mp3",
+      "french": "sound/drinks_1/vin_blanc.mp3"
+    }
   }
 ]
