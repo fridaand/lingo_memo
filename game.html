@@ -8,82 +8,112 @@
   </head>
 
   <body>
-      <main>
-          <nav class="navbar">
-              <h1>LINGO MEMO GAME</h1>
-              <div class="hitbox" id="button_trigger">
-                  <img src="./icons/nav/cross_s.svg" alt=""/>
+    <main>
+      <nav class="navbar">
+        <h1>LINGO MEMO GAME</h1>
+        <div class="hitbox" id="button_trigger">
+          <img src="./icons/nav/cross_s.svg" alt="" />
+        </div>
+      </nav>
+
+      <!-- SECTION PAGE LABEL -->
+      <section class="section_page-label">
+        <div class="wrapper_h2-text-button">
+          <h2 id="cate"></h2>
+          <div class="wrapper_text-button">
+            <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
+            <div class="button_wrapper">
+              <div id="button-mute" class="hitbox button-mute">
+                <img
+                  id="sound-icon"
+                  class="button_s_r"
+                  src="./icons/buttons/button_sound-off.png"
+                  alt="Mute button"
+                />
               </div>
-          </nav>
-
-          <!-- SECTION PAGE LABEL -->
-          <section class="section_page-label">
-              <div class="wrapper_h2-text-button">
-                  <h2 id="cate"></h2>
-                  <div class="wrapper_text-button">
-                      <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
-                      <div class="button_wrapper">
-                          <div id="button-mute" class="hitbox button-mute">
-                              <img id="sound-icon" class="button_s_r" src="./icons/buttons/button_sound-off.png" alt="Mute button">
-                          </div>
-                          <div id="button-pause" class="hitbox button-pause" onclick="pause()">
-                              <img id="play-pause" class="button_m_r" src="./icons/buttons/button_pause.png" alt="Play-pause button">
-                          </div>
-                      </div>
-                  </div>
+              <div
+                id="button-pause"
+                class="hitbox button-pause"
+                onclick="pause()"
+              >
+                <img
+                  id="play-pause"
+                  class="button_m_r"
+                  src="./icons/buttons/button_pause.png"
+                  alt="Play-pause button"
+                />
               </div>
-          </section>
-
-          <!-- SECTION DRAUGHTS & SECONDS -->
-          <section class="section_total">
-              <h4 class="h3_label_s">PÅGÅENDE SPEL</h4>
-              <div class="container_game-info">
-                  <div class="wrapper_spel-min">
-                      <div class="wrapper_text-min">
-                          <div><span class="score"></span> drag</div>
-                      </div>
-                      <div class="wrapper_text-min">
-                          <div><span class="info-seconds"></span> sekunder</div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-          <!-- showing the points -->
-
-          <!-- container for the cards -->
-          <div class="section_game"></div>
-
-          <!-- SECTION TOTAL GAMES & MINUTES -->
-          <section class="section_total">
-              <h4 class="h3_label_s">TOTALT</h4>
-              <div class="container_game-info">
-                  <div class="wrapper_spel-min">
-                      <div class="wrapper_text-min">
-                          <span id="info-rounds"></span>spel
-                      </div>
-                      <div class="wrapper_text-min">
-                          <span id="info-totaltime"></span>minuter
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-          <!-- button that starts the game (add more?)-->
-          <div class="section_end-game">
-              <div class="container_end-game">
-                  <h3>Bra gjort!</h3>
-                  <p>Du klarade spelet med <span class="score"></span> drag</p>
-                  <p>På <span class="info-seconds"></span> sekunder</p>
-                  <p>Tryck på knappen för att spela igen</p>
-                  <div class="actions">
-                      <button onclick="restartGame()">Spela igen</button>
-                  </div>
-              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="container_game-info">
-              <!--
+      <!-- SECTION DRAUGHTS & SECONDS -->
+      <section class="section_total">
+        <h4 class="h3_label_s">PÅGÅENDE SPEL</h4>
+        <div class="container_game-info">
+          <div class="wrapper_spel-min">
+            <div class="wrapper_text-min">
+              <div><span class="score"></span> drag</div>
+            </div>
+            <div class="wrapper_text-min">
+              <div><span class="info-seconds"></span> sekunder</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- showing the points -->
+
+      <!-- container for the cards -->
+      <div class="section_game"></div>
+
+      <!-- SECTION TOTAL GAMES & MINUTES -->
+      <section class="section_total">
+        <h4 class="h3_label_s">TOTALT</h4>
+        <div class="container_game-info">
+          <div class="wrapper_spel-min">
+            <div class="wrapper_text-min">
+              <span id="info-rounds"></span>spel
+            </div>
+            <div class="wrapper_text-min">
+              <span id="info-totaltime"></span>minuter
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- button that starts the game (add more?)-->
+      <div class="section_end-game">
+        <div class="container_end-game">
+          <div class="wrapper_justify-end">
+            <div class="hitbox_tl" onclick="restartGame()">
+              <img src="./icons/nav/cross_s.svg" />
+            </div>
+          </div>
+          <div class="wrapper_h2-text">
+            <h2>BRA GJORT!</h2>
+            <div>
+              <p>Du klarade spelet med <span class="score"></span> drag</p>
+              <p>På <span class="info-seconds"></span> sekunder</p>
+            </div>
+          </div>
+          <div class="button_wrapper">
+            <div class="actions button_primary" onclick="restartGame()">
+              <h3>Spela igen</h3>
+            </div>
+            <div
+              class="button_primary button-menu"
+              onclick="window.location.href='menu.html';"
+            >
+              <h3>Huvudmeny</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_game-info">
+        <!--
                   <div>Antal spelade omgångar: <span id="info-rounds"></span></div>
                   <div>Totalt spelade minuter: <span id="info-totaltime"></span></div>
 
@@ -92,26 +122,32 @@
                   <button id="button-pause" class="button-pause" onclick="pause()">⏸️</button>
                   </div>
               -->
-              <button class="button-menu" onclick="window.location.href='menu.html';">
-                  Huvudmeny
-              </button>
+        <button class="button-menu" onclick="window.location.href='menu.html';">
+          Huvudmeny
+        </button>
+      </div>
 
+      <div id="popUpId" class="popup_bg">
+        <div class="popup_box">
+          <!--<span class="close">&times;</span> -->
+          <div class="wrapper_justify-end">
+            <div class="hitbox_tl">
+              <img class="button_close" src="./icons/nav/cross_s.svg" alt="" />
+            </div>
           </div>
+          <h2>VILL DU AVSLUTA?</h2>
 
-          <div id="popUpId" class="popup_bg">
-              <div class="popup_box">
-                  <!--<span class="close">&times;</span> -->
-                  <div class="popup_wrapper">
-                      <div class="hitbox"><img class="button_close" src="./icons/nav/cross_s.svg" alt=""></div>
-                      <h2>VILL DU AVSLUTA?</h2>
-                  </div>
-                  <div class="button_wrapper">
-                      <a href="menu.html"><div class="button_popup"><h3>Ja</h3></div></a>
-                      <a class="button_close"><div class="button_popup"><h3>Nej</h3></div></a>
-                  </div>
-              </div>
+          <div class="button_wrapper">
+            <a href="menu.html"
+              ><div class="button_primary"><h3>Ja</h3></div></a
+            >
+            <a class="button_close"
+              ><div class="button_primary"><h3>Nej</h3></div></a
+            >
           </div>
-      </main>
+        </div>
+      </div>
+    </main>
 
     <script>
       // Get the popup
@@ -124,25 +160,23 @@
       let closeElements = document.querySelectorAll(".button_close");
 
       // When the user clicks the button, open the popup
-      xButton.onclick = function() {
+      xButton.onclick = function () {
         popup.style.display = "flex";
-      }
+      };
 
       closeElements.forEach((e) => {
-          e.onclick = function() {
-              popup.style.display = "none";
-          };
+        e.onclick = function () {
+          popup.style.display = "none";
+        };
       });
 
-      // When the user clicks on <span> (x), close the modal
-
       // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
+      window.onclick = function (event) {
         if (event.target == popup) {
           popup.style.display = "none";
         }
-      }
-      </script>
+      };
+    </script>
 
     <!-- script tag last in the body-->
     <script src="common.js"></script>

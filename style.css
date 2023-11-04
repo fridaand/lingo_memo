@@ -5,7 +5,7 @@ body {
   display: flex;
   height: 100vh;
   justify-content: center;
-  color: white;
+  color: #ffe7a7;
   font-family: "Quicksand", "Gill Sans", "Gill Sans MT", "Calibri",
     "Trebuchet MS", sans-serif;
   top: 0;
@@ -21,6 +21,7 @@ h1 {
   text-align: center;
   font-weight: 700;
   font-size: 50px;
+  letter-spacing: 0.025rem;
 }
 
 h3 {
@@ -28,30 +29,15 @@ h3 {
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
+  letter-spacing: 0.025rem;
 }
 
 p {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 500;
-}
-
-.actions {
-  display: flex;
-  justify-content: center;
-}
-
-.actions button:hover {
-  background-color: rgb(49, 118, 95);
-}
-
-.actions button {
-  padding: 0.5rem 3rem;
-  font-size: 2rem;
-  border-radius: 2rem;
-  background-color: #79d9a1;
-  color: white;
-  border: solid 3px;
+  letter-spacing: 0.025rem;
+  margin: 0;
 }
 
 .section_game {
@@ -200,24 +186,40 @@ p {
 
 .section_end-game {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 360px;
   height: 100%;
   position: absolute;
-  top: 25%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .container_end-game {
   display: flex;
   width: 280px;
   height: auto;
+  padding: 1.25rem;
   flex-direction: column;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: var(--radius-popup, 16px);
   margin: auto;
-  padding: 1.25rem;
-  background-color: rgb(90, 177, 148);
+  background: var(
+    --fade_forest_footer,
+    linear-gradient(185deg, #428580 8.78%, #3b7773 27.96%, #1c3836 108.32%)
+  );
+  /* board-shadow */
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2),
+    0px -2px 4px 0px rgba(0, 0, 0, 0.15) inset,
+    0px 2px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.wrapper_h2-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
 }
 
 a {
@@ -340,6 +342,13 @@ li {
     justify-content: flex-end;
     align-items: center;
   }
+  .hitbox_tl {
+    display: flex;
+    width: var(--measure-hit-box, 40px);
+    height: var(--measure-hit-box, 40px);
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 
   .hitbox_arrow {
     flex-direction: column;
@@ -449,10 +458,8 @@ li {
   height: auto;
   padding: 20px var(--spacing-padding-l, 20px);
   flex-direction: column;
-  align-items: flex-start;
   margin: auto;
-  gap: var(--measure-card-image-s-2, 32px);
-  border-radius: 8px;
+  border-radius: var(--radius-popup, 16px);
   background: var(
     --fade_forest_footer,
     linear-gradient(185deg, #428580 8.78%, #3b7773 27.96%, #1c3836 108.32%)
@@ -464,18 +471,18 @@ li {
     0px 2px 4px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
-.popup_wrapper {
+.wrapper_justify-end {
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
-  align-items: end;
 }
 
 .button_wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-self: stretch;
   gap: 0.5rem;
+  padding-top: 1.75rem;
 }
 
 /* COMMON FONTS */
@@ -534,6 +541,13 @@ h2 {
   letter-spacing: 0.05rem;
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin: 0.5rem 0;
 }
 
 /* INDEX-PAGE */
@@ -760,27 +774,15 @@ h2 {
   width: 0.75rem;
   object-fit: contain;
 }
-/* The Close Button 
-.button_close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-*/
 
-.button_close:hover,
-.button_close:focus {
-  opacity: 0.8;
-  transition: ease-out 0.3s;
-  cursor: pointer;
-}
-.button_popup {
+.button_primary {
   display: flex;
   padding: var(--spacing-padding-m, 16px);
   justify-content: center;
   border-radius: 1.5rem;
   width: 100px;
+  text-transform: uppercase;
+  color: var(--golden-shade_0, #6b5929);
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.1) 0%,
@@ -800,4 +802,9 @@ h2 {
   /* button_cat */
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2),
     -2px -2px 8px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.button_primary:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
