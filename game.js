@@ -198,6 +198,12 @@ function increaseRounds() {
   localStorage.setItem("totalRounds", ++rounds);
 }
 
+function increaseStars() {
+  const category = localStorage.getItem("selectedCategory");
+  let stars = localStorage.getItem("stars-" + category) || 0;
+  localStorage.setItem("stars-" + category, ++stars);
+}
+
 function resetTimer() {
   clearInterval(timerInterval);
   timerInterval = null;
@@ -246,6 +252,7 @@ function pause() {
 function endGame() {
   increaseRounds();
   increaseTotalTime();
+  increaseStars();
   updatePage();
   resetTimer();
   hideGameInfo();
