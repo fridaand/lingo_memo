@@ -11,6 +11,7 @@ let lastAudio = undefined;
 let popup = document.getElementById("popUpId"); // Get the popup
 let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
+let currentLanguage = localStorage.getItem("language") || "french"; // Använd franska som standard om inget är sparad
 
 // FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
 xButton.onclick = function () {
@@ -55,11 +56,58 @@ function updateTitle() {
     localStorage.getItem("categoryTitle");
 }
 
+// TESTAR
+// Funktion för att ändra språket
+function changeLanguage(newLanguage) {
+  currentLanguage = newLanguage;
+  // Kör en funktion för att generera korten igen med det nya språket
+  regenerateCards();
+}
+
+function generateCardDiv(card) {
+  const language = currentLanguage === "english" ? "english" : "french";
+  return `
+  <div class="front">
+  <img class="front-image" src=${card.image} />
+  <p class="card-text">${card.language[currentLanguage]}</p>
+</div>
+<div class="back"></div>
+    `;
+}
+
+function generateCards() {
+  const gridContainer = document.querySelector(".section_game");
+  for (let card of cards) {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    cardElement.setAttribute("data-name", card.name);
+    cardElement.innerHTML = generateCardDiv(card);
+    gridContainer.appendChild(cardElement);
+
+    cardElement.onClick = function () {
+      if (isPaused || (lastAudio && !lastAudio.ended)) {
+        return;
+      }
+
+      if (!isMuted) {
+        const audioLanguage =
+          currentLanguage === "english" ? "english" : "french";
+        playCardSound(card.audio[audioLanguage]); // Spela upp ljudet när kortet klickas på
+      }
+
+      flipCard.call(this);
+    };
+
+    cardElement.addEventListener("click", cardElement.onClick);
+  }
+}
+
+/* BACKUP
 function generateCardDiv(card) {
   return `
     <div class="front">
         <img class="front-image" src=${card.image} />
-        <p class="card-text">${card.language.english}</p>
+        <p class="card-text">${card.language.french}</p>
     </div>
     <div class="back"></div>
     `;
@@ -80,7 +128,7 @@ function generateCards() {
       }
 
       if (!isMuted) {
-        playCardSound(card.audio.english); // Spela upp ljudet när kortet klickas på
+        playCardSound(card.audio.french); // Spela upp ljudet när kortet klickas på
       }
 
       flipCard.call(this);
@@ -89,6 +137,7 @@ function generateCards() {
     cardElement.addEventListener("click", cardElement.onClick);
   }
 }
+*/
 
 function playCardSound(audioSrc) {
   lastAudio = new Audio(audioSrc);

@@ -26,13 +26,35 @@
         <div class="wrapper_h2-text-button">
           <h2>SPEL</h2>
           <div class="wrapper_text-button">
-            <h4 class="h3_label_s">SVE-ENG</h4>
-            <a href="" class="hitbox"
-              ><img class="button_m_r" src="./icons/nav/language_l.png" alt=""
-            /></a>
+            <h4 class="h3_label_s" id="selected_language">SVE-ENG</h4>
+            <div class="hitbox" id="choose_language">
+              <img class="button_m_r" src="./icons/nav/language_l.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- POPUP CHOOSE LANGUAGE -->
+      <div id="popUpId" class="popup_bg">
+        <div class="popup_box">
+          <!--<span class="close">&times;</span> -->
+          <div class="wrapper_justify-end">
+            <div class="hitbox_tl">
+              <img class="button_close" src="./icons/nav/cross_s.svg" alt="" />
+            </div>
+          </div>
+          <h2>VÄLJ SPRÅK</h2>
+
+          <div class="button_wrapper">
+            <div class="button_primary button_close" id="english">
+              <h3>ENGELSKA</h3>
+            </div>
+            <div class="button_primary button_close" id="french">
+              <h3>FRANSKA</h3>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- SECTION TOTAL GAMES & MINUTES -->
       <section class="section_total">
