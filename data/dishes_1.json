@@ -4,89 +4,119 @@
     "image": "images/dishes_1/burger.png",
     "language": {
       "english": "burger",
-      "french": "X"
+      "french": "le burger"
     },
-    "audio": "sound/dishes_1/burger.mp3"
+    "audio": {
+      "english": "sound/dishes_1/burger.mp3",
+      "french": "sound/dishes_1/burger-fr.mp3"
+    }
   },
   {
     "name": "pancakes",
     "image": "images/dishes_1/pancakes.png",
     "language": {
       "english": "pancakes",
-      "french": "X"
+      "french": "les crêpe"
     },
-    "audio": "sound/dishes_1/pancakes.mp3"
+    "audio": {
+      "english": "sound/dishes_1/pancakes.mp3",
+      "french": "sound/dishes_1/crepes.mp3"
+    }
   },
   {
     "name": "pasta",
     "image": "images/dishes_1/pasta.png",
     "language": {
       "english": "pasta",
-      "french": "X"
+      "french": "les pâtes"
     },
-    "audio": "sound/dishes_1/pasta.mp3"
+    "audio": {
+      "english": "sound/dishes_1/pasta.mp3",
+      "french": "sound/dishes_1/pates.mp3"
+    }
   },
   {
     "name": "pie",
     "image": "images/dishes_1/pie.png",
     "language": {
       "english": "pie",
-      "french": "X"
+      "french": "la tarte"
     },
-    "audio": "sound/dishes_1/pie.mp3"
+    "audio": {
+      "english": "sound/dishes_1/pie.mp3",
+      "french": "sound/dishes_1/tarte.mp3"
+    }
   },
   {
     "name": "pizza",
     "image": "images/dishes_1/pizza.png",
     "language": {
       "english": "pizza",
-      "french": "X"
+      "french": "la pizza"
     },
-    "audio": "sound/dishes_1/pizza.mp3"
+    "audio": {
+      "english": "sound/dishes_1/pizza.mp3",
+      "french": "sound/dishes_1/pizza-fr.mp3"
+    }
   },
   {
     "name": "salad",
     "image": "images/dishes_1/salad.png",
     "language": {
       "english": "salad",
-      "french": "X"
+      "french": "la salade"
     },
-    "audio": "sound/dishes_1/salad.mp3"
+    "audio": {
+      "english": "sound/dishes_1/salad.mp3",
+      "french": "sound/dishes_1/salade.mp3"
+    }
   },
   {
     "name": "soup",
     "image": "images/dishes_1/soup.png",
     "language": {
       "english": "soup",
-      "french": "X"
+      "french": "la soupe"
     },
-    "audio": "sound/dishes_1/soup.mp3"
+    "audio": {
+      "english": "sound/dishes_1/soup.mp3",
+      "french": "sound/dishes_1/soupe.mp3"
+    }
   },
   {
     "name": "taco",
     "image": "images/dishes_1/taco.png",
     "language": {
       "english": "taco",
-      "french": "X"
+      "french": "le taco"
     },
-    "audio": "sound/dishes_1/taco.mp3"
+    "audio": {
+      "english": "sound/dishes_1/taco.mp3",
+      "french": "sound/dishes_1/taco-fr.mp3"
+    }
   },
   {
     "name": "wok",
     "image": "images/dishes_1/wok.png",
     "language": {
       "english": "wok",
-      "french": "X"
+      "french": "le wok"
     },
-    "audio": "sound/dishes_1/wok.mp3"
+    "audio": {
+      "english": "sound/dishes_1/wok.mp3",
+      "french": "sound/dishes_1/wok-fr.mp3"
+    }
   },
   {
     "name": "wrap",
     "image": "images/dishes_1/wrap.png",
     "language": {
       "english": "wrap",
-      "french": "X"
+      "french": "le wrap"
     },
-    "audio": "sound/dishes_1/wrap.mp3"
+    "audio": {
+      "english": "sound/dishes_1/wrap.mp3",
+      "french": "sound/dishes_1/wrap-fr.mp3"
+    }
   }
 ]

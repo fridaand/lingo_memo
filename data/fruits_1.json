@@ -6,7 +6,10 @@
       "english": "kiwi",
       "french": "le kiwi"
     },
-    "audio": "sound/fruits_1/kiwi.mp3"
+    "audio": {
+      "english": "sound/fruits_1/kiwi.mp3",
+      "french": "sound/fruits_1/kiwi-fr.mp3"
+    }
   },
   {
     "name": "strawberry",
@@ -15,6 +18,9 @@
       "english": "strawberry",
       "french": "la fraise"
     },
-    "audio": "sound/fruits_1/strawberry.mp3"
+    "audio": {
+      "english": "sound/fruits_1/strawberry.mp3",
+      "french": "sound/fruits_1/fraise.mp3"
+    }
   }
 ]

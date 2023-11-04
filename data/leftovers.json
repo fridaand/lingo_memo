@@ -1,13 +1,14 @@
-{
-  "name": "chilli",
-  "image": "images/vegetables_1/chilli.png",
-  "language": {
-    "english": "chilli",
-    "french": "X"
+[
+  {
+    "name": "chilli",
+    "image": "images/vegetables_1/chilli.png",
+    "language": {
+      "english": "chilli",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/chilli.mp3"
   },
-  "audio": "sound/vegetables_1/chilli.mp3"
-},
-{
+  {
     "name": "curry",
     "image": "images/dishes_1/curry.png",
     "language": {
@@ -16,3 +17,4 @@
     },
     "audio": "sound/dishes_1/curry.mp3"
   }
+]

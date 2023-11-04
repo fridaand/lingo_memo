@@ -1,92 +1,122 @@
 [
   {
     "name": "avocado",
-    "image": "images/vegetables_1/avocado.png",
+    "image": "images/fruits_1/avocado.png",
     "language": {
       "english": "avocado",
-      "french": "X"
+      "french": "l'avocat"
     },
-    "audio": "sound/vegetables_1/avocado.mp3"
+    "audio": {
+      "english": "sound/fruits_1/avocado.mp3",
+      "french": "sound/fruits_1/avocat.mp3"
+    }
   },
   {
     "name": "beetroot",
-    "image": "images/vegetables_1/beetroot.png",
+    "image": "images/fruits_1/beetroot.png",
     "language": {
       "english": "beetroot",
-      "french": "X"
+      "french": "la betterave"
     },
-    "audio": "sound/vegetables_1/beetroot.mp3"
+    "audio": {
+      "english": "sound/fruits_1/beetroot.mp3",
+      "french": "sound/fruits_1/betterave.mp3"
+    }
   },
   {
     "name": "bellpepper",
-    "image": "images/vegetables_1/bellpepper.png",
+    "image": "images/fruits_1/bellpepper.png",
     "language": {
       "english": "bell pepper",
-      "french": "X"
+      "french": "le poivron"
     },
-    "audio": "sound/vegetables_1/bellpepper.mp3"
+    "audio": {
+      "english": "sound/fruits_1/bellpepper.mp3",
+      "french": "sound/fruits_1/poivron.mp3"
+    }
   },
   {
     "name": "carrot",
-    "image": "images/vegetables_1/carrot.png",
+    "image": "images/fruits_1/carrot.png",
     "language": {
       "english": "carrot",
-      "french": "X"
+      "french": "la carotte"
     },
-    "audio": "sound/vegetables_1/carrot.mp3"
+    "audio": {
+      "english": "sound/fruits_1/carrot.mp3",
+      "french": "sound/fruits_1/carotte.mp3"
+    }
   },
   {
     "name": "cucumber",
-    "image": "images/vegetables_1/cucumber.png",
+    "image": "images/fruits_1/cucumber.png",
     "language": {
       "english": "cucumber",
-      "french": "X"
+      "french": "le concombre"
     },
-    "audio": "sound/vegetables_1/cucumber.mp3"
+    "audio": {
+      "english": "sound/fruits_1/cucumber.mp3",
+      "french": "sound/fruits_1/concombre.mp3"
+    }
   },
   {
     "name": "eggplant",
-    "image": "images/vegetables_1/eggplant.png",
+    "image": "images/fruits_1/eggplant.png",
     "language": {
       "english": "eggplant",
-      "french": "X"
+      "french": "l'aubergine"
     },
-    "audio": "sound/vegetables_1/eggplant.mp3"
+    "audio": {
+      "english": "sound/fruits_1/eggplant.mp3",
+      "french": "sound/fruits_1/aubergine.mp3"
+    }
   },
   {
     "name": "lettuce",
-    "image": "images/vegetables_1/lettuce.png",
+    "image": "images/fruits_1/lettuce.png",
     "language": {
       "english": "lettuce",
-      "french": "X"
+      "french": "la laitue"
     },
-    "audio": "sound/vegetables_1/lettuce.mp3"
+    "audio": {
+      "english": "sound/fruits_1/lettuce.mp3",
+      "french": "sound/fruits_1/laitue.mp3"
+    }
   },
   {
     "name": "mushroom",
-    "image": "images/vegetables_1/mushroom.png",
+    "image": "images/fruits_1/mushroom.png",
     "language": {
       "english": "mushroom",
-      "french": "X"
+      "french": "le champignon"
     },
-    "audio": "sound/vegetables_1/mushroom.mp3"
+    "audio": {
+      "english": "sound/fruits_1/mushroom.mp3",
+      "french": "sound/fruits_1/champignon.mp3"
+    }
   },
   {
     "name": "onion",
-    "image": "images/vegetables_1/onion.png",
+    "image": "images/fruits_1/onion.png",
     "language": {
       "english": "onion",
-      "french": "X"
+      "french": "l'oignon"
     },
-    "audio": "sound/vegetables_1/onion.mp3"
+    "audio": {
+      "english": "sound/fruits_1/onion.mp3",
+      "french": "sound/fruits_1/oignon.mp3"
+    }
   },
   {
     "name": "tomato",
-    "image": "images/vegetables_1/tomato.png",
+    "image": "images/fruits_1/tomato.png",
     "language": {
       "english": "tomato",
-      "french": "X"
+      "french": "la tomate"
     },
-    "audio": "sound/vegetables_1/tomato.mp3"
+    "audio": {
+      "english": "sound/fruits_1/tomato.mp3",
+      "french": "sound/fruits_1/tomate.mp3"
+    }
   }
 ]
