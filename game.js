@@ -175,8 +175,8 @@ function registerMuteButton() {
     isMuted = !isMuted; // Växla ljudets tillstånd
 
     iconSound.src = isMuted
-      ? "icons/buttons/button_sound-on.png"
-      : "icons/buttons/button_sound-off.png";
+      ? "icons/buttons/button_sound-off.png"
+      : "icons/buttons/button_sound-on.png";
   });
 }
 
