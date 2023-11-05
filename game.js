@@ -84,7 +84,7 @@ function generateCards() {
     gridContainer.appendChild(cardElement);
 
     cardElement.onClick = function () {
-      if (isPaused || (lastAudio && !lastAudio.ended)) {
+      if (isPaused || (firstCard && secondCard)) {
         return;
       }
 
