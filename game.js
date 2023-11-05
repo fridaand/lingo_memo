@@ -1,7 +1,6 @@
 let cards = [];
 let firstCard = null;
 let secondCard = null;
-let lockBoard = false;
 let score = 0;
 let timer = 0;
 let timerInterval;
@@ -123,7 +122,7 @@ function generateCards() {
     gridContainer.appendChild(cardElement);
 
     cardElement.onClick = function () {
-      if (isPaused || (lastAudio && !lastAudio.ended) || lockBoard) {
+      if (isPaused || (firstCard && secondCard)) {
         return;
       }
 
@@ -158,7 +157,6 @@ function flipCard() {
   secondCard = this;
   score++;
   updateScore();
-  lockBoard = true;
 
   checkForMatch();
 }
@@ -199,7 +197,6 @@ function unflipCards() {
 function resetBoard() {
   firstCard = null;
   secondCard = null;
-  lockBoard = false;
 }
 
 function updateGameSeconds() {
