@@ -9,6 +9,8 @@ const categories = [
   { id: "animals-game_1", name: "animals_1" },
   { id: "dishes-game_1", name: "dishes_1" },
   { id: "drinks-game_1", name: "drinks_1" },
+  { id: "colors-game_1", name: "colors_1" },
+  { id: "fruits-game_2", name: "fruits_2" },
 ];
 
 const maxNumberOfStartsPerCategory = 5;
@@ -32,18 +34,30 @@ window.onclick = function (event) {
   }
 };
 
-// SPARA SPRÅKVAL
+// SPARA SPRÅKVAL, & PREPARED CODE FOR PUTTING IN FLAG IMAGES
 // Användaren väljer engelska
 document.getElementById("english").addEventListener("click", function () {
   localStorage.setItem("language", "english");
-  // Ev länka till nästa sida här
+  updateLanguageDisplay("SVE-ENG", "flag_english.png"); // Uppdatera text och flagga});
 });
-
 // Användaren väljer franska
 document.getElementById("french").addEventListener("click", function () {
   localStorage.setItem("language", "french");
+  updateLanguageDisplay("SVE-FRA", "flag_french.png"); // Uppdatera text och flagga  // Ev länka till nästa sida här
   // Ev länka till nästa sida här
 });
+
+// Funktion för att uppdatera texten och flaggan baserat på det sparade språket
+function updateLanguageDisplay(defaultText, flagImage) {
+  const language = localStorage.getItem("language") || "english"; // Använd engelska som standard om inget är sparad
+  if (language === "english") {
+    document.getElementById("selected_language").textContent = defaultText;
+    document.getElementById("flag").src = flagImage;
+  } else if (language === "french") {
+    document.getElementById("selected_language").textContent = defaultText;
+    document.getElementById("flag").src = flagImage;
+  } // Lägg till fler `else if`-block för andra språk om det behövs
+}
 
 function updatePage() {
   updateRounds();
@@ -62,6 +76,24 @@ function updateStars() {
     }
   });
 }
+
+//PREPARED CODE FOR PUTTING IN FLAG IMAGES
+// Uppdatera text och flagga när sidan laddas
+window.addEventListener("load", function () {
+  // SPARA SPRÅKVAL när sidan laddas
+  const storedLanguage = localStorage.getItem("language");
+  if (storedLanguage) {
+    const flagImage = "flag_" + storedLanguage + ".png";
+    const displayedLanguage =
+      storedLanguage === "english" ? "SVE-ENG" : "SVE-FRA";
+    currentLanguage = storedLanguage; // Uppdatera aktuellt språk
+    updateLanguageDisplay(displayedLanguage, flagImage);
+    currentLanguage = storedLanguage; // Uppdatera aktuellt språk
+  } else {
+    // Om inget språk har sparats, använd standardtext och flagga
+    updateLanguageDisplay("SVE-ENG", "flag_english.png");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   updatePage();

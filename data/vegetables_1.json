@@ -1,122 +1,122 @@
 [
   {
     "name": "avocado",
-    "image": "images/fruits_1/avocado.png",
+    "image": "images/vegetables_1/avocado.png",
     "language": {
       "english": "avocado",
       "french": "l'avocat"
     },
     "audio": {
-      "english": "sound/fruits_1/avocado.mp3",
-      "french": "sound/fruits_1/avocat.mp3"
+      "english": "sound/vegetables_1/avocado.mp3",
+      "french": "sound/vegetables_1/avocat.mp3"
     }
   },
   {
     "name": "beetroot",
-    "image": "images/fruits_1/beetroot.png",
+    "image": "images/vegetables_1/beetroot.png",
     "language": {
       "english": "beetroot",
       "french": "la betterave"
     },
     "audio": {
-      "english": "sound/fruits_1/beetroot.mp3",
-      "french": "sound/fruits_1/betterave.mp3"
+      "english": "sound/vegetables_1/beetroot.mp3",
+      "french": "sound/vegetables_1/betterave.mp3"
     }
   },
   {
     "name": "bellpepper",
-    "image": "images/fruits_1/bellpepper.png",
+    "image": "images/vegetables_1/bellpepper.png",
     "language": {
       "english": "bell pepper",
       "french": "le poivron"
     },
     "audio": {
-      "english": "sound/fruits_1/bellpepper.mp3",
-      "french": "sound/fruits_1/poivron.mp3"
+      "english": "sound/vegetables_1/bellpepper.mp3",
+      "french": "sound/vegetables_1/poivron.mp3"
     }
   },
   {
     "name": "carrot",
-    "image": "images/fruits_1/carrot.png",
+    "image": "images/vegetables_1/carrot.png",
     "language": {
       "english": "carrot",
       "french": "la carotte"
     },
     "audio": {
-      "english": "sound/fruits_1/carrot.mp3",
-      "french": "sound/fruits_1/carotte.mp3"
+      "english": "sound/vegetables_1/carrot.mp3",
+      "french": "sound/vegetables_1/carotte.mp3"
     }
   },
   {
     "name": "cucumber",
-    "image": "images/fruits_1/cucumber.png",
+    "image": "images/vegetables_1/cucumber.png",
     "language": {
       "english": "cucumber",
       "french": "le concombre"
     },
     "audio": {
-      "english": "sound/fruits_1/cucumber.mp3",
-      "french": "sound/fruits_1/concombre.mp3"
+      "english": "sound/vegetables_1/cucumber.mp3",
+      "french": "sound/vegetables_1/concombre.mp3"
     }
   },
   {
     "name": "eggplant",
-    "image": "images/fruits_1/eggplant.png",
+    "image": "images/vegetables_1/eggplant.png",
     "language": {
       "english": "eggplant",
       "french": "l'aubergine"
     },
     "audio": {
-      "english": "sound/fruits_1/eggplant.mp3",
-      "french": "sound/fruits_1/aubergine.mp3"
+      "english": "sound/vegetables_1/eggplant.mp3",
+      "french": "sound/vegetables_1/aubergine.mp3"
     }
   },
   {
     "name": "lettuce",
-    "image": "images/fruits_1/lettuce.png",
+    "image": "images/vegetables_1/lettuce.png",
     "language": {
       "english": "lettuce",
       "french": "la laitue"
     },
     "audio": {
-      "english": "sound/fruits_1/lettuce.mp3",
-      "french": "sound/fruits_1/laitue.mp3"
+      "english": "sound/vegetables_1/lettuce.mp3",
+      "french": "sound/vegetables_1/laitue.mp3"
     }
   },
   {
     "name": "mushroom",
-    "image": "images/fruits_1/mushroom.png",
+    "image": "images/vegetables_1/mushroom.png",
     "language": {
       "english": "mushroom",
       "french": "le champignon"
     },
     "audio": {
-      "english": "sound/fruits_1/mushroom.mp3",
-      "french": "sound/fruits_1/champignon.mp3"
+      "english": "sound/vegetables_1/mushroom.mp3",
+      "french": "sound/vegetables_1/champignon.mp3"
     }
   },
   {
     "name": "onion",
-    "image": "images/fruits_1/onion.png",
+    "image": "images/vegetables_1/onion.png",
     "language": {
       "english": "onion",
       "french": "l'oignon"
     },
     "audio": {
-      "english": "sound/fruits_1/onion.mp3",
-      "french": "sound/fruits_1/oignon.mp3"
+      "english": "sound/vegetables_1/onion.mp3",
+      "french": "sound/vegetables_1/oignon.mp3"
     }
   },
   {
     "name": "tomato",
-    "image": "images/fruits_1/tomato.png",
+    "image": "images/vegetables_1/tomato.png",
     "language": {
       "english": "tomato",
       "french": "la tomate"
     },
     "audio": {
-      "english": "sound/fruits_1/tomato.mp3",
-      "french": "sound/fruits_1/tomate.mp3"
+      "english": "sound/vegetables_1/tomato.mp3",
+      "french": "sound/vegetables_1/tomate.mp3"
     }
   }
 ]

@@ -10,7 +10,7 @@ let lastAudio = undefined;
 let popup = document.getElementById("popUpId"); // Get the popup
 let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
-let currentLanguage = localStorage.getItem("language") || "french"; // Använd franska som standard om inget är sparad
+let currentLanguage = localStorage.getItem("language") || "english"; // Använd engelska som standard om inget är sparad
 
 // FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
 xButton.onclick = function () {
@@ -64,7 +64,7 @@ function changeLanguage(newLanguage) {
 }
 
 function generateCardDiv(card) {
-  const language = currentLanguage === "english" ? "english" : "french";
+  const language = currentLanguage === "french" ? "french" : "english";
   return `
   <div class="front">
   <img class="front-image" src=${card.image} />
@@ -90,7 +90,7 @@ function generateCards() {
 
       if (!isMuted) {
         const audioLanguage =
-          currentLanguage === "english" ? "english" : "french";
+          currentLanguage === "french" ? "french" : "english";
         playCardSound(card.audio[audioLanguage]); // Spela upp ljudet när kortet klickas på
       }
 
