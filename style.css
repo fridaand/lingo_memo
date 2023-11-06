@@ -3,7 +3,7 @@
 /* ev flytta dessa egenskaper senare t anann div */
 body {
   display: flex;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   color: #ffe7a7;
   font-family: "Quicksand", "Gill Sans", "Gill Sans MT", "Calibri",
@@ -122,6 +122,7 @@ main {
   height: var(--measure-hit-box, 40px);
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 }
 .hitbox_tl {
   display: flex;
@@ -241,10 +242,19 @@ main {
 /* BUTTONS ETC ENDS */
 
 footer {
+  position: fixed;
+  width: 100%;
+  min-width: var(--measure-total-width-s, 320px);
+  margin: 0;
+  bottom: 0;
+}
+
+.footer_container {
   display: flex;
   height: 3rem;
-  min-width: var(--measure-total-width-s, 320px);
+  width: auto;
   padding: 0px var(--spacing-padding-s, 1.25rem);
+  margin: 0;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
@@ -333,7 +343,9 @@ footer {
   display: flex;
   flex-direction: column;
   width: auto;
-  overflow: auto; /* Enable scroll if needed */
+  min-height: 75%;
+  height: auto;
+  overflow: scroll; /* Enable scroll if needed */
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.1) 0%,
@@ -348,6 +360,8 @@ footer {
   display: flex;
   min-width: var(--measure-total-width-s, 320px);
   flex-wrap: wrap;
+  height: 100%;
+
   padding: var(--spacing-padding-l, 20px);
   align-items: flex-start;
   align-content: flex-start;
@@ -365,7 +379,8 @@ footer {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  transition: 0.3s ease-out;
   background: var(
     --gold_card-menu,
     linear-gradient(
@@ -380,6 +395,11 @@ footer {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15),
     0px -2px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
+
+.menu-card:hover {
+  scale: 1.02;
+}
+
 /* PAGE MENU (SCROLL AREA) ENDS */
 
 /* CARDS? PLACE! */
@@ -452,6 +472,7 @@ footer {
   gap: var(--spacing-gap-xs, 8px);
   flex-shrink: 0;
   border-radius: 8px;
+  cursor: pointer;
   background: var(
     --button-shade-green,
     linear-gradient(179deg, #408581 18.99%, #3a7874 30.68%, #1a3534 81.09%)
@@ -563,7 +584,7 @@ h1 {
   font-weight: 500;
   line-height: 2rem;
   margin: 0;
-  background: var(
+  /*background: var(
     --gold_icon_fade,
     linear-gradient(
       180deg,
@@ -576,19 +597,17 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: transparent;*/
 }
 
 .h1_big-card {
-  align-self: stretch;
   text-align: center;
-  color: #ffe7a7;
-  color: #957a31;
+  color: #af9754;
   font-size: 3.25rem;
-  line-height: 3.25rem; /* 100% */
+  line-height: 3.5rem;
   letter-spacing: 0.1rem;
   margin: 0;
-  /*text-shadow: 1px 1px 2px 0px #957a31 inset;*/
+  text-shadow: 1px 1px 2px 0px #957a31 inset;
 }
 
 h2 {
@@ -647,38 +666,44 @@ p {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.5rem; /* 133.333% */
+  line-height: 1.5rem;
   letter-spacing: 0.2px;
-  /*text-shadow: 1px 1px 2px 0px #957a31 inset;*/
+  text-shadow: 1px 1px 2px 0px #957a31 inset;
 }
 /* FONTS END */
 
 /* PAGE INDEX */
+.section_intro-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .big-card {
   display: flex;
   width: var(--measure-total-width-s, 20rem);
   height: var(--measure-total-width-s, 20rem);
-  padding: 0rem 1.25rem;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border-radius: var(--spacing-padding-s, 0.75rem);
   background: linear-gradient(
     180deg,
     #bfaf83 0%,
-    #fff3d3 2.48%,
-    #ffeec1 69.94%,
-    #ffe7a7 95.24%
+    #fff3d3 3%,
+    #ffeec1 70%,
+    #ffe7a7 95%
   );
   box-shadow: 0px 6.6735px 13.34701px 0px rgba(0, 0, 0, 0.15),
     8px 8px 16px 0px rgba(170, 149, 90, 0.5) inset,
     -8px -8px 12px 0px rgba(170, 149, 90, 0.5) inset;
   transition: ease-out 0.3s;
 }
+
 /* FIXA HOVER & INTRO-ANIMATION */
-.big-card:hover {
-  opacity: 0.9;
+.big-card:focus {
+  scale: 1.05;
 }
 
 .wrapper_text {
@@ -687,7 +712,6 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  align-self: stretch;
 }
 
 /* PAGE INDEX ENDS */
@@ -722,6 +746,7 @@ p {
   justify-content: center;
   align-items: center;
   position: relative; /* important */
+  cursor: pointer;
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
   background: #fffaed;
