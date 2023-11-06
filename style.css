@@ -379,7 +379,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 1rem;
+  border-radius: 2rem;
   transition: 0.3s ease-out;
   background: var(
     --gold_card-menu,
@@ -541,11 +541,11 @@ footer {
     linear-gradient(
       180deg,
       #b5a26f 0%,
-      #bfaf83 7.44%,
-      #fff3d3 31.25%,
-      #ffeec1 69.94%,
-      #bfaf83 88.29%,
-      #b5a26f 95.24%
+      #bfaf83 3%,
+      #fff3d3 20%,
+      #ffeec1 70%,
+      #bfaf83 97%,
+      #b5a26f 0%
     )
   );
 }
