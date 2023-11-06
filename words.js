@@ -1,11 +1,11 @@
 const dropdownButton = document.getElementById("dropdown-button");
 //const dropdownButton = document.querySelector(".dropdown-button");
-const ddArrow = document.getElementById("dd-arrow");
+const arrow = document.querySelector(".arrow");
 const dropdownList = document.querySelector(".dd-category_words");
 
 dropdownButton.addEventListener("click", function () {
   dropdownList.classList.toggle("open");
-  ddArrow.classList.toggle("rotate");
+  arrow.classList.toggle("rotate");
 });
 
 /* PÅBÖRJAD TEST DATALISTA I DD
