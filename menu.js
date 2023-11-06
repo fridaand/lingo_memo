@@ -9,7 +9,7 @@ const categories = [
   { id: "animals-game_1", name: "animals_1" },
   { id: "dishes-game_1", name: "dishes_1" },
   { id: "drinks-game_1", name: "drinks_1" },
-  { id: "colors-game_1", name: "colors_1" },
+  { id: "colours-game_1", name: "colours_1" },
   { id: "fruits-game_2", name: "fruits_2" },
 ];
 

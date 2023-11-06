@@ -1,0 +1,122 @@
+[
+  {
+    "name": "black",
+    "image": "images/colours_1/black.png",
+    "language": {
+      "english": "black",
+      "french": "noir"
+    },
+    "audio": {
+      "english": "sound/colours_1/black.mp3",
+      "french": "sound/colours_1/noir.mp3"
+    }
+  },
+  {
+    "name": "blue",
+    "image": "images/colours_1/blue.png",
+    "language": {
+      "english": "blue",
+      "french": "bleu"
+    },
+    "audio": {
+      "english": "sound/colours_1/blue.mp3",
+      "french": "sound/colours_1/bleu.mp3"
+    }
+  },
+  {
+    "name": "green",
+    "image": "images/colours_1/green.png",
+    "language": {
+      "english": "green",
+      "french": "vert"
+    },
+    "audio": {
+      "english": "sound/colours_1/green.mp3",
+      "french": "sound/colours_1/vert.mp3"
+    }
+  },
+  {
+    "name": "grey",
+    "image": "images/colours_1/grey.png",
+    "language": {
+      "english": "grey",
+      "french": "gris"
+    },
+    "audio": {
+      "english": "sound/colours_1/grey.mp3",
+      "french": "sound/colours_1/gris.mp3"
+    }
+  },
+  {
+    "name": "orange",
+    "image": "images/colours_1/orange.png",
+    "language": {
+      "english": "orange",
+      "french": "orange"
+    },
+    "audio": {
+      "english": "sound/colours_1/orange.mp3",
+      "french": "sound/colours_1/orange-fr.mp3"
+    }
+  },
+  {
+    "name": "pink",
+    "image": "images/colours_1/pink.png",
+    "language": {
+      "english": "pink",
+      "french": "rose"
+    },
+    "audio": {
+      "english": "sound/colours_1/pink.mp3",
+      "french": "sound/colours_1/rose.mp3"
+    }
+  },
+  {
+    "name": "purple",
+    "image": "images/colours_1/purple.png",
+    "language": {
+      "english": "purple",
+      "french": "violet"
+    },
+    "audio": {
+      "english": "sound/colours_1/purple.mp3",
+      "french": "sound/colours_1/violet.mp3"
+    }
+  },
+  {
+    "name": "red",
+    "image": "images/colours_1/red.png",
+    "language": {
+      "english": "red",
+      "french": "rouge"
+    },
+    "audio": {
+      "english": "sound/colours_1/red.mp3",
+      "french": "sound/colours_1/rouge.mp3"
+    }
+  },
+  {
+    "name": "white",
+    "image": "images/colours_1/white.png",
+    "language": {
+      "english": "white",
+      "french": "blanc"
+    },
+    "audio": {
+      "english": "sound/colours_1/white.mp3",
+      "french": "sound/colours_1/blanc.mp3"
+    }
+  },
+  {
+    "name": "yellow",
+    "image": "images/colours_1/yellow.png",
+    "language": {
+      "english": "yellow",
+      "french": "jaune"
+    },
+    "audio": {
+      "english": "sound/colours_1/yellow.mp3",
+      "french": "sound/colours_1/jaune.mp3"
+    }
+  }
+]
