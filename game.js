@@ -11,6 +11,16 @@ let popup = document.getElementById("popUpId"); // Get the popup
 let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
 let currentLanguage = localStorage.getItem("language") || "english"; // Använd engelska som standard om inget är sparad
+const goBackButton = document.getElementById("goBackButton");
+
+// VISIT EARLIER PAGE OR MENU.HTML
+goBackButton.addEventListener("click", function () {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "menu.html.";
+  }
+});
 
 // FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
 xButton.onclick = function () {
@@ -83,7 +93,7 @@ function generateCards() {
     cardElement.innerHTML = generateCardDiv(card);
     gridContainer.appendChild(cardElement);
 
-    cardElement.onClick = function () {
+    cardElement.onclick = function () {
       if (isPaused || (firstCard && secondCard)) {
         return;
       }
@@ -97,7 +107,7 @@ function generateCards() {
       flipCard.call(this);
     };
 
-    cardElement.addEventListener("click", cardElement.onClick);
+    cardElement.addEventListener("click", cardElement.onclick);
   }
 }
 
@@ -178,8 +188,8 @@ function checkForMatch() {
 }
 
 function disableCards() {
-  firstCard.removeEventListener("click", firstCard.onClick);
-  secondCard.removeEventListener("click", secondCard.onClick);
+  firstCard.removeEventListener("click", firstCard.onclick);
+  secondCard.removeEventListener("click", secondCard.onclick);
   resetBoard();
   if (document.querySelectorAll(".card:not(.flipped)").length === 0) {
     endGame();
