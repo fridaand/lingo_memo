@@ -93,7 +93,7 @@ function generateCards() {
     cardElement.innerHTML = generateCardDiv(card);
     gridContainer.appendChild(cardElement);
 
-    cardElement.onclick = function () {
+    cardElement.onClick = function () {
       if (isPaused || (firstCard && secondCard)) {
         return;
       }
@@ -107,7 +107,7 @@ function generateCards() {
       flipCard.call(this);
     };
 
-    cardElement.addEventListener("click", cardElement.onclick);
+    cardElement.addEventListener("click", cardElement.onClick);
   }
 }
 
@@ -188,8 +188,8 @@ function checkForMatch() {
 }
 
 function disableCards() {
-  firstCard.removeEventListener("click", firstCard.onclick);
-  secondCard.removeEventListener("click", secondCard.onclick);
+  firstCard.removeEventListener("click", firstCard.onClick);
+  secondCard.removeEventListener("click", secondCard.onClick);
   resetBoard();
   if (document.querySelectorAll(".card:not(.flipped)").length === 0) {
     endGame();
