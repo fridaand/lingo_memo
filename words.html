@@ -75,14 +75,14 @@
                 <div class="wrapper_stars-hitbox">
                   <div id="stars-fruits_1" class="wrapper_total-stars"></div>
                 </div>
-                <div id="dropdown-button">
+                <div class="dropdown-button">
                   <div id="dd-arrow">
                     <img class="arrow" src="./icons/nav/arrow.png" alt="" />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="dd-category_words">
+            <div class="dd-category_words" data-dropdown="dd-fruits_1">
               <div class="row_words">
                 <p class="word_language">kiwi</p>
                 <p class="word_swedish">kiwi</p>
@@ -94,7 +94,116 @@
             </div>
           </div>
         </div>
-        <!-- 
+
+        <div class="container_categories">
+          <div class="category_label_dd">
+            <div class="dd-category_label">
+              <div class="wrapper_category">
+                <a
+                  class="button_category"
+                  id="animals-game_1"
+                  data-mission="animals"
+                  href="game.html?category=animals_1&dataFolder=data"
+                >
+                  <img
+                    class="image_cate_icon"
+                    src="./images/animals_1/horse.png"
+                    alt=""
+                  />
+                  <h3 id="cate-animals_1" class="h3_label_s">Djur</h3>
+                </a>
+
+                <div class="wrapper_stars-hitbox">
+                  <div id="stars-fruits_1" class="wrapper_total-stars"></div>
+                </div>
+                <div class="dropdown-button">
+                  <div id="dd-arrow">
+                    <img class="arrow" src="./icons/nav/arrow.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dd-category_words" id="dd-animals_1">
+              <div class="row_words">
+                <p class="word_language">horse</p>
+                <p class="word_swedish">häst</p>
+              </div>
+              <div class="row_words">
+                <p class="word_language">rabbit</p>
+                <p class="word_swedish">kanin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container_categories">
+          <div class="category_label_dd">
+            <div class="dd-category_label">
+              <div class="wrapper_category">
+                <a
+                  class="button_category"
+                  id="dishes-game_1"
+                  data-mission="dishes_1"
+                  href="game.html?category=dishes_1&dataFolder=data"
+                >
+                  <img
+                    class="image_cate_icon"
+                    src="./images/dishes_1/wok.png"
+                    alt=""
+                  />
+                  <h3 id="cate-dishes_1" class="h3_label_s">Maträtter</h3>
+                </a>
+
+                <div class="wrapper_stars-hitbox">
+                  <div class="wrapper_total-stars">
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                  </div>
+                  <a href=""><img src="./icons/nav/arrow_l.svg" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container_categories">
+          <div class="category_label_dd">
+            <div class="dd-category_label">
+              <div class="wrapper_category">
+                <a
+                  class="button_category"
+                  id="drinks-game_1"
+                  data-mission="drinks_1"
+                  href="game.html?category=drinks_1&dataFolder=data"
+                >
+                  <img
+                    class="image_cate_icon"
+                    src="./images/drinks_1/juice_orange.png"
+                    alt=""
+                  />
+                  <h3 id="cate-drinks_1" class="h3_label_s">Dryck</h3>
+                </a>
+
+                <div class="wrapper_stars-hitbox">
+                  <div class="wrapper_total-stars">
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                    <img src="./icons/star.png" alt="" />
+                  </div>
+                  <a href=""><img src="./icons/nav/arrow_l.svg" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OLD
         <div class="container_categories">
           <div class="category_label_dd">
             <div class="dd-category_label">
@@ -123,105 +232,8 @@
           </div>
         </div>
         -->
-        <div class="container_categories">
-          <div class="category_label_dd">
-            <div class="dd-category_label">
-              <div class="wrapper_category">
-                <a href="game.html?category=animals_1&dataFolder=data">
-                  <div
-                    class="button_category"
-                    id="animals-game_1"
-                    data-mission="animals_1"
-                  >
-                    <img
-                      class="image_cate_icon"
-                      src="./images/animals_1/horse.png"
-                      alt=""
-                    />
-                    <h3 id="cate-animals_1" class="h3_label_s">Djur</h3>
-                  </div>
-                </a>
-                <div class="wrapper_stars-hitbox">
-                  <div class="wrapper_total-stars">
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                  </div>
-                  <a href=""><img src="./icons/nav/arrow_l.svg" alt="" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container_categories">
-          <div class="category_label_dd">
-            <div class="dd-category_label">
-              <div class="wrapper_category">
-                <a href="game.html?category=dishes_1&dataFolder=data">
-                  <div
-                    class="button_category"
-                    id="dishes-game_1"
-                    data-mission="dishes_1"
-                  >
-                    <img
-                      class="image_cate_icon"
-                      src="./images/dishes_1/curry.png"
-                      alt=""
-                    />
-                    <h3 id="cate-dishes_1" class="h3_label_s">Maträtter</h3>
-                  </div>
-                </a>
-                <div class="wrapper_stars-hitbox">
-                  <div class="wrapper_total-stars">
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                  </div>
-                  <a href=""><img src="./icons/nav/arrow_l.svg" alt="" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container_categories">
-          <div class="category_label_dd">
-            <div class="dd-category_label">
-              <div class="wrapper_category">
-                <a href="game.html?category=drinks_1&dataFolder=data">
-                  <div
-                    class="button_category"
-                    id="drinks-game_1"
-                    data-mission="drinks_1"
-                  >
-                    <img
-                      class="image_cate_icon"
-                      src="./images/drinks_1/juice_orange.png"
-                      alt=""
-                    />
-                    <h3 id="cate-drinks_1" class="h3_label_s">Dryck</h3>
-                  </div>
-                </a>
-                <div class="wrapper_stars-hitbox">
-                  <div class="wrapper_total-stars">
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                    <img src="./icons/star.png" alt="" />
-                  </div>
-                  <a href=""><img src="./icons/nav/arrow_l.svg" alt="" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- SECTION FOOTER -->
+      <!-- FOOTER -->
       <footer>
         <div class="footer_container">
           <a href="menu.html"
@@ -256,6 +268,7 @@
           </div>
         </div>
       </footer>
+
       <!--
       <button id="clear-button" class="button-clear">CLEAR</button>
       -->
