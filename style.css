@@ -83,17 +83,12 @@ main {
   align-items: center;
 }
 
-.wrapper_text-button {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-gap-xs, 8px);
-}
-
 /*  LABEL X */
 .wrapper_text-button {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: var(--spacing-gap-xs, 8px);
+  cursor: pointer;
 }
 
 .wrapper_buttons-round {
@@ -509,6 +504,11 @@ footer {
 .star {
   width: 0.75rem;
   object-fit: contain;
+}
+
+#flag {
+  width: 20px;
+  height: 20px;
 }
 
 /* DROPWOWN */

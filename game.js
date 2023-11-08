@@ -93,7 +93,7 @@ function generateCards() {
     cardElement.innerHTML = generateCardDiv(card);
     gridContainer.appendChild(cardElement);
 
-    cardElement.onClick = function () {
+    cardElement.clickTrigger = function () {
       if (isPaused || (firstCard && secondCard)) {
         return;
       }
@@ -107,7 +107,7 @@ function generateCards() {
       flipCard.call(this);
     };
 
-    cardElement.addEventListener("click", cardElement.onClick);
+    cardElement.addEventListener("click", cardElement.clickTrigger);
   }
 }
 
@@ -131,7 +131,7 @@ function generateCards() {
     cardElement.innerHTML = generateCardDiv(card);
     gridContainer.appendChild(cardElement);
 
-    cardElement.onClick = function () {
+    cardElement.clickTrigger = function () {
       if (isPaused || (firstCard && secondCard)) {
         return;
       }
@@ -143,7 +143,7 @@ function generateCards() {
       flipCard.call(this);
     };
 
-    cardElement.addEventListener("click", cardElement.onClick);
+    cardElement.addEventListener("click", cardElement.clickTrigger);
   }
 }
 */
@@ -188,8 +188,8 @@ function checkForMatch() {
 }
 
 function disableCards() {
-  firstCard.removeEventListener("click", firstCard.onClick);
-  secondCard.removeEventListener("click", secondCard.onClick);
+  firstCard.removeEventListener("click", firstCard.clickTrigger);
+  secondCard.removeEventListener("click", secondCard.clickTrigger);
   resetBoard();
   if (document.querySelectorAll(".card:not(.flipped)").length === 0) {
     endGame();
