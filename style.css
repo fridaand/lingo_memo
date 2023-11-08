@@ -77,7 +77,6 @@ main {
 .wrapper_h2-text-button {
   display: flex;
   min-width: var(--measure-total-width-s, 320px);
-
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -358,12 +357,11 @@ footer {
   min-width: var(--measure-total-width-s, 320px);
   flex-wrap: wrap;
   height: 100%;
-
   padding: var(--spacing-padding-l, 20px);
   align-items: flex-start;
   align-content: flex-start;
-  row-gap: 3vw;
-  column-gap: 3vw;
+  row-gap: 2.5vw;
+  column-gap: 2.5vw;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -744,7 +742,7 @@ p {
   flex-wrap: wrap;
   min-width: 320px;
   width: auto;
-  gap: 1.75vw;
+  gap: 1.25vw;
   padding: var(--spacing-padding-l, 20px);
   background: var(
     --fade_forest_dark,
@@ -1002,15 +1000,30 @@ a:hover {
 }
 */
 
+@media screen and (max-width: 1024px) {
+  /* PAGE GAME CARDS */
+  .section_game {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .card {
+    min-width: 6rem;
+    min-height: 6rem;
+    padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
+  }
+  .front-image {
+    height: 2.5rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .section_game {
-    gap: 1.5vw;
+    gap: 0.5rem;
     justify-content: center;
   }
   /* PAGE GAME CARDS */
   .card {
-    min-width: 80px;
-    min-height: 80px;
+    min-width: 5rem;
+    min-height: 5rem;
     padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
   }
 
@@ -1023,10 +1036,28 @@ a:hover {
   .front-image {
     height: 2.75rem;
   }
+  .container_menu-cards {
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 468px) {
   /* PAGE GAME CARDS */
+
+  .navbar {
+    padding: 0.25rem 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
   .card {
     min-width: var(--measure-card-size-s, 60px);
     min-height: var(--measure-card-size-s, 60px);
@@ -1054,11 +1085,8 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
-  h1 {
-    font-size: 1.75rem;
-  }
   .navbar {
-    height: 40px;
+    height: auto;
   }
 
   .section_game {

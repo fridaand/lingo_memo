@@ -11,13 +11,17 @@ const categories = [
 
 const maxNumberOfStartsPerCategory = 5;
 
-// LOAD THE GAME
+// LOAD THE GAME CARDS & CATEGORY TITLE AT GAME.HTML
 categories.forEach((category) => {
   const categoryElement = document.getElementById(category.id);
 
   if (categoryElement) {
     categoryElement.addEventListener("click", function () {
       localStorage.setItem("selectedCategory", category.name);
+      localStorage.setItem(
+        "categoryTitle",
+        document.getElementById("cate-" + category.name).innerText
+      );
     });
   }
 });
@@ -80,6 +84,7 @@ function updateStars() {
   });
 }
 
+//ORGINA
 document.addEventListener("DOMContentLoaded", function () {
   updatePage();
 
