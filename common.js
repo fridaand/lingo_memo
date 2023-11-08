@@ -11,6 +11,17 @@ const categories = [
 
 const maxNumberOfStartsPerCategory = 5;
 
+// LOAD THE GAME
+categories.forEach((category) => {
+  const categoryElement = document.getElementById(category.id);
+
+  if (categoryElement) {
+    categoryElement.addEventListener("click", function () {
+      localStorage.setItem("selectedCategory", category.name);
+    });
+  }
+});
+
 // CHOOSE LANGUAGE
 // User choose English
 document.getElementById("english").addEventListener("click", function () {

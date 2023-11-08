@@ -493,6 +493,7 @@ footer {
   justify-content: flex-end;
   gap: 8px;
   width: 128px;
+  background: red;
 }
 
 .wrapper_total-stars {

@@ -1,3 +1,5 @@
+// Example code for words.html
+
 /*let langButton = document.getElementById("choose_language"); // Button that opens the popup för language?
 let popup = document.getElementById("popUpId"); // Get the popup
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
