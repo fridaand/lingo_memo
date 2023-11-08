@@ -4,7 +4,8 @@
     "image": "images/dishes_1/burger.png",
     "language": {
       "english": "burger",
-      "french": "le burger"
+      "french": "le burger",
+      "swedish": "burgare"
     },
     "audio": {
       "english": "sound/dishes_1/burger.mp3",
@@ -16,7 +17,8 @@
     "image": "images/dishes_1/pancakes.png",
     "language": {
       "english": "pancakes",
-      "french": "les crêpe"
+      "french": "les crêpe",
+      "swedish": "pannkakor"
     },
     "audio": {
       "english": "sound/dishes_1/pancakes.mp3",
@@ -28,7 +30,8 @@
     "image": "images/dishes_1/pasta.png",
     "language": {
       "english": "pasta",
-      "french": "les pâtes"
+      "french": "les pâtes",
+      "swedish": "pasta"
     },
     "audio": {
       "english": "sound/dishes_1/pasta.mp3",
@@ -40,7 +43,8 @@
     "image": "images/dishes_1/pie.png",
     "language": {
       "english": "pie",
-      "french": "la tarte"
+      "french": "la tarte",
+      "swedish": "paj"
     },
     "audio": {
       "english": "sound/dishes_1/pie.mp3",
@@ -52,7 +56,8 @@
     "image": "images/dishes_1/pizza.png",
     "language": {
       "english": "pizza",
-      "french": "la pizza"
+      "french": "la pizza",
+      "swedish": "pizza"
     },
     "audio": {
       "english": "sound/dishes_1/pizza.mp3",
@@ -64,7 +69,8 @@
     "image": "images/dishes_1/salad.png",
     "language": {
       "english": "salad",
-      "french": "la salade"
+      "french": "la salade",
+      "swedish": "sallad"
     },
     "audio": {
       "english": "sound/dishes_1/salad.mp3",
@@ -76,7 +82,8 @@
     "image": "images/dishes_1/soup.png",
     "language": {
       "english": "soup",
-      "french": "la soupe"
+      "french": "la soupe",
+      "swedish": "soppa"
     },
     "audio": {
       "english": "sound/dishes_1/soup.mp3",
@@ -88,7 +95,8 @@
     "image": "images/dishes_1/taco.png",
     "language": {
       "english": "taco",
-      "french": "le taco"
+      "french": "le taco",
+      "swedish": "taco"
     },
     "audio": {
       "english": "sound/dishes_1/taco.mp3",
@@ -100,7 +108,8 @@
     "image": "images/dishes_1/wok.png",
     "language": {
       "english": "wok",
-      "french": "le wok"
+      "french": "le wok",
+      "swedish": "wok"
     },
     "audio": {
       "english": "sound/dishes_1/wok.mp3",
@@ -112,7 +121,8 @@
     "image": "images/dishes_1/wrap.png",
     "language": {
       "english": "wrap",
-      "french": "le wrap"
+      "french": "le wrap",
+      "swedish": "rulle"
     },
     "audio": {
       "english": "sound/dishes_1/wrap.mp3",

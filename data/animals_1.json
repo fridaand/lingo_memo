@@ -4,7 +4,8 @@
     "image": "images/animals_1/bird.png",
     "language": {
       "english": "bird",
-      "french": "l'oiseau"
+      "french": "l'oiseau",
+      "swedish": "fågel"
     },
     "audio": {
       "english": "sound/animals_1/bird.mp3",
@@ -16,7 +17,8 @@
     "image": "images/animals_1/cat.png",
     "language": {
       "english": "cat",
-      "french": "le chat"
+      "french": "le chat",
+      "swedish": "katt"
     },
     "audio": {
       "english": "sound/animals_1/cat.mp3",
@@ -28,7 +30,8 @@
     "image": "images/animals_1/cow.png",
     "language": {
       "english": "cow",
-      "french": "la vache"
+      "french": "la vache",
+      "swedish": "ko"
     },
     "audio": {
       "english": "sound/animals_1/cow.mp3",
@@ -40,7 +43,8 @@
     "image": "images/animals_1/dog.png",
     "language": {
       "english": "dog",
-      "french": "le chien"
+      "french": "le chien",
+      "swedish": "hund"
     },
     "audio": {
       "english": "sound/animals_1/dog.mp3",
@@ -52,7 +56,8 @@
     "image": "images/animals_1/fish.png",
     "language": {
       "english": "fish",
-      "french": "le poisson"
+      "french": "le poisson",
+      "swedish": "fisk"
     },
     "audio": {
       "english": "sound/animals_1/fish.mp3",
@@ -64,7 +69,8 @@
     "image": "images/animals_1/hamster.png",
     "language": {
       "english": "hamster",
-      "french": "le hamster"
+      "french": "le hamster",
+      "swedish": "hamster"
     },
     "audio": {
       "english": "sound/animals_1/hamster.mp3",
@@ -76,7 +82,8 @@
     "image": "images/animals_1/horse.png",
     "language": {
       "english": "horse",
-      "french": "le cheval"
+      "french": "le cheval",
+      "swedish": "häst"
     },
     "audio": {
       "english": "sound/animals_1/horse.mp3",
@@ -88,7 +95,8 @@
     "image": "images/animals_1/pig.png",
     "language": {
       "english": "pig",
-      "french": "le cochon"
+      "french": "le cochon",
+      "swedish": "gris"
     },
     "audio": {
       "english": "sound/animals_1/pig.mp3",
@@ -100,7 +108,8 @@
     "image": "images/animals_1/rabbit.png",
     "language": {
       "english": "rabbit",
-      "french": "le lapin"
+      "french": "le lapin",
+      "swedish": "kanin"
     },
     "audio": {
       "english": "sound/animals_1/rabbit.mp3",
@@ -112,7 +121,8 @@
     "image": "images/animals_1/sheep.png",
     "language": {
       "english": "sheep",
-      "french": "le mouton"
+      "french": "le mouton",
+      "swedish": "får"
     },
     "audio": {
       "english": "sound/animals_1/sheep.mp3",

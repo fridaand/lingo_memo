@@ -109,6 +109,14 @@ main {
   gap: 1rem;
   padding-top: 1.75rem;
 }
+
+.wrapper_buttons_lang {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
 /*  LABEL X END */
 
 /* BUTTON HITBOX ETC */
@@ -141,7 +149,7 @@ main {
   box-shadow: -1px -1px 8px 0px rgba(140, 127, 69, 0.2) inset,
     1px 1px 4px 0px rgba(140, 127, 69, 0.2) inset;
 }
-#dd-arrow {
+.dd-arrow {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -534,18 +542,24 @@ footer {
   align-items: flex-start;
   align-self: stretch;
   max-height: 0;
-  overflow: hidden;
+  width: auto;
+  overflow: scroll;
   transition: max-height 0.5s ease-in;
 }
 
 .dd-category_words.open {
-  max-height: 200px;
+  max-height: 80vh;
   transition: max-height 0.8s ease-out;
+  overflow: scroll;
 }
 
-.row_words {
+.wrapper-word {
+  width: 100%;
+  height: auto;
+}
+
+.list-word {
   display: flex;
-  width: auto;
   margin: 0;
   padding: var(--spacing-padding-xs, 8px) var(--spacing-padding-l, 20px);
   justify-content: space-between;

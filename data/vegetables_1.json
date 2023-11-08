@@ -4,7 +4,8 @@
     "image": "images/vegetables_1/avocado.png",
     "language": {
       "english": "avocado",
-      "french": "l'avocat"
+      "french": "l'avocat",
+      "swedish": "avokado"
     },
     "audio": {
       "english": "sound/vegetables_1/avocado.mp3",
@@ -16,7 +17,8 @@
     "image": "images/vegetables_1/beetroot.png",
     "language": {
       "english": "beetroot",
-      "french": "la betterave"
+      "french": "la betterave",
+      "swedish": "rödbeta"
     },
     "audio": {
       "english": "sound/vegetables_1/beetroot.mp3",
@@ -28,7 +30,8 @@
     "image": "images/vegetables_1/bellpepper.png",
     "language": {
       "english": "bell pepper",
-      "french": "le poivron"
+      "french": "le poivron",
+      "swedish": "paprika"
     },
     "audio": {
       "english": "sound/vegetables_1/bellpepper.mp3",
@@ -40,7 +43,8 @@
     "image": "images/vegetables_1/carrot.png",
     "language": {
       "english": "carrot",
-      "french": "la carotte"
+      "french": "la carotte",
+      "swedish": "morot"
     },
     "audio": {
       "english": "sound/vegetables_1/carrot.mp3",
@@ -52,7 +56,8 @@
     "image": "images/vegetables_1/cucumber.png",
     "language": {
       "english": "cucumber",
-      "french": "le concombre"
+      "french": "le concombre",
+      "swedish": "gurka"
     },
     "audio": {
       "english": "sound/vegetables_1/cucumber.mp3",
@@ -64,7 +69,8 @@
     "image": "images/vegetables_1/eggplant.png",
     "language": {
       "english": "eggplant",
-      "french": "l'aubergine"
+      "french": "l'aubergine",
+      "swedish": "aubergine"
     },
     "audio": {
       "english": "sound/vegetables_1/eggplant.mp3",
@@ -76,7 +82,8 @@
     "image": "images/vegetables_1/lettuce.png",
     "language": {
       "english": "lettuce",
-      "french": "la laitue"
+      "french": "la laitue",
+      "swedish": "salladsblad"
     },
     "audio": {
       "english": "sound/vegetables_1/lettuce.mp3",
@@ -88,7 +95,8 @@
     "image": "images/vegetables_1/mushroom.png",
     "language": {
       "english": "mushroom",
-      "french": "le champignon"
+      "french": "le champignon",
+      "swedish": "svamp"
     },
     "audio": {
       "english": "sound/vegetables_1/mushroom.mp3",
@@ -100,7 +108,8 @@
     "image": "images/vegetables_1/onion.png",
     "language": {
       "english": "onion",
-      "french": "l'oignon"
+      "french": "l'oignon",
+      "swedish": "lök"
     },
     "audio": {
       "english": "sound/vegetables_1/onion.mp3",
@@ -112,7 +121,8 @@
     "image": "images/vegetables_1/tomato.png",
     "language": {
       "english": "tomato",
-      "french": "la tomate"
+      "french": "la tomate",
+      "swedish": "tomat"
     },
     "audio": {
       "english": "sound/vegetables_1/tomato.mp3",

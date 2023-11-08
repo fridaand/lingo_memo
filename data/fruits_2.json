@@ -4,7 +4,8 @@
     "image": "images/fruits_1/apple.png",
     "language": {
       "english": "apple",
-      "french": "la pomme"
+      "french": "la pomme",
+      "swedish": "äpple"
     },
     "audio": {
       "english": "sound/fruits_1/apple.mp3",
@@ -16,7 +17,8 @@
     "image": "images/fruits_1/banana.png",
     "language": {
       "english": "banana",
-      "french": "la banane"
+      "french": "la banane",
+      "swedish": "banan"
     },
     "audio": {
       "english": "sound/fruits_1/banana.mp3",
@@ -28,7 +30,8 @@
     "image": "images/fruits_1/cherry.png",
     "language": {
       "english": "cherry",
-      "french": "la cerise"
+      "french": "la cerise",
+      "swedish": "körsbär"
     },
     "audio": {
       "english": "sound/fruits_1/cherry.mp3",
@@ -40,7 +43,8 @@
     "image": "images/fruits_1/grape.png",
     "language": {
       "english": "grape",
-      "french": "le raisin"
+      "french": "le raisin",
+      "swedish": "vindruvor"
     },
     "audio": {
       "english": "sound/fruits_1/grape.mp3",
@@ -52,7 +56,8 @@
     "image": "images/fruits_1/kiwi.png",
     "language": {
       "english": "kiwi",
-      "french": "le kiwi"
+      "french": "le kiwi",
+      "swedish": "kiwi"
     },
     "audio": {
       "english": "sound/fruits_1/kiwi.mp3",
@@ -64,7 +69,8 @@
     "image": "images/fruits_1/orange.png",
     "language": {
       "english": "orange",
-      "french": "l'orange"
+      "french": "l'orange",
+      "swedish": "apelsin"
     },
     "audio": {
       "english": "sound/fruits_1/orange.mp3",
@@ -76,7 +82,8 @@
     "image": "images/fruits_1/peach.png",
     "language": {
       "english": "peach",
-      "french": "la pêche"
+      "french": "la pêche",
+      "swedish": "persika"
     },
     "audio": {
       "english": "sound/fruits_1/peach.mp3",
@@ -88,7 +95,8 @@
     "image": "images/fruits_1/pineapple.png",
     "language": {
       "english": "pineapple",
-      "french": "l'ananas"
+      "french": "l'ananas",
+      "swedish": "ananas"
     },
     "audio": {
       "english": "sound/fruits_1/pineapple.mp3",
@@ -100,7 +108,8 @@
     "image": "images/fruits_1/pear.png",
     "language": {
       "english": "pear",
-      "french": "la poire"
+      "french": "la poire",
+      "swedish": "päron"
     },
     "audio": {
       "english": "sound/fruits_1/pear.mp3",
@@ -112,7 +121,8 @@
     "image": "images/fruits_1/strawberry.png",
     "language": {
       "english": "strawberry",
-      "french": "la fraise"
+      "french": "la fraise",
+      "swedish": "jordgubbe"
     },
     "audio": {
       "english": "sound/fruits_1/strawberry.mp3",

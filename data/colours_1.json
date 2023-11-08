@@ -4,7 +4,8 @@
     "image": "images/colours_1/black.png",
     "language": {
       "english": "black",
-      "french": "noir"
+      "french": "noir",
+      "swedish": "svart"
     },
     "audio": {
       "english": "sound/colours_1/black.mp3",
@@ -16,7 +17,8 @@
     "image": "images/colours_1/blue.png",
     "language": {
       "english": "blue",
-      "french": "bleu"
+      "french": "bleu",
+      "swedish": "blå"
     },
     "audio": {
       "english": "sound/colours_1/blue.mp3",
@@ -28,7 +30,8 @@
     "image": "images/colours_1/green.png",
     "language": {
       "english": "green",
-      "french": "vert"
+      "french": "vert",
+      "swedish": "grön"
     },
     "audio": {
       "english": "sound/colours_1/green.mp3",
@@ -40,7 +43,8 @@
     "image": "images/colours_1/grey.png",
     "language": {
       "english": "grey",
-      "french": "gris"
+      "french": "gris",
+      "swedish": "grå"
     },
     "audio": {
       "english": "sound/colours_1/grey.mp3",
@@ -52,7 +56,8 @@
     "image": "images/colours_1/orange.png",
     "language": {
       "english": "orange",
-      "french": "orange"
+      "french": "orange",
+      "swedish": "orange"
     },
     "audio": {
       "english": "sound/colours_1/orange.mp3",
@@ -64,7 +69,8 @@
     "image": "images/colours_1/pink.png",
     "language": {
       "english": "pink",
-      "french": "rose"
+      "french": "rose",
+      "swedish": "rosa"
     },
     "audio": {
       "english": "sound/colours_1/pink.mp3",
@@ -76,7 +82,8 @@
     "image": "images/colours_1/purple.png",
     "language": {
       "english": "purple",
-      "french": "violet"
+      "french": "violet",
+      "swedish": "lila"
     },
     "audio": {
       "english": "sound/colours_1/purple.mp3",
@@ -88,7 +95,8 @@
     "image": "images/colours_1/red.png",
     "language": {
       "english": "red",
-      "french": "rouge"
+      "french": "rouge",
+      "swedish": "röd"
     },
     "audio": {
       "english": "sound/colours_1/red.mp3",
@@ -100,7 +108,8 @@
     "image": "images/colours_1/white.png",
     "language": {
       "english": "white",
-      "french": "blanc"
+      "french": "blanc",
+      "swedish": "vit"
     },
     "audio": {
       "english": "sound/colours_1/white.mp3",
@@ -112,7 +121,8 @@
     "image": "images/colours_1/yellow.png",
     "language": {
       "english": "yellow",
-      "french": "jaune"
+      "french": "jaune",
+      "swedish": "gul"
     },
     "audio": {
       "english": "sound/colours_1/yellow.mp3",
