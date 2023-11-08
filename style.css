@@ -348,6 +348,7 @@ footer {
   flex-direction: column;
   width: auto;
   min-height: 75%;
+  padding-bottom: 48px;
   height: auto;
   overflow: scroll; /* Enable scroll if needed */
   background: linear-gradient(
