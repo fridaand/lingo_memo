@@ -1,3 +1,31 @@
+/*let langButton = document.getElementById("choose_language"); // Button that opens the popup för language?
+let popup = document.getElementById("popUpId"); // Get the popup
+let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
+
+// FUNCTIONS FOR THE POPUP "AVSLUTA"
+langButton.onclick = function () {
+  // When the user clicks the button, open the popup
+  popup.style.display = "flex";
+  popup.style.animationPlayState = "running"; // Starta animationen
+  //popup.classList.add("fade");
+};
+
+closeElements.forEach((e) => {
+  e.onclick = function () {
+    popup.style.display = "none";
+    // popup.classList.remove("fade");
+  };
+});
+
+window.onclick = function (event) {
+  // When the user clicks anywhere outside of the popup, close it
+  if (event.target == popup) {
+    popup.style.display = "none";
+    // popup.classList.remove("fade");
+  }
+};
+*/
+/*
 let langButton = document.getElementById("choose_language"); // Button that opens the popup för language?
 let popup = document.getElementById("popUpId"); // Get the popup
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
@@ -113,3 +141,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+*/
