@@ -66,23 +66,53 @@ dropdownButtons.forEach((button) => {
     categoryWords.classList.toggle("open");
     arrow.classList.toggle("rotate");
 
-    // Ladda och visa ordlistan för den valda kategorin
-    loadAndDisplayWordList(category, "english"); // Standard språk är engelska
+    // Hämta det valda språket från localStorage
+    const selectedLanguage = localStorage.getItem("language") || "english";
+
+    // Ladda och visa ordlistan för den valda kategorin med det valda språket
+    loadAndDisplayWordList(category, selectedLanguage);
   });
 });
 
-// Lyssna på klickhändelser på knapparna för språkbyte
-const swedishToEnglishButton = document.querySelector(
-  "#swedishToEnglishButton"
-);
-const swedishToFrenchButton = document.querySelector("#swedishToFrenchButton");
+// När användaren väljer språk
+document.getElementById("english").addEventListener("click", function () {
+  localStorage.setItem("language", "english");
+  updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
 
-swedishToEnglishButton.addEventListener("click", () => {
-  // Uppdatera ordlistan med engelska översättningar
-  loadAndDisplayWordList(category, "english");
+  // Uppdatera ordlistorna med det valda språket
+  const selectedCategory = localStorage.getItem("selectedCategory");
+  if (selectedCategory) {
+    const selectedLanguage = localStorage.getItem("language") || "english";
+    loadAndDisplayWordList(selectedCategory, selectedLanguage);
+  }
 });
 
-swedishToFrenchButton.addEventListener("click", () => {
-  // Uppdatera ordlistan med franska översättningar
-  loadAndDisplayWordList(category, "french");
+document.getElementById("french").addEventListener("click", function () {
+  localStorage.setItem("language", "french");
+  updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
+
+  // Uppdatera ordlistorna med det valda språket
+  const selectedCategory = localStorage.getItem("selectedCategory");
+  if (selectedCategory) {
+    const selectedLanguage = localStorage.getItem("language") || "english";
+    loadAndDisplayWordList(selectedCategory, selectedLanguage);
+  }
+});
+
+// Uppdatera label och flagga när sidan laddas
+window.addEventListener("load", function () {
+  // Hämta det valda språket från localStorage
+  const storedLanguage = localStorage.getItem("language") || "english";
+
+  // Uppdatera label och flagga
+  updateLanguageDisplay(
+    storedLanguage === "english" ? "SVE-ENG" : "SVE-FRA",
+    `./icons/flag/${storedLanguage}.png`
+  );
+
+  // Uppdatera ordlistorna med det valda språket
+  const selectedCategory = localStorage.getItem("selectedCategory");
+  if (selectedCategory) {
+    loadAndDisplayWordList(selectedCategory, storedLanguage);
+  }
 });
