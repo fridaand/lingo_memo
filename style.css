@@ -499,7 +499,6 @@ footer {
   justify-content: flex-end;
   gap: 8px;
   width: 128px;
-  background: red;
 }
 
 .wrapper_total-stars {
@@ -551,6 +550,12 @@ footer {
   max-height: 80vh;
   transition: max-height 0.8s ease-out;
   overflow: scroll;
+}
+
+.height {
+  height: 200px;
+  width: 100%;
+  background-color: blue;
 }
 
 .wrapper-word {
@@ -611,7 +616,7 @@ h1 {
   /* app/h1_24_32_12_0% */
   letter-spacing: 0.025rem;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2rem;
   margin: 0;
   /*background: var(
@@ -748,6 +753,11 @@ p {
 
 /* PAGE GAME (WITHIN SCROLL AREA)  */
 
+.center {
+  height: 75vh;
+  margin: 0;
+}
+
 .section_game {
   display: flex;
   align-items: flex-start;
@@ -755,6 +765,7 @@ p {
   justify-content: flex-start;
   flex-wrap: wrap;
   min-width: 320px;
+  height: 100%;
   width: auto;
   gap: 1.25vw;
   padding: var(--spacing-padding-l, 20px);

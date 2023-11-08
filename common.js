@@ -66,6 +66,10 @@ window.addEventListener("load", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  updatePage(); // Uppdatera sidan när den laddas
+});
+
 function updatePage() {
   updateRounds();
   updateTotalTime();
@@ -84,7 +88,6 @@ function updateStars() {
   });
 }
 
-//ORGINA
 document.addEventListener("DOMContentLoaded", function () {
   updatePage();
 
