@@ -258,11 +258,11 @@ function pause() {
 
   if (isPaused) {
     isPaused = false;
-    playPause.src = "icons/buttons/button_pause.png";
+    playPause.src = "./icons/buttons/button_play.png";
   } else {
     isPaused = true;
 
-    playPause.src = "icons/buttons/button_play.png";
+    playPause.src = "./icons/buttons/button_pause-w.png";
   }
 }
 

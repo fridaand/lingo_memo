@@ -87,7 +87,7 @@ main {
 .wrapper_text-button {
   display: flex;
   flex-direction: row;
-  width: 120px;
+  width: 124px;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
@@ -770,28 +770,42 @@ p {
 }
 
 .section_game {
-  display: flex;
+  /* display: flex;
   align-items: flex-start;
   align-content: flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  min-width: 320px;
-  height: auto;
+  flex-wrap: wrap;*/
+  /*min-width: 320px;*/
+  /* height: auto;
   width: auto;
-  gap: 1.25vw;
+  gap: 1.25vw; */
   padding: var(--spacing-padding-l, 20px);
   background: var(
     --fade_forest_dark,
     linear-gradient(180deg, #152a28 0%, #1c3836 92.71%, #152a28 100%)
   );
+  /* 9NOV */
+
+  display: grid;
+  grid-gap: 2vw; /* Avstånd mellan brickorna */
+  grid-template-columns: repeat(5, 1fr); /* 5 kolumner i liggande format */
+  justify-items: center; /* Centrera korten horisontellt */
+  justify-content: center;
+  /*ha med nedan?*/
+  align-content: center; /* Centrera brickorna vertikalt */
+  max-width: 100%; /* Säkerställ att sektionen inte blir bredare än skärmbredden */
 }
 
 /* PAGE GAME CARDS */
 .card {
-  width: auto;
-  height: auto;
-  min-width: var(--measure-card-size-s, 7rem);
-  min-height: var(--measure-card-size-s, 7rem);
+  /* För att fylla gridcellen */
+  width: 7rem; /* Maxstorlek för kort */
+  height: 7rem; /* Maxstorlek för kort */
+  min-width: 64px; /* Minstorlek för kort */
+  min-height: 64px; /* Minstorlek för kort */
+  margin: auto; /* Centrera kortet i gridcellen */
+
+  display: flex;
   padding: 1rem;
   border-radius: 0.5rem;
   flex-direction: column;
@@ -810,7 +824,7 @@ p {
 
 .card-text {
   color: #1d1d1d;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   text-align: center;
   text-wrap: wrap;
@@ -818,7 +832,7 @@ p {
 }
 
 .front-image {
-  height: 4rem;
+  height: 3rem;
   width: auto;
 }
 
@@ -1038,50 +1052,41 @@ a:hover {
 
 @media screen and (max-width: 1024px) {
   /* PAGE GAME CARDS */
-  .section_game {
-    gap: 0.75rem;
-    justify-content: center;
-  }
   .card {
-    min-width: 6rem;
-    min-height: 6rem;
-    padding: var(--spacing-padding-xxs, 0.5rem)
-      var(--spacing-padding-xxs, 0.5rem);
+    padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
+    /* 9nov */
+    min-width: 4rem; /* Mindre storlek */
+    min-height: 4rem;
   }
+  .card-text {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  }
+
   .front-image {
-    height: 2.5rem;
+    height: 3.25rem;
   }
 }
-@media screen and (max-width: 768px) {
-  .section_game {
-    gap: 0.5rem;
-    justify-content: center;
-  }
+
+@media screen and (max-width: 640px) {
   /* PAGE GAME CARDS */
   .card {
-    min-width: 5rem;
-    min-height: 5rem;
+    width: var(--measure-card-size-s, 4.75rem);
+    height: var(--measure-card-size-s, 4.75rem);
     padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
   }
 
   .card-text {
-    font-size: 0.75rem;
-    line-height: 0.75rem;
     margin: 0;
   }
 
   .front-image {
-    height: 2.75rem;
+    height: 2rem;
   }
   .container_menu-cards {
     row-gap: 1rem;
     column-gap: 1rem;
   }
-}
-
-@media screen and (max-width: 468px) {
-  /* PAGE GAME CARDS */
-
   .navbar {
     padding: 0.25rem 1.25rem;
   }
@@ -1094,12 +1099,13 @@ a:hover {
   h2 {
     font-size: 1.75rem;
   }
+}
 
+@media screen and (max-width: 468px) {
   .card {
-    min-width: var(--measure-card-size-s, 60px);
-    min-height: var(--measure-card-size-s, 60px);
+    width: var(--measure-card-size-s, 3.75rem);
+    height: var(--measure-card-size-s, 3.75rem);
     padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
-    gap: 0.25rem;
   }
 
   .card-text {
@@ -1114,7 +1120,6 @@ a:hover {
 
   .front,
   .back {
-    gap: 0.25rem;
   }
   .wrapper_spel-min {
     width: 172px;
@@ -1122,16 +1127,15 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
-  .navbar {
-    height: auto;
-  }
+}
+.section_game {
+  grid-gap: 0.25rem; /* Avstånd mellan brickorna */
+}
 
+@media (orientation: portrait) {
   .section_game {
-    gap: 1.25vw;
-  }
-  .card-text {
-    font-size: 0.5rem;
-    line-height: 0.5rem;
-    text-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolumner i stående format */
   }
 }
+
+/* PREFIXING FLEXBOX */
