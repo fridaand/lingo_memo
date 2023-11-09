@@ -255,7 +255,7 @@ main {
 /* BUTTONS ETC ENDS */
 
 footer {
-  position: fixed;
+  position: sticky;
   width: 100%;
   min-width: var(--measure-total-width-s, 320px);
   margin: 0;
@@ -1045,7 +1045,8 @@ a:hover {
   .card {
     min-width: 6rem;
     min-height: 6rem;
-    padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
+    padding: var(--spacing-padding-xxs, 0.5rem)
+      var(--spacing-padding-xxs, 0.5rem);
   }
   .front-image {
     height: 2.5rem;
