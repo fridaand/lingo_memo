@@ -845,6 +845,7 @@ p {
 .front-image {
   height: 4rem;
   width: auto;
+  z-index: 20;
 }
 
 .card.flipped {
@@ -869,6 +870,7 @@ p {
   justify-content: center;
   align-items: center;
   transform: rotateY(180deg);
+  z-index: 19;
 }
 
 .card .back {
