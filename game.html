@@ -9,63 +9,61 @@
 
   <body>
     <main>
-      <nav class="navbar">
-        <h1>LINGO MEMO GAME</h1>
-        <div class="hitbox" id="button_trigger">
-          <img src="./icons/nav/cross_s.svg" alt="" />
-        </div>
-      </nav>
+      <div class="sticky">
+        <nav class="navbar">
+          <h1>LINGO MEMO GAME</h1>
+          <div class="hitbox" id="button_trigger">
+            <img src="./icons/nav/cross_s.svg" alt="" />
+          </div>
+        </nav>
 
-      <!-- SECTION PAGE LABEL -->
-      <section class="section_page-label">
-        <div class="wrapper_h2-text-button">
-          <h2 id="cate"></h2>
-          <div class="wrapper_text-button">
-            <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
-            <div class="wrapper_buttons-round">
-              <div id="button-mute" class="hitbox button-mute">
-                <img
-                  id="sound-icon"
-                  class="button_s_r"
-                  src="./icons/buttons/button_sound-on.png"
-                  alt="Mute button"
-                />
-              </div>
-              <div
-                id="button-pause"
-                class="hitbox button-pause"
-                onclick="pause()"
-              >
-                <img
-                  id="play-pause"
-                  class="button_m_r"
-                  src="./icons/buttons/button_pause.png"
-                  alt="Play-pause button"
-                />
+        <!-- SECTION PAGE LABEL -->
+        <section class="section_page-label">
+          <div class="wrapper_h2-text-button">
+            <h2 id="cate"></h2>
+            <div class="wrapper_text-button">
+              <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
+              <div class="wrapper_buttons-round">
+                <div id="button-mute" class="hitbox button-mute">
+                  <img
+                    id="sound-icon"
+                    class="button_s_r"
+                    src="./icons/buttons/button_sound-on.png"
+                    alt="Mute button"
+                  />
+                </div>
+                <div
+                  id="button-pause"
+                  class="hitbox button-pause"
+                  onclick="pause()"
+                >
+                  <img
+                    id="play-pause"
+                    class="button_m_r"
+                    src="./icons/buttons/button_pause.png"
+                    alt="Play-pause button"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- SECTION DRAUGHTS & SECONDS -->
-      <section class="section_total">
-        <h4 class="h3_label_s">PÅGÅENDE SPEL</h4>
-        <div class="container_game-info">
-          <div class="wrapper_spel-min">
-            <div class="wrapper_text-min">
-              <div><span class="score"></span> drag</div>
-            </div>
-            <div class="wrapper_text-min">
-              <div><span class="info-seconds"></span> sekunder</div>
+        <!-- SECTION DRAUGHTS & SECONDS -->
+        <section class="section_total">
+          <h4 class="h3_label_s">PÅGÅENDE SPEL</h4>
+          <div class="container_game-info">
+            <div class="wrapper_spel-min">
+              <div class="wrapper_text-min">
+                <div><span class="score"></span> drag</div>
+              </div>
+              <div class="wrapper_text-min">
+                <div><span class="info-seconds"></span> sekunder</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- showing the points -->
-
-      <!-- container for the cards -->
+        </section>
+      </div>
 
       <div class="center"><div class="section_game"></div></div>
 
@@ -113,7 +111,7 @@
         </div>
       </div>
 
-      <div class="container_game-info">
+      <div class="wrapper_button">
         <div class="button_primary" onclick="window.location.href='menu.html';">
           Huvudmeny
         </div>

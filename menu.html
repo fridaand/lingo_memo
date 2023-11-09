@@ -14,68 +14,74 @@
   <!-- "NAVBAR" -->
   <body>
     <main>
-      <nav class="navbar">
-        <h1>LINGO MEMO GAME</h1>
-        <a href="" class="hitbox">
-          <img src="./icons/nav/cross_s.svg" alt="" />
-        </a>
-      </nav>
+      <div class="sticky">
+        <nav class="navbar">
+          <h1>LINGO MEMO GAME</h1>
+          <a href="" class="hitbox">
+            <img src="./icons/nav/cross_s.svg" alt="" />
+          </a>
+        </nav>
 
-      <!-- SECTION PAGE LABEL -->
-      <section class="section_page-label">
-        <div class="wrapper_h2-text-button">
-          <h2>SPEL</h2>
+        <!-- SECTION PAGE LABEL -->
+        <section class="section_page-label">
+          <div class="wrapper_h2-text-button">
+            <h2>SPEL</h2>
 
-          <div class="wrapper_text-button" id="choose_language">
-            <h4 class="h3_label_s" id="selected_language">SVE-ENG</h4>
-            <div class="hitbox">
-              <img
-                id="flag"
-                class="button_m_r"
-                src="./icons/flag/english.png"
-                alt=""
-              />
+            <div class="wrapper_text-button" id="choose_language">
+              <h4 class="h3_label_s" id="selected_language">SVE-ENG</h4>
+              <div class="hitbox">
+                <img
+                  id="flag"
+                  class="button_m_r"
+                  src="./icons/flag/english.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- POPUP CHOOSE LANGUAGE -->
+        <div id="popUpId" class="popup_bg">
+          <div class="popup_box">
+            <!--<span class="close">&times;</span> -->
+            <div class="wrapper_justify-end">
+              <div class="hitbox_tl">
+                <img
+                  class="button_close"
+                  src="./icons/nav/cross_s.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <h2>VÄLJ SPRÅK</h2>
+
+            <div class="wrapper_buttons">
+              <div class="button_primary button_close" id="english">
+                <h3>ENGELSKA</h3>
+              </div>
+              <div class="button_primary button_close" id="french">
+                <h3>FRANSKA</h3>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- POPUP CHOOSE LANGUAGE -->
-      <div id="popUpId" class="popup_bg">
-        <div class="popup_box">
-          <!--<span class="close">&times;</span> -->
-          <div class="wrapper_justify-end">
-            <div class="hitbox_tl">
-              <img class="button_close" src="./icons/nav/cross_s.svg" alt="" />
+        <!-- SECTION TOTAL GAMES & MINUTES -->
+        <section class="section_total">
+          <h4 class="h3_label_s">TOTALT</h4>
+          <div class="container_game-info">
+            <div class="wrapper_spel-min">
+              <div class="wrapper_text-min">
+                <span id="info-rounds"></span>spel
+              </div>
+              <div class="wrapper_text-min">
+                <span id="info-totaltime"></span>minuter
+              </div>
             </div>
           </div>
-          <h2>VÄLJ SPRÅK</h2>
-
-          <div class="wrapper_buttons">
-            <div class="button_primary button_close" id="english">
-              <h3>ENGELSKA</h3>
-            </div>
-            <div class="button_primary button_close" id="french">
-              <h3>FRANSKA</h3>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-
-      <!-- SECTION TOTAL GAMES & MINUTES -->
-      <section class="section_total">
-        <h4 class="h3_label_s">TOTALT</h4>
-        <div class="container_game-info">
-          <div class="wrapper_spel-min">
-            <div class="wrapper_text-min">
-              <span id="info-rounds"></span>spel
-            </div>
-            <div class="wrapper_text-min">
-              <span id="info-totaltime"></span>minuter
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- SECTION SCROLL AREA WITH GAME BUTTONS -->
       <section class="scroll-area">
