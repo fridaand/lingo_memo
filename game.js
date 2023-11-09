@@ -119,6 +119,9 @@ function playCardSound(audioSrc) {
 function flipCard() {
   if (this === firstCard) return;
 
+  // Lyssna efter "animationend" händelse på detta kort
+  this.addEventListener("animationend", handleAnimationEnd);
+
   this.classList.add("flipped");
 
   if (!firstCard) {
@@ -132,6 +135,18 @@ function flipCard() {
   updateScore();
 
   checkForMatch();
+}
+
+function handleAnimationEnd() {
+  // Koden som ska köras när animationen är klar
+  if (this.classList.contains("flipped")) {
+    // Frontbilden är fortfarande synlig
+  } else {
+    // Frontbilden har försvunnit
+  }
+
+  // Ta bort händelselyssnaren efter att den har använts
+  this.removeEventListener("animationend", handleAnimationEnd);
 }
 
 function startTimer() {

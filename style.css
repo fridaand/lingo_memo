@@ -1,9 +1,15 @@
 @import url(https://fonts.bunny.net/css?family=quicksand:300,400,500,600);
 
+html {
+  height: -webkit-fill-available;
+}
+
 /* ev flytta dessa egenskaper senare t anann div */
 body {
   display: flex;
   height: 100vh;
+  height: -webkit-fill-available;
+
   justify-content: center;
   color: #ffe7a7;
   font-family: "Quicksand", "Gill Sans", "Gill Sans MT", "Calibri",
@@ -12,8 +18,17 @@ body {
   margin: 0;
   background: var(
     --button-shade-green,
-    linear-gradient(179deg, #408581 18.99%, #3a7874 30.68%, #1a3534 81.09%)
+    linear-gradient(
+      -180deg,
+      #408581 10%,
+      #3a7874 30%,
+      #1a3534 50%,
+
+      #3a7874 10%,
+      #408581 20%
+    )
   );
+  background: #408581;
 }
 
 main {
@@ -25,10 +40,6 @@ main {
   align-items: center;
   /* flex: 1 0 0;*/
   align-self: stretch;
-  background: var(
-    --button-shade-green,
-    linear-gradient(179deg, #408581 18.99%, #3a7874 30.68%, #1a3534 81.09%)
-  );
 }
 
 .sticky {
@@ -41,7 +52,7 @@ main {
   display: flex;
   min-width: 320px;
   width: auto;
-  height: 48px;
+  height: auto;
   padding: var(--spacing-padding-xs, 8px) var(--spacing-padding-l, 20px);
   justify-content: space-between;
   align-items: center;
@@ -65,13 +76,13 @@ main {
   display: flex;
   width: auto;
   min-width: var(--measure-total-width-m, 320px);
-  padding: var(--spacing-padding-m, 16px) var(--spacing-padding-l, 20px);
+  padding: var(--spacing-padding-l, 1.25rem) var(--spacing-padding-l, 20px);
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-gap-l, 20px);
   background: var(
     --fade_forest_dark,
-    linear-gradient(180deg, #152a28 0%, #1c3836 92.71%, #152a28 100%)
+    linear-gradient(180deg, #152a28 0%, #224643 93%, #152a28 100%)
   );
 }
 
@@ -317,7 +328,7 @@ footer {
   min-width: 320px;
   width: auto;
   font-weight: 400;
-  padding: 0px var(--spacing-padding-l, 20px);
+  padding: 0.75rem var(--spacing-padding-l, 20px);
   justify-content: space-between;
   align-items: center;
   background: var(
@@ -332,7 +343,7 @@ footer {
     )
   );
   box-shadow: 0px -4px 4px 0px #173736;
-  height: 40px;
+  height: auto;
   color: #ffe18d;
 }
 
@@ -782,12 +793,12 @@ p {
   padding: var(--spacing-padding-l, 20px);
   background: var(
     --fade_forest_dark,
-    linear-gradient(180deg, #152a28 0%, #1c3836 92.71%, #152a28 100%)
+    linear-gradient(180deg, #152a28 0%, #224643 1%)
   );
   /* 9NOV */
 
   display: grid;
-  grid-gap: 2vw; /* Avstånd mellan brickorna */
+  grid-gap: clamp(0.25rem, 1vw, 3rem); /* Avstånd mellan brickorna */
   grid-template-columns: repeat(5, 1fr); /* 5 kolumner i liggande format */
   justify-items: center; /* Centrera korten horisontellt */
   justify-content: center;
@@ -824,7 +835,7 @@ p {
 
 .card-text {
   color: #1d1d1d;
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 1vw, 1rem);
   line-height: 1rem;
   text-align: center;
   text-wrap: wrap;
@@ -832,7 +843,7 @@ p {
 }
 
 .front-image {
-  height: 3rem;
+  height: 4rem;
   width: auto;
 }
 
@@ -980,7 +991,7 @@ p {
   z-index: 1; /* Sit on top */
   top: 0;
   width: 100%;
-  height: 100%; /* Full height */
+  height: 100vh; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
@@ -1064,7 +1075,7 @@ a:hover {
   }
 
   .front-image {
-    height: 3.25rem;
+    height: 3.5rem;
   }
 }
 
@@ -1081,7 +1092,7 @@ a:hover {
   }
 
   .front-image {
-    height: 2rem;
+    height: 2.25rem;
   }
   .container_menu-cards {
     row-gap: 1rem;
@@ -1107,19 +1118,13 @@ a:hover {
     height: var(--measure-card-size-s, 3.75rem);
     padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
   }
-
   .card-text {
     font-size: 0.5rem;
     line-height: 0.5rem;
     margin: 4px;
   }
-
   .front-image {
     height: 2rem;
-  }
-
-  .front,
-  .back {
   }
   .wrapper_spel-min {
     width: 172px;
@@ -1127,9 +1132,9 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
-}
-.section_game {
-  grid-gap: 0.25rem; /* Avstånd mellan brickorna */
+  .section_game {
+    grid-gap: 0.25rem; /* Avstånd mellan brickorna */
+  }
 }
 
 @media (orientation: portrait) {
