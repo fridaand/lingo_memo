@@ -18,7 +18,7 @@ goBackButton.addEventListener("click", function () {
   if (window.history.length > 1) {
     window.history.back();
   } else {
-    window.location.href = "menu.html.";
+    window.location.href = "menu.html";
   }
 });
 
@@ -110,43 +110,6 @@ function generateCards() {
     cardElement.addEventListener("click", cardElement.clickTrigger);
   }
 }
-
-/* BACKUP
-function generateCardDiv(card) {
-  return `
-    <div class="front">
-        <img class="front-image" src=${card.image} />
-        <p class="card-text">${card.language.french}</p>
-    </div>
-    <div class="back"></div>
-    `;
-}
-
-function generateCards() {
-  const gridContainer = document.querySelector(".section_game");
-  for (let card of cards) {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    cardElement.setAttribute("data-name", card.name);
-    cardElement.innerHTML = generateCardDiv(card);
-    gridContainer.appendChild(cardElement);
-
-    cardElement.clickTrigger = function () {
-      if (isPaused || (firstCard && secondCard)) {
-        return;
-      }
-
-      if (!isMuted) {
-        playCardSound(card.audio.french); // Spela upp ljudet när kortet klickas på
-      }
-
-      flipCard.call(this);
-    };
-
-    cardElement.addEventListener("click", cardElement.clickTrigger);
-  }
-}
-*/
 
 function playCardSound(audioSrc) {
   lastAudio = new Audio(audioSrc);

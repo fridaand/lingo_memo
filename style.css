@@ -87,7 +87,7 @@ main {
   display: flex;
   flex-direction: row;
   width: 120px;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   cursor: pointer;
 }
