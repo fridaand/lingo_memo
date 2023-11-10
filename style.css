@@ -372,7 +372,7 @@ footer {
   width: auto;
   min-height: 75%;
   height: auto;
-  padding-bottom: 48px;
+  padding-bottom: 0px;
   overflow: scroll; /* Enable scroll if needed */
   background: linear-gradient(
       0deg,
