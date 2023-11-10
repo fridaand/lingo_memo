@@ -10,105 +10,78 @@
 
   <body>
     <main>
-      <nav class="navbar">
-        <h1>LINGO MEMO GAME</h1>
-        <div class="hitbox" id="button_trigger">
-          <img src="./icons/nav/cross_s.svg" alt="" />
-        </div>
-      </nav>
-      <div class="sticky">
-        <!-- SECTION PAGE LABEL -->
-        <section class="section_page-label">
-          <div class="wrapper_h2-text-button">
-            <h2 id="cate"></h2>
-            <div class="wrapper_text-button">
-              <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
-              <div class="wrapper_buttons-round">
-                <div id="button-mute" class="hitbox button-mute">
-                  <img
-                    id="sound-icon"
-                    class="button_s_r"
-                    src="./icons/buttons/button_sound-on.png"
-                    alt="Mute button"
-                  />
-                </div>
-                <div
-                  id="button-pause"
-                  class="hitbox button-pause"
-                  onclick="pause()"
-                >
-                  <img
-                    id="play-pause"
-                    class="button_m_r"
-                    src="./icons/buttons/button_play.png"
-                    alt="Play-pause button"
-                  />
+      <div class="all-sections">
+        <nav class="navbar">
+          <h1>LINGO MEMO GAME</h1>
+          <div class="hitbox" id="button_trigger">
+            <img src="./icons/nav/cross_s.svg" alt="" />
+          </div>
+        </nav>
+        <div class="sticky">
+          <!-- SECTION PAGE LABEL -->
+          <section class="section_page-label">
+            <div class="wrapper_h2-text-button">
+              <h2 id="cate"></h2>
+              <div class="wrapper_text-button">
+                <!-- <h4 class="h3_label_s">SVE-ENG</h4> -->
+                <div class="wrapper_buttons-round">
+                  <div id="button-mute" class="hitbox button-mute">
+                    <img
+                      id="sound-icon"
+                      class="button_s_r"
+                      src="./icons/buttons/button_sound-on.png"
+                      alt="Mute button"
+                    />
+                  </div>
+                  <div
+                    id="button-pause"
+                    class="hitbox button-pause"
+                    onclick="pause()"
+                  >
+                    <img
+                      id="play-pause"
+                      class="button_m_r"
+                      src="./icons/buttons/button_play.png"
+                      alt="Play-pause button"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- SECTION DRAUGHTS & SECONDS -->
+          <!-- SECTION DRAUGHTS & SECONDS -->
+          <section class="section_total">
+            <h3 class="h3_label_s">PÅGÅENDE SPEL</h3>
+            <div class="container_game-info">
+              <div class="wrapper_spel-min">
+                <div class="wrapper_text-min">
+                  <div><span class="score"></span> drag</div>
+                </div>
+                <div class="wrapper_text-min">
+                  <div><span class="info-seconds"></span> sekunder</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="center"><div class="section_game"></div></div>
+
+        <!-- SECTION TOTAL GAMES & MINUTES -->
         <section class="section_total">
-          <h3 class="h3_label_s">PÅGÅENDE SPEL</h3>
+          <h3 class="h3_label_s">TOTALT</h3>
           <div class="container_game-info">
             <div class="wrapper_spel-min">
               <div class="wrapper_text-min">
-                <div><span class="score"></span> drag</div>
+                <span id="info-rounds"></span>spel
               </div>
               <div class="wrapper_text-min">
-                <div><span class="info-seconds"></span> sekunder</div>
+                <span id="info-totaltime"></span>minuter
               </div>
             </div>
           </div>
         </section>
-      </div>
-
-      <div class="center"><div class="section_game"></div></div>
-
-      <!-- SECTION TOTAL GAMES & MINUTES -->
-      <section class="section_total">
-        <h3 class="h3_label_s">TOTALT</h3>
-        <div class="container_game-info">
-          <div class="wrapper_spel-min">
-            <div class="wrapper_text-min">
-              <span id="info-rounds"></span>spel
-            </div>
-            <div class="wrapper_text-min">
-              <span id="info-totaltime"></span>minuter
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- button that starts the game (add more?)-->
-      <div class="section_end-game">
-        <div class="container_end-game">
-          <div class="wrapper_justify-end">
-            <div class="hitbox_tl" onclick="restartGame()">
-              <img src="./icons/nav/cross_s.svg" />
-            </div>
-          </div>
-          <div class="wrapper_h2-text">
-            <h2>BRA GJORT!</h2>
-            <div>
-              <p>Du klarade spelet med <span class="score"></span> drag</p>
-              <p>På <span class="info-seconds"></span> sekunder</p>
-            </div>
-          </div>
-          <div class="wrapper_buttons">
-            <div class="actions button_primary" onclick="restartGame()">
-              <h3>Spela igen</h3>
-            </div>
-            <div
-              class="button_primary button-menu"
-              onclick="window.location.href='menu.html';"
-            >
-              <h3>Huvudmeny</h3>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="wrapper_button">
@@ -116,31 +89,58 @@
           Huvudmeny
         </div>
       </div>
-
-      <!-- POPUP END GAME-->
-      <div id="popUpId" class="popup_bg">
-        <div class="popup_box">
-          <!--<span class="close">&times;</span> -->
-          <div class="wrapper_justify-end">
-            <div class="hitbox_tl">
-              <img class="button_close" src="./icons/nav/cross_s.svg" alt="" />
-            </div>
+    </main>
+    <!-- POPUP EXIT GAME-->
+    <div id="popUpId" class="popup_bg">
+      <div class="popup_box">
+        <!--<span class="close">&times;</span> -->
+        <div class="wrapper_justify-end">
+          <div class="hitbox_tl">
+            <img class="button_close" src="./icons/nav/cross_s.svg" alt="" />
           </div>
-          <h2>VILL DU AVSLUTA?</h2>
+        </div>
+        <h2>VILL DU AVSLUTA?</h2>
 
-          <div class="wrapper_buttons">
-            <a href=""
-              ><div class="button_primary" id="goBackButton">
-                <h3>Ja</h3>
-              </div></a
-            >
-            <a class="button_close"
-              ><div class="button_primary"><h3>Nej</h3></div></a
-            >
+        <div class="wrapper_buttons">
+          <a href=""
+            ><div class="button_primary" id="goBackButton">
+              <h3>Ja</h3>
+            </div></a
+          >
+          <a class="button_close"
+            ><div class="button_primary"><h3>Nej</h3></div></a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- POPUP GAME ENDS-->
+    <div class="section_end-game">
+      <div class="container_end-game">
+        <div class="wrapper_justify-end">
+          <div class="hitbox_tl" onclick="restartGame()">
+            <img src="./icons/nav/cross_s.svg" />
+          </div>
+        </div>
+        <div class="wrapper_h2-text">
+          <h2>BRA GJORT!</h2>
+          <div>
+            <p>Du klarade spelet med <span class="score"></span> drag</p>
+            <p>På <span class="info-seconds"></span> sekunder</p>
+          </div>
+        </div>
+        <div class="wrapper_buttons">
+          <div class="actions button_primary" onclick="restartGame()">
+            <h3>Spela igen</h3>
+          </div>
+          <div
+            class="button_primary button-menu"
+            onclick="window.location.href='menu.html';"
+          >
+            <h3>Huvudmeny</h3>
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
     <!-- script tag last in the body-->
     <script src="common.js"></script>
