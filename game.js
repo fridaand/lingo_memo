@@ -194,7 +194,7 @@ function registerGoBackButton() {
 
     // VISIT EARLIER PAGE OR MENU.HTML
     goBackButton.addEventListener("click", function () {
-        if (window) {
+        if (window && window.history) {
             if (window.history.length > 1) {
                 window.history.back();
             } else {
