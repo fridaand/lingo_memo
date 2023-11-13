@@ -6,40 +6,7 @@ let timer = 0;
 let timerInterval;
 let isMuted = false;
 let isPaused = false;
-let lastAudio = undefined;
 let popup = document.getElementById("popUpId"); // Get the popup
-let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
-let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
-let currentLanguage = localStorage.getItem("language") || "english"; // Använd engelska som standard om inget är sparad
-const goBackButton = document.getElementById("goBackButton");
-
-// VISIT EARLIER PAGE OR MENU.HTML
-goBackButton.addEventListener("click", function () {
-  if (window.history.length > 1) {
-    window.history.back();
-  } else {
-    window.location.href = "menu.html";
-  }
-});
-
-// FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
-xButton.onclick = function () {
-  // When the user clicks the button, open the popup
-  popup.style.display = "flex";
-};
-
-closeElements.forEach((e) => {
-  e.onclick = function () {
-    popup.style.display = "none";
-  };
-});
-
-window.onclick = function (event) {
-  // When the user clicks anywhere outside of the popup, close it
-  if (event.target == popup) {
-    popup.style.display = "none";
-  }
-};
 
 function updateScore() {
   document.querySelectorAll(".score").forEach((span) => {
@@ -112,8 +79,8 @@ function generateCards() {
 }
 
 function playCardSound(audioSrc) {
-  lastAudio = new Audio(audioSrc);
-  lastAudio.play();
+  const audio = new Audio(audioSrc);
+  audio.play();
 }
 
 function flipCard() {
@@ -198,10 +165,48 @@ function registerMuteButton() {
   });
 }
 
+function registerCloseButtons() {
+    const closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
+    closeElements.forEach((e) => {
+        e.onclick = function () {
+            popup.style.display = "none";
+        };
+    });
+
+    // FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
+    let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
+    xButton.onclick = function () {
+        // When the user clicks the button, open the popup
+        popup.style.display = "flex";
+    };
+
+    window.onclick = function (event) {
+        // When the user clicks anywhere outside of the popup, close it
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    };
+}
+
+function registerGoBackButton() {
+    const goBackButton = document.getElementById("goBackButton");
+
+    // VISIT EARLIER PAGE OR MENU.HTML
+    goBackButton.addEventListener("click", function () {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = "menu.html";
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   hideEndGameInfo();
   showGameInfo();
+  registerCloseButtons();
   registerMuteButton();
+  registerGoBackButton();
   updatePage();
 });
 
