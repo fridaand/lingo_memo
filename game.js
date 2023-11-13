@@ -193,10 +193,16 @@ function registerGoBackButton() {
 
     // VISIT EARLIER PAGE OR MENU.HTML
     goBackButton.addEventListener("click", function () {
-        if (window.history.length > 1) {
-            window.history.back();
+        if (window) {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "menu.html";
+            }
+        } else if (navigator) {
+            navigator.app.backHistory()
         } else {
-            window.location.href = "menu.html";
+            alert("No window nor navigator!");
         }
     });
 }
