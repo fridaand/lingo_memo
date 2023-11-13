@@ -7,6 +7,7 @@ let timerInterval;
 let isMuted = false;
 let isPaused = false;
 let popup = document.getElementById("popUpId"); // Get the popup
+let currentLanguage = localStorage.getItem("language") || "english"; // Använd engelska som standard om inget är sparad
 
 function updateScore() {
   document.querySelectorAll(".score").forEach((span) => {
