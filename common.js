@@ -22,22 +22,34 @@ categories.forEach((category) => {
         "categoryTitle",
         document.getElementById("cate-" + category.name).innerText
       );
+
+      // Attila: this should be in the DOMContentLoaded, but since this is shared by multiple html files, it must be
+      // here, to make sure that we only set it to menu.js when we click a category from the menu.
+      localStorage.setItem("prevPage", "menu.js");
     });
   }
 });
 
 // CHOOSE LANGUAGE
 // User choose English
-document.getElementById("english").addEventListener("click", function () {
-  localStorage.setItem("language", "english");
-  updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
-});
+
+const englishElement = document.getElementById("english");
+if (englishElement) {
+    englishElement.addEventListener("click", function () {
+        localStorage.setItem("language", "english");
+        updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
+    });
+}
 
 // User choose French
-document.getElementById("french").addEventListener("click", function () {
-  localStorage.setItem("language", "french");
-  updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
-});
+const frenchElement = document.getElementById("french");
+if (frenchElement) {
+    frenchElement.addEventListener("click", function () {
+        localStorage.setItem("language", "french");
+        updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
+    });
+}
+
 // Function for updating label and flag, based on the saved language
 function updateLanguageDisplay(defaultText, flagImage) {
   const language = localStorage.getItem("language") || "english";
@@ -57,10 +69,10 @@ window.addEventListener("load", function () {
   const storedLanguage = localStorage.getItem("language") || "english";
 
   const flagElement = this.document.getElementById("flag");
-  if (storedLanguage === "english") {
+  if (storedLanguage === "english" && flagElement) {
     flagElement.src = "./icons/flag/english.png";
     updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
-  } else if (storedLanguage === "french") {
+  } else if (storedLanguage === "french" && flagElement) {
     flagElement.src = "./icons/flag/french.png";
     updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
   }
@@ -95,14 +107,16 @@ document.addEventListener("DOMContentLoaded", function () {
   categories.forEach((category) => {
     const missionElement = document.getElementById(category.id);
 
-    missionElement.addEventListener("click", () => {
-      // Spara den valda kategorin i localStorage
-      localStorage.setItem("selectedCategory", category.name);
-      localStorage.setItem(
-        "categoryTitle",
-        document.getElementById("cate-" + category.name).innerText
-      );
-    });
+      if (missionElement) {
+          missionElement.addEventListener("click", () => {
+              // Spara den valda kategorin i localStorage
+              localStorage.setItem("selectedCategory", category.name);
+              localStorage.setItem(
+                  "categoryTitle",
+                  document.getElementById("cate-" + category.name).innerText
+              );
+          });
+      }
   });
 });
 

@@ -116,3 +116,7 @@ window.addEventListener("load", function () {
     loadAndDisplayWordList(selectedCategory, storedLanguage);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  localStorage.setItem("prevPage", "words.js");
+}

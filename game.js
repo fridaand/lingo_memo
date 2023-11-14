@@ -192,6 +192,11 @@ function registerCloseButtons() {
 function registerGoBackButton() {
     const goBackButton = document.getElementById("goBackButton");
 
+    // GO T PREVIOUS PAGE IF EXISTS, OTHERWISE GO TO MENU.HTML
+    //goBackButton.addEventListener("click", function () {
+        //window.location.href = localStorage.getItem("prevPage") || "menu.html";
+    //});
+
     // VISIT EARLIER PAGE OR MENU.HTML
     goBackButton.addEventListener("click", function () {
         if (window && window.history) {
