@@ -32,10 +32,10 @@ function loadAndDisplayWordList(category, language) {
 
       // Uppdatera knapparna för språkval
       const swedishToEnglishButton = document.querySelector(
-        `[data-dropdown="dd-${category}"] #swedishToEnglishButton`
+        `[data-dropdown="dd-${category}"]`
       );
       const swedishToFrenchButton = document.querySelector(
-        `[data-dropdown="dd-${category}"] #swedishToFrenchButton`
+        `[data-dropdown="dd-${category}"]`
       );
 
       if (language === "english") {
@@ -51,6 +51,23 @@ function loadAndDisplayWordList(category, language) {
         `Det uppstod ett fel vid hämtning av data för ${category}: ${error}`
       )
     );
+}
+
+function loadLanguageData() {
+  // Update label and flag when page reloads
+  window.addEventListener("load", function () {
+    // Save language choice when page loads
+    const storedLanguage = localStorage.getItem("language") || "english";
+
+    const flagElement = this.document.getElementById("flag");
+    if (storedLanguage === "english") {
+      flagElement.src = "./icons/flag/english.png";
+      updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
+    } else if (storedLanguage === "french") {
+      flagElement.src = "./icons/flag/french.png";
+      updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
+    }
+  });
 }
 
 // Lyssna på klickhändelser på dropdown-knapparna
@@ -115,4 +132,11 @@ window.addEventListener("load", function () {
   if (selectedCategory) {
     loadAndDisplayWordList(selectedCategory, storedLanguage);
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  registerPopup();
+  registerCategories();
+  registerLangButton();
+  loadLanguageData();
 });

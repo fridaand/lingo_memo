@@ -1004,7 +1004,7 @@ p {
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 20%
+    rgba(0, 0, 0, 0.5) 20% rgba(0, 0, 0, 0.2) 20%
   );
 }
 
