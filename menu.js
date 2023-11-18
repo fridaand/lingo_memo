@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updatePage();
   registerCategories();
   registerPopup();
-  registerLangButton();
 
   // Loopa igenom varje kategori och lägg till klickhändelselyssnare
   categories.forEach((category) => {
