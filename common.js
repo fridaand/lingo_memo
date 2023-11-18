@@ -1,3 +1,5 @@
+// Shared JS for FUNCTIONS and VARIABLES only
+
 // Array med kategorier
 const categories = [
   { id: "fruits-game_1", name: "fruits_1" },
@@ -11,6 +13,44 @@ const categories = [
 
 const maxNumberOfStartsPerCategory = 5;
 
+// FUNCTIONS FOR THE LANGUAGE
+function registerLangButton() {
+  let langButton = document.querySelector("#choose_language");
+  let popup = document.querySelector("#popUpId");
+
+  langButton.onclick = function () {
+    // When the user clicks the button, open the popup
+    popup.style.display = "flex";
+    popup.style.animationPlayState = "running"; // Starta animationen
+    //popup.classList.add("fade");
+  };
+
+  // CHOOSE LANGUAGE
+  // User choose English
+  document.getElementById("english").addEventListener("click", function () {
+    localStorage.setItem("language", "english");
+    updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
+  });
+
+  // User choose French
+  document.getElementById("french").addEventListener("click", function () {
+    localStorage.setItem("language", "french");
+    updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
+  });
+}
+// Function for updating label and flag, based on the saved language
+function updateLanguageDisplay(defaultText, flagImage) {
+  const language = localStorage.getItem("language") || "english";
+  document.getElementById("selected_language").textContent = defaultText;
+
+  const flagElement = document.getElementById("flag");
+  if (language === "english") {
+    flagElement.src = "./icons/flag/english.png";
+  } else if (language === "french") {
+    flagElement.src = "./icons/flag/french.png";
+  }
+}
+/*
 // LOAD THE GAME CARDS & CATEGORY TITLE AT GAME.HTML
 categories.forEach((category) => {
   const categoryElement = document.getElementById(category.id);
@@ -41,6 +81,7 @@ document.getElementById("french").addEventListener("click", function () {
 // Function for updating label and flag, based on the saved language
 function updateLanguageDisplay(defaultText, flagImage) {
   const language = localStorage.getItem("language") || "english";
+
   document.getElementById("selected_language").textContent = defaultText;
 
   const flagElement = document.getElementById("flag");
@@ -106,7 +147,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// KOD FRÅN MENU.JS SLUT
+// KOD FRÅN MENU.JS SLUT */
+
+// LOAD THE GAME
+//LOAD THE GAME CARDS & CATEGORY TITLE AT GAME.HTML
+
+function registerCategories() {
+  categories.forEach((category) => {
+    const categoryElement = document.getElementById(category.id);
+
+    if (categoryElement) {
+      categoryElement.addEventListener("click", function () {
+        localStorage.setItem("selectedCategory", category.name);
+        localStorage.setItem(
+          "categoryTitle",
+          document.getElementById("cate-" + category.name).innerText
+        );
+      });
+    }
+  });
+}
+// LOAD THE GAME ENDS
 
 function updateRounds() {
   let rounds = localStorage.getItem("totalRounds") || 0;
@@ -122,4 +183,26 @@ function updateTime(time, id) {
 function updateTotalTime() {
   let totalTime = localStorage.getItem("totalTime");
   updateTime(totalTime, "info-totaltime");
+}
+
+function registerPopup() {
+  let popup = document.querySelector("#popUpId");
+  let closeElements = document.querySelectorAll(".button_close");
+
+  // FUNCTIONS FOR THE POPUP "AVSLUTA"
+
+  closeElements.forEach((e) => {
+    e.onclick = function () {
+      popup.style.display = "none";
+      // popup.classList.remove("fade");
+    };
+  });
+
+  window.onclick = function (event) {
+    // When the user clicks anywhere outside of the popup, close it
+    if (event.target == popup) {
+      popup.style.display = "none";
+      // popup.classList.remove("fade");
+    }
+  };
 }

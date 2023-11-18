@@ -1,38 +1,5 @@
-// Example code for words.html
-
-/*let langButton = document.getElementById("choose_language"); // Button that opens the popup för language?
-let popup = document.getElementById("popUpId"); // Get the popup
-let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
-
-// FUNCTIONS FOR THE POPUP "AVSLUTA"
-langButton.onclick = function () {
-  // When the user clicks the button, open the popup
-  popup.style.display = "flex";
-  popup.style.animationPlayState = "running"; // Starta animationen
-  //popup.classList.add("fade");
-};
-
-closeElements.forEach((e) => {
-  e.onclick = function () {
-    popup.style.display = "none";
-    // popup.classList.remove("fade");
-  };
-});
-
-window.onclick = function (event) {
-  // When the user clicks anywhere outside of the popup, close it
-  if (event.target == popup) {
-    popup.style.display = "none";
-    // popup.classList.remove("fade");
-  }
-};
-*/
-/*
-let langButton = document.getElementById("choose_language"); // Button that opens the popup för language?
-let popup = document.getElementById("popUpId"); // Get the popup
-let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
-
 // Array med kategorier
+/*
 const categories = [
   { id: "fruits-game_1", name: "fruits_1" },
   { id: "vegetables-game_1", name: "vegetables_1" },
@@ -45,68 +12,7 @@ const categories = [
 
 const maxNumberOfStartsPerCategory = 5;
 
-// FUNCTIONS FOR THE POPUP "AVSLUTA"
-langButton.onclick = function () {
-  // When the user clicks the button, open the popup
-  popup.style.display = "flex";
-  popup.style.animationPlayState = "running"; // Starta animationen
-  //popup.classList.add("fade");
-};
-
-closeElements.forEach((e) => {
-  e.onclick = function () {
-    popup.style.display = "none";
-    // popup.classList.remove("fade");
-  };
-});
-
-window.onclick = function (event) {
-  // When the user clicks anywhere outside of the popup, close it
-  if (event.target == popup) {
-    popup.style.display = "none";
-    // popup.classList.remove("fade");
-  }
-};
-
-// CHOOSE LANGUAGE
-// User choose English
-document.getElementById("english").addEventListener("click", function () {
-  localStorage.setItem("language", "english");
-  updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
-});
-
-// User choose French
-document.getElementById("french").addEventListener("click", function () {
-  localStorage.setItem("language", "french");
-  updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
-});
-// Function for updating label and flag, based on the saved language
-function updateLanguageDisplay(defaultText, flagImage) {
-  const language = localStorage.getItem("language") || "english";
-  document.getElementById("selected_language").textContent = defaultText;
-
-  const flagElement = document.getElementById("flag");
-  if (language === "english") {
-    flagElement.src = "./icons/flag/english.png";
-  } else if (language === "french") {
-    flagElement.src = "./icons/flag/french.png";
-  }
-}
-
-// Update label and flag when page reloads
-window.addEventListener("load", function () {
-  // Save language choice when page loads
-  const storedLanguage = localStorage.getItem("language") || "english";
-
-  const flagElement = this.document.getElementById("flag");
-  if (storedLanguage === "english") {
-    flagElement.src = "./icons/flag/english.png";
-    updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
-  } else if (storedLanguage === "french") {
-    flagElement.src = "./icons/flag/french.png";
-    updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
-  }
-});
+*/
 
 function updatePage() {
   updateRounds();
@@ -126,8 +32,42 @@ function updateStars() {
   });
 }
 
+/*
+function registerPopup() {
+  let langButton = document.querySelector("#choose_language");
+  let popup = document.querySelector("#popUpId");
+  let closeElements = document.querySelectorAll(".button_close");
+
+  // FUNCTIONS FOR THE POPUP "AVSLUTA"
+  langButton.onclick = function () {
+    // When the user clicks the button, open the popup
+    popup.style.display = "flex";
+    popup.style.animationPlayState = "running"; // Starta animationen
+    //popup.classList.add("fade");
+  };
+
+  closeElements.forEach((e) => {
+    e.onclick = function () {
+      popup.style.display = "none";
+      // popup.classList.remove("fade");
+    };
+  });
+
+  window.onclick = function (event) {
+    // When the user clicks anywhere outside of the popup, close it
+    if (event.target == popup) {
+      popup.style.display = "none";
+      // popup.classList.remove("fade");
+    }
+  };
+}
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
   updatePage();
+  registerCategories();
+  registerPopup();
+  registerLangButton();
 
   // Loopa igenom varje kategori och lägg till klickhändelselyssnare
   categories.forEach((category) => {
@@ -143,4 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-*/
+
+//registerPopup
