@@ -15,11 +15,7 @@ const goBackButton = document.getElementById("goBackButton");
 
 // VISIT EARLIER PAGE OR MENU.HTML
 goBackButton.addEventListener("click", function () {
-  if (window.history.length > 1) {
-    window.history.back();
-  } else {
-    window.location.href = "menu.html";
-  }
+    window.location.href = "blabla";
 });
 
 // FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
