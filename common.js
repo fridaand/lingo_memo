@@ -13,6 +13,18 @@ const categories = [
 
 const maxNumberOfStartsPerCategory = 5;
 
+function updateStars() {
+  categories.forEach((category) => {
+    const starsElement = document.getElementById("stars-" + category.name);
+    let numberOfStars = localStorage.getItem("stars-" + category.name) || 0;
+    numberOfStars = Math.min(numberOfStars, maxNumberOfStartsPerCategory);
+    starsElement.innerHTML = "";
+    for (let i = 0; i < numberOfStars; i++) {
+      starsElement.innerHTML += `<img class="star" src="./icons/star_full.png" alt="Star for points"/>`;
+    }
+  });
+}
+
 // Function for updating label and flag, based on the saved language
 /*
 // LOAD THE GAME CARDS & CATEGORY TITLE AT GAME.HTML
@@ -55,6 +67,8 @@ function updateLanguageDisplay(defaultText, flagImage) {
     flagElement.src = "./icons/flag/french.png";
   }
 }
+
+
 
 // Update label and flag when page reloads
 window.addEventListener("load", function () {
@@ -189,17 +203,33 @@ function registerPopup() {
     localStorage.setItem("language", "french");
     updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
   });
-
 }
 
 function updateLanguageDisplay(defaultText, flagImage) {
-    const language = localStorage.getItem("language") || "english";
-    document.getElementById("selected_language").textContent = defaultText;
+  const language = localStorage.getItem("language") || "english";
+  document.getElementById("selected_language").textContent = defaultText;
 
-    const flagElement = document.getElementById("flag");
-    if (language === "english") {
-        flagElement.src = "./icons/flag/english.png";
-    } else if (language === "french") {
-        flagElement.src = "./icons/flag/french.png";
+  const flagElement = document.getElementById("flag");
+  if (language === "english") {
+    flagElement.src = "./icons/flag/english.png";
+  } else if (language === "french") {
+    flagElement.src = "./icons/flag/french.png";
+  }
+}
+
+function updateFlag() {
+  // Update label and flag when page reloads
+  window.addEventListener("load", function () {
+    // Save language choice when page loads
+    const storedLanguage = localStorage.getItem("language") || "english";
+
+    const flagElement = this.document.getElementById("flag");
+    if (storedLanguage === "english") {
+      flagElement.src = "./icons/flag/english.png";
+      updateLanguageDisplay("SVE-ENG", "./icons/flag/english.png");
+    } else if (storedLanguage === "french") {
+      flagElement.src = "./icons/flag/french.png";
+      updateLanguageDisplay("SVE-FRA", "./icons/flag/french.png");
     }
+  });
 }

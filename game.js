@@ -15,7 +15,7 @@ const goBackButton = document.getElementById("goBackButton");
 
 // VISIT EARLIER PAGE OR MENU.HTML
 goBackButton.addEventListener("click", function () {
-    window.location.href = "blabla";
+  window.location.href = "menu.html";
 });
 
 // FUNCTIONS FOR CLOSING POPUP "AVSLUTA"
@@ -194,13 +194,6 @@ function registerMuteButton() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  hideEndGameInfo();
-  showGameInfo();
-  registerMuteButton();
-  updatePage();
-});
-
 function increaseTotalTime() {
   let previousTotalTime = parseInt(localStorage.getItem("totalTime")) || 0;
   let currentTotalTime = previousTotalTime + timer;
@@ -254,7 +247,7 @@ function pause() {
 
   if (isPaused) {
     isPaused = false;
-    playPause.src = "./icons/buttons/button_play.png";
+    playPause.src = "./icons/buttons/button_pause.png";
   } else {
     isPaused = true;
 
@@ -298,3 +291,11 @@ function main() {
 }
 
 main();
+
+document.addEventListener("DOMContentLoaded", function () {
+  hideEndGameInfo();
+  showGameInfo();
+  registerMuteButton();
+  updatePage();
+  updateStars();
+});

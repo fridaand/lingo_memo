@@ -138,4 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
   registerPopup();
   registerCategories();
   loadLanguageData();
+  updateRounds();
+  updateTotalTime();
+  updateStars();
+  updateFlag();
 });

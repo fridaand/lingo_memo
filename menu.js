@@ -18,18 +18,7 @@ function updatePage() {
   updateRounds();
   updateTotalTime();
   updateStars();
-}
-
-function updateStars() {
-  categories.forEach((category) => {
-    const starsElement = document.getElementById("stars-" + category.name);
-    let numberOfStars = localStorage.getItem("stars-" + category.name) || 0;
-    numberOfStars = Math.min(numberOfStars, maxNumberOfStartsPerCategory);
-    starsElement.innerHTML = "";
-    for (let i = 0; i < numberOfStars; i++) {
-      starsElement.innerHTML += `<img class="star" src="./icons/star_full.png" alt="Star for points"/>`;
-    }
-  });
+  updateFlag();
 }
 
 /*
